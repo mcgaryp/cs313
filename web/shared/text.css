@@ -1,0 +1,15 @@
+.text-center {
+   text-align: center;
+}
+
+.justified {
+   text-align: justify;
+}
+
+.font-small {
+   font-size: xx-small;
+}
+
+.align-right {
+   text-align: right;
+}

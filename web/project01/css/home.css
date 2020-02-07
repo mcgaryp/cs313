@@ -1,0 +1,20 @@
+.h-400 {
+   height: 400px;
+}
+
+.h-200 {
+   height: 600px;
+}
+
+.card {
+   width: 18rem;
+}
+
+#carouselMovie .carousel-indicators li {
+   background-color: black;
+}
+
+#carouselMovie .carousel-control-prev:hover, #carouselMovie .carousel-control-next:hover  {
+   opacity: .2;
+   background-color: black;
+}

@@ -1,0 +1,41 @@
+.coral {
+   background-color: lightcoral;
+}
+
+.green {
+   background-color: lightgreen;
+}
+
+.blue {
+   background-color: lightblue;
+}
+
+.bold {
+   width: 200px;
+   height: 50px;
+   font-size: larger;
+   padding: 5px;
+   margin: auto;
+   border-radius: 50px;
+}
+
+.bold:hover {
+   font-weight: bold;
+}
+
+.container {
+   display: flex;
+   text-align: center;
+   flex-direction: row;
+   margin: 5px;
+}
+
+.subContainer {
+   flex-direction: column;
+   display: flex;
+   margin: auto;
+}
+
+button {
+   margin: auto;
+}

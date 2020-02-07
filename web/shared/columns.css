@@ -1,0 +1,70 @@
+.columns {
+   display: flex;
+   flex-direction: row;
+   padding: 5px;
+}
+
+.flex-container-wrap {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.flex-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.column {
+   padding: 5px;
+}
+
+.is-one-fifth {
+   width: 20%;
+}
+
+.is-two-fifths {
+   width: 40%;
+}
+
+.is-three-fifths {
+   width: 60%;
+}
+
+.is-four-fifths {
+   width: 80%;
+}
+
+.is-one-third {
+   width: 33%;
+}
+
+.is-two-thirds {
+   width: 66%;
+}
+
+.is-one-fourth {
+   width: 25%;
+}
+
+.is-half {
+   width: 50%;
+}
+
+.is-three-fourths {
+   width: 75%;
+}
+
+.is-full {
+   width: 100%;
+}
+
+.float-right {
+   float: right;
+}
+
+.float-left {
+   float: left;
+}

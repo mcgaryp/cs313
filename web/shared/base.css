@@ -1,0 +1,115 @@
+  /* Tags */
+  nav, footer {
+    background-color: rgb(182, 44, 20);
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  /* footer {
+    background-image: url("../pictures/blasterBolt.png");
+    height: 100px;
+  } */
+
+  a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  
+  ul {
+    padding: 5px;
+    margin-top: 0px;
+  }
+
+  /* Ids */
+  #title {
+    color: white;
+    margin: 0px;
+    text-align: center;
+    padding: 5px;
+    font-size: 40px;
+  }
+
+  #icon {
+    height: 35px;
+    float: right;
+    padding-top: 2.5px;
+  }
+
+  /* Classes */
+  .container {
+    display: inline-block;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .menu {
+    height: max-content;
+    width: max-content;
+    background-color: rgb(182, 44, 20);
+    -webkit-transform: translateX(-200px);
+    transform: translateX(-200px);
+    -webkit-transition: 1s;
+    transition: 1s;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+
+  .menuItem {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .menuItem:hover {
+    transition: 2s;
+    background-color: rgb(128, 22, 3);
+  }
+
+  .change .menu {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  
+  .center {
+    text-align: center;
+  }
+
+  .title {
+    color:white;
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+  }
+
+  .navbar-button{
+    color: rgba(255,255,255,.5);
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+  }

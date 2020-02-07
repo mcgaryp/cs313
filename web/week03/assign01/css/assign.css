@@ -1,0 +1,23 @@
+.item-image {
+   width: 700;
+   height: 400;
+}
+
+.icon {
+   height: 50px;
+}
+
+.circle {
+   border-radius: 25px;
+   background-color: rgb(182, 44, 20);
+   color: white;
+   width: 20px;
+   height: 20px;
+   text-align: center;
+   vertical-align: middle;
+   visibility: hidden;
+}
+
+.black-text {
+   color: black;
+}

@@ -1,0 +1,50 @@
+[
+   {
+      "title" : "Han Solo Blaster",
+      "price" : 79.99,
+      "url" : "../../pictures/hanSoloBlaster.jpg",
+      "id" : 0
+   },
+   {
+      "title" : "StormTrooper Blaster",
+      "price" : 39.99,
+      "url" : "../../pictures/stormtrooperBlaster.jpg",
+      "id" : 1
+   },
+   {
+      "title" : "Princess Leia Blaster",
+      "price" : 109.99,
+      "url" : "../../pictures/princessLeiaBlaster.jpg",
+      "id" : 2
+   },
+   {
+      "title" : "Chewbacca Bow Caster",
+      "price" : 199.99,
+      "url" : "../../pictures/chewbaccaBowCaster.jpg",
+      "id" : 3
+   },
+   {
+      "title" : "Han Solo Outfit",
+      "price" : 129.99,
+      "url" : "../../pictures/hanSoloOutfit.jpg",
+      "id" : 4
+   },
+   {
+      "title" : "Stormtrooper Armor",
+      "price" : 299.99,
+      "url" : "../../pictures/stormtrooperOufit.jpg",
+      "id" : 5
+   }, 
+   {
+      "title" : "Princess Leia Outfit",
+      "price" : 99.99,
+      "url" : "../../pictures/princessLeiaOutfit.jpg",
+      "id" : 6
+   }, 
+   {
+      "title" : "Chewbacca Outfit", 
+      "price" : 249.99,
+      "url" : "../../pictures/chewbaccaOutfit.jpg",
+      "id" : 7
+   }
+]
