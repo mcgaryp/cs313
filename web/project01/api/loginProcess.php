@@ -25,7 +25,6 @@
    }
 
    // Get data from db
-   print("hello");
    require_once "dbConnect.php";
 
    // necessary to catch errors thrown from other files
@@ -54,8 +53,10 @@
 
    print_r($_SESSION);
 
+   print("hello from before");
    // Redirect to home.php
    header("Location: ../home.php");
+   print("hello");
    exit();
 
 
