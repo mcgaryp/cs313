@@ -48,7 +48,6 @@ print_r($_SESSION);
 
 // Redirect to home.php
 header("location:../home.php");
-
-echo "I MADE IT";
+exit();
 
 ?>
