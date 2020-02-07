@@ -53,8 +53,12 @@
       array_push($movies, $movie);
    }
 
+   print("<br> this is after the loop");
+
    // Set object in session
    $_SESSION["Movies"] = $movies;
+
+   print("<br> this is after the session setting variable");
 
    print_r($_SESSION);
 
