@@ -47,7 +47,7 @@
    // Create array to hold all the users movies
    $movies = array();
 
-
+   print("<br> Just before the loop");
    $i = 0;
    // Pass it into the object
    while($row = $moviesDB->fetch(PDO::FETCH_ASSOC)) {
