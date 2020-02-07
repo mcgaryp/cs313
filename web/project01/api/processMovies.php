@@ -37,7 +37,9 @@ while($row = $moviesDB->fetch(PDO::FETCH_ASSOC)) {
 // Set object in session
 $_SESSION["Movies"] = $movies;
 
+print_r($_SESSION);
+
 // Redirect to home.php
-header("location:../home.php")
+header("location:../home.php");
 
 ?>
