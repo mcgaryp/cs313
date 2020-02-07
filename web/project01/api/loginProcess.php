@@ -55,7 +55,7 @@
 
       print("<br>Creating movie Object....");
 
-      $movie = new Movie($row["image"], $row["title"], $row["description"], $roe["rating"], $row["year"]);
+      $movie = new Movie($row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
       
       print("<br>Just before the push to array");
 
