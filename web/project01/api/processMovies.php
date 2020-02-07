@@ -47,7 +47,7 @@ $_SESSION["Movies"] = $movies;
 print_r($_SESSION);
 
 // Redirect to home.php
-header("Location:../home.php");
+header("Location: ../home.php");
 exit();
 
 ?>
