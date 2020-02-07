@@ -19,6 +19,13 @@ class Movie {
 
 // Get data from db
 require_once "dbConnect.php";
+
+// necessary to catch errors thrown from other files
+function exception_error_handler($errno, $errstr, $errfile, $errline ) {
+   throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
+}
+set_error_handler("exception_error_handler");
+
 $db = getBD();
 
 // Just get some of the movies preparation
@@ -41,5 +48,7 @@ print_r($_SESSION);
 
 // Redirect to home.php
 header("location:../home.php");
+
+echo "I MADE IT";
 
 ?>
