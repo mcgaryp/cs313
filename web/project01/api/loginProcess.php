@@ -25,13 +25,16 @@
    }
 
    // Get data from db
+   print("\nThis si at the top before the connect to DB");   
    require_once "dbConnect.php";
+   print("\nThis is right after db connect");
 
    // necessary to catch errors thrown from other files
-   function exception_error_handler($errno, $errstr, $errfile, $errline ) {
-      throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
-   }
-   set_error_handler("exception_error_handler");
+   // function exception_error_handler($errno, $errstr, $errfile, $errline ) {
+   //    throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
+   // }
+
+   // set_error_handler("exception_error_handler");
 
    $db = getBD();
 
