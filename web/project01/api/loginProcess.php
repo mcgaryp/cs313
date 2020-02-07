@@ -53,10 +53,14 @@
    while($row = $movieDB->fetch(PDO::FETCH_ASSOC)) {
       $i++;
 
+      print("<br>Creating movie Object....");
+
       $movie = new Movie($row["image"], $row["title"], $row["description"], $roe["rating"], $row["year"]);
       
+      print("<br>Just before the push to array");
+
       array_push($movies, $movie);
-      
+
       print("<br> this is in the loop it ran: $i");
    }
 
