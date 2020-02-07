@@ -36,13 +36,13 @@
 
    $db = getBD();
 
-   print("\nThis is right after db fun call");
+   print("This is right after db fun call");
 
    // Just get some of the movies preparation
    $movieDB = $db->prepare("SELECT * FROM movie m INNER JOIN movie_group mg on m.movie_id = mg.movie_id AND mg.account_id = 2");
    $movieDB->execute();
 
-   print("\nThis is right after db prepare and execute call");
+   print("<br>This is right after db prepare and execute call");
 
    // Create array to hold all the users movies
    $movies = array();
@@ -50,9 +50,10 @@
    print("<br> Just before the loop");
    $i = 0;
    // Pass it into the object
-   while($row = $moviesDB->fetch(PDO::FETCH_ASSOC)) {
+   while($row = $movieDB->fetch(PDO::FETCH_ASSOC)) {
       $i++;
       print("<br> this is in the loop it ran: $i");
+
       $movie = new Movie($row["image"], $row["title"], $row["description"], $roe["rating"], $row["year"]);
       array_push($movies, $movie);
    }
