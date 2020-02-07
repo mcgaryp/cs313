@@ -52,10 +52,12 @@
    // Pass it into the object
    while($row = $movieDB->fetch(PDO::FETCH_ASSOC)) {
       $i++;
-      print("<br> this is in the loop it ran: $i");
 
       $movie = new Movie($row["image"], $row["title"], $row["description"], $roe["rating"], $row["year"]);
+      
       array_push($movies, $movie);
+      
+      print("<br> this is in the loop it ran: $i");
    }
 
    print("<br> this is after the loop");
