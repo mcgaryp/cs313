@@ -140,7 +140,6 @@
 
                   <!--Slides-->
                   <div class="carousel-inner" role="listbox">
-
                      <!--First slide-->
                         <?php 
                            for ($index = 0; $index < count($movies); $index++) { 
@@ -165,6 +164,7 @@
                                  </div>
                                  </div>
                         <?php }
+                              echo $index;
                            } ?> 
 
                            <!-- <div class="col-md-4 clearfix d-none d-md-block">
