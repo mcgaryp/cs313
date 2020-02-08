@@ -151,10 +151,10 @@
                            <div class="col-md-auto">
                               <!-- make this button -->
                               <div class="card">
-                                 <img class="card-img-top" src="<?=$m->image?>"
-                                    alt="<?=$m->title?> Movie Cover">
+                                 <img class="card-img-top" src="<?=$movies[$index]->image?>"
+                                    alt="<?=$movies[$index]->title?> Movie Cover">
                                  <div class="card-body">
-                                    <h4 class="card-title text-center"><?=$m->title?></h4>
+                                    <h4 class="card-title text-center"><?=$movies[$index]->title?></h4>
                                  </div>
                               </div>
                               <!-- .button -->
