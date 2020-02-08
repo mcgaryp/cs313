@@ -88,6 +88,7 @@
                      <li data-target="#carouselRecent" data-slide-to="2"></li>
                   </ol>
                   <div class="carousel-inner h-400">
+
                      <div class="carousel-item active">
                         <img src="https://via.placeholder.com/300.png/01c/fff" class="d-block w-100" alt="...">
                      </div>
@@ -175,7 +176,7 @@
                      </div>
                      <!--/.First slide-->
 
-                     <!--Second slide-->
+                     <!--Second slide
                      <div class="carousel-item">
 
                         <div class="row">
@@ -220,9 +221,9 @@
                         </div>
 
                      </div>
-                     <!--/.Second slide-->
+                     /.Second slide-->
 
-                     <!--Third slide-->
+                     <!--Third slide
                      <div class="carousel-item">
 
                         <div class="row">
@@ -267,7 +268,7 @@
                         </div>
 
                      </div>
-                     <!--/.Third slide-->
+                     /.Third slide-->
 
                   </div>
                   <!--/.Slides-->
