@@ -132,9 +132,12 @@
 
                   <!--Indicators-->
                   <ol class="carousel-indicators">
-                     <li data-target="#carouselMovie" data-slide-to="0" class="active"></li>
-                     <li data-target="#carouselMovie" data-slide-to="1"></li>
-                     <li data-target="#carouselMovie" data-slide-to="2"></li>
+                  <?php 
+                     for ($index = 0; $index < count($movies); $index++) { 
+                        if ($index % 3 == 0) { ?>
+                     <li data-target="#carouselMovie" data-slide-to="<?=$index?>" <?php if ($index == 0) echo "class='active'"; ?> ></li>
+                  <?php }
+                     } ?>
                   </ol>
                   <!--/.Indicators-->
 
