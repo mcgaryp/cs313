@@ -45,35 +45,35 @@
 
    $db = getBD();
 
-   print("This is right after db fun call");
+   // print("This is right after db fun call");
 
    // Just get some of the movies preparation
    $movieDB = $db->prepare("SELECT * FROM movie m INNER JOIN movie_group mg on m.movie_id = mg.movie_id AND mg.account_id = 2");
    $movieDB->execute();
 
-   print("<br>This is right after db prepare and execute call");
+   // print("<br>This is right after db prepare and execute call");
 
    // Create array to hold all the users movies
    $movies = array();
 
-   print("<br> Just before the loop");
+   // print("<br> Just before the loop");
    $i = 0;
    // Pass it into the object
    while($row = $movieDB->fetch(PDO::FETCH_ASSOC)) {
       $i++;
 
-      print("<br>Creating movie Object....");
+      // print("<br>Creating movie Object....");
 
       $movie = new Movie($row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
       
-      print("<br>Just before the push to array");
+      // print("<br>Just before the push to array");
 
       array_push($movies, $movie);
 
-      print("<br> this is in the loop it ran: $i");
+      // print("<br> this is in the loop it ran: $i");
    }
 
-   print("<br> this is after the loop");
+   // print("<br> this is after the loop");
 
    print_r($movies);
 
@@ -149,7 +149,7 @@
                               <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
                                  alt="Card image cap">
                               <div class="card-body">
-                                 <h4 class="card-title">Card title</h4>
+                                 <h4 class="card-title"><?=$movies[0]->title?>>/h4>
                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                                  card's content.</p>
                                  <a class="btn btn-primary">Button</a>
