@@ -142,34 +142,22 @@
 
                      <!--First slide-->
                      <div class="carousel-item active">
-
+                     <?php foreach ($movies as $m) { ?>
                         <div class="row">
                            <div class="col-md-4">
-                           <div class="card mb-2">
-                              <img class="card-img-top" src="<?=$movies[0]->image?>"
-                                 alt="<?=$movies[0]->title?> Movie Cover">
-                              <div class="card-body">
-                                 <h4 class="card-title"><?=$movies[0]->title?></h4>
-                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                 card's content.</p>
+                              <div class="card mb-2">
+                                 <img class="card-img-top" src="<?=$m->image?>"
+                                    alt="<?=$m->title?> Movie Cover">
+                                 <div class="card-body">
+                                    <h4 class="card-title"><?=$m->title?></h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                 </div>
                               </div>
                            </div>
-                           </div>
+                        <?php } ?> 
 
-                           <div class="col-md-4 clearfix d-none d-md-block">
-                           <div class="card mb-2">
-                              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                 alt="<?=$movies[0]->title?> Movie Cover">
-                              <div class="card-body">
-                                 <h4 class="card-title">Card title</h4>
-                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                 card's content.</p>
-                                 <a class="btn btn-primary">Button</a>
-                              </div>
-                           </div>
-                           </div>
-
-                           <div class="col-md-4 clearfix d-none d-md-block">
+                           <!-- <div class="col-md-4 clearfix d-none d-md-block">
                            <div class="card mb-2">
                               <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
                                  alt="Card image cap">
@@ -180,8 +168,9 @@
                                  <a class="btn btn-primary">Button</a>
                               </div>
                            </div>
-                           </div>
+                           </div> -->
                         </div>
+                        <!-- .row -->
 
                      </div>
                      <!--/.First slide-->
