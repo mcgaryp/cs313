@@ -142,9 +142,9 @@
 
                      <!--First slide-->
                      <div class="carousel-item active">
-                     <?php foreach ($movies as $m) { ?>
-                        <div class="row">
-                           <div class="col-md-4">
+                     <div class="row">
+                        <div class="col-md-4">
+                           <?php foreach ($movies as $m) { ?>
                               <div class="card mb-2">
                                  <img class="card-img-top" src="<?=$m->image?>"
                                     alt="<?=$m->title?> Movie Cover">
