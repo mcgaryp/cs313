@@ -142,21 +142,29 @@
                   <div class="carousel-inner" role="listbox">
 
                      <!--First slide-->
-                     <div class="carousel-item active">
-                     <div class="row justify-content-center">
-                        <?php foreach ($movies as $m) { ?>
+                        <?php 
+                           for ($index = 0; $index < count($movies); $index++) { 
+                              if ($index % 3 == 0) { ?>
+                                 <div class="carousel-item active">
+                                 <div class="row justify-content-center">
+                        <?php } ?>
                            <div class="col-md-auto">
+                              <!-- make this button -->
                               <div class="card">
                                  <img class="card-img-top" src="<?=$m->image?>"
                                     alt="<?=$m->title?> Movie Cover">
                                  <div class="card-body">
-                                    <h4 class="card-title"><?=$m->title?></h4>
-                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                    card's content.</p> -->
+                                    <h4 class="card-title text-center"><?=$m->title?></h4>
                                  </div>
                               </div>
+                              <!-- .button -->
                            </div>
-                        <?php } ?> 
+                        <?php 
+                              if ($index % 3 == 2) { ?>
+                                 </div>
+                                 </div>
+                        <?php }
+                           } ?> 
 
                            <!-- <div class="col-md-4 clearfix d-none d-md-block">
                            <div class="card mb-2">
@@ -170,10 +178,10 @@
                               </div>
                            </div>
                            </div> -->
-                        </div>
+                        <!-- </div> -->
                         <!-- .row -->
 
-                     </div>
+                     <!-- </div> -->
                      <!--/.First slide-->
 
                      <!--Second slide
