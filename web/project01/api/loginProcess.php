@@ -74,10 +74,9 @@
    print_r($_SESSION);
 
    print("hello from before");
+   
    // Redirect to home.php
    header("Location: ../home.php");
    print("hello");
-   exit();
-
-
+   exit;
 ?>

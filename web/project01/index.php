@@ -32,7 +32,8 @@ $_SESSION["current"] = "project01";
 						Account Login
 					</span>
 					<div class="login100-form p-b-33 p-t-5">
-						<form class="validate-form" method="POST" action="api/loginProcess.php">
+						<!-- <form class="validate-form" method="POST" action="api/loginProcess.php"> -->
+						<form class="validate-form" method="POST" action="home.php">
 							<div class="wrap-input100 validate-input" data-validate = "Enter username">
 								<input class="input100" type="text" name="username" placeholder="Username">
 								<span class="focus-input100" data-placeholder="&#xe82a;"></span>
