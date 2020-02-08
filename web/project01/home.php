@@ -143,7 +143,7 @@
 
                      <!--First slide-->
                         <?php 
-                           for ($index = 0; $index < count($movies); $index += 1) { 
+                           for ($index = 0; $index < count($movies); $index++) { 
                               echo "HELLLLLLLLLOOOOOO!";
                               if ($index % 3 == 0) { ?>
                                  <div class="carousel-item <?php if ($index = 0) { echo "active"; } ?>">
