@@ -75,7 +75,7 @@
 
    // print("<br> this is after the loop");
 
-   print_r($movies);
+   // print_r($movies);
 
    ?> 
       <div class="container">
