@@ -143,7 +143,7 @@
 
                      <!--First slide-->
                         <?php 
-                           for ($index = 0; $index < count($movies); $index++) { 
+                           for ($index = 0; $index < 1; $index++) { 
                               if ($index % 3 == 0) { ?>
                                  <div class="carousel-item <?php if ($index = 0) { echo "active"; } ?>">
                                  <div class="row justify-content-center">
