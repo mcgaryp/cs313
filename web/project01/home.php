@@ -114,6 +114,30 @@
 
       </nav>
       <!--/.Navbar-->
+
+         <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark pink lighten-3 mb-4">
+
+         <!-- Collapsible content -->
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+         <!-- Search form -->
+         <form class="form-inline mr-auto">
+            <div class="md-form my-0">
+               <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+               <i class="fas fa-search text-white ml-3" aria-hidden="true"></i>
+            </div>
+         </form>
+
+         </div>
+         <!-- Collapsible content -->
+
+         <!-- Navbar brand -->
+         <a class="navbar-brand" href="#">Navbar</a>
+
+      </nav>
+      <!--/.Navbar-->   
+
       <div class="container">
          <div class="row justify-content-center pb-5">
             <div class="col-12">
