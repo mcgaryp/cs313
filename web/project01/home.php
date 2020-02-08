@@ -154,8 +154,8 @@
                                     card's content.</p>
                                  </div>
                               </div>
-                           </div>
-                        <?php } ?> 
+                           <?php } ?> 
+                        </div>
 
                            <!-- <div class="col-md-4 clearfix d-none d-md-block">
                            <div class="card mb-2">
