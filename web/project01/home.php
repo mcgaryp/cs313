@@ -1,5 +1,9 @@
 <?php
+
    session_start();
+
+   $_SESSION["current"] = "home.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +39,6 @@
    // Get data from db
    require_once "api/dbConnect.php";
    
-
    // necessary to catch errors thrown from other files
    function exception_error_handler($errno, $errstr, $errfile, $errline ) {
       throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
@@ -45,39 +48,72 @@
 
    $db = getBD();
 
-   // print("This is right after db fun call");
-
    // Just get some of the movies preparation
    $movieDB = $db->prepare("SELECT * FROM movie m INNER JOIN movie_group mg on m.movie_id = mg.movie_id AND mg.account_id = 2");
    $movieDB->execute();
 
-   // print("<br>This is right after db prepare and execute call");
-
    // Create array to hold all the users movies
    $movies = array();
 
-   // print("<br> Just before the loop");
-   $i = 0;
    // Pass it into the object
    while($row = $movieDB->fetch(PDO::FETCH_ASSOC)) {
-      $i++;
-
-      // print("<br>Creating movie Object....");
-
       $movie = new Movie($row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
-      
-      // print("<br>Just before the push to array");
-
       array_push($movies, $movie);
-
-      // print("<br> this is in the loop it ran: $i");
    }
 
-   // print("<br> this is after the loop");
+   // Get recently added top 10
 
-   // print_r($movies);
 
    ?> 
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
+
+         <!-- Navbar brand -->
+         <a class="navbar-brand" href="#">Navbar</a>
+
+         <!-- Collapse button -->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
+
+         <!-- Collapsible content -->
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+         <!-- Links -->
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Pricing</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">Dropdown</a>
+               <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Another action</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+               </div>
+            </li>
+
+         </ul>
+         <!-- Links -->
+
+         <!-- Search form -->
+         <form class="form-inline">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+         </form>
+         </div>
+         <!-- Collapsible content -->
+
+      </nav>
+      <!--/.Navbar-->
       <div class="container">
          <div class="row justify-content-center pb-5">
             <div class="col-12">
@@ -135,7 +171,7 @@
                   <?php 
                      for ($index = 0; $index < count($movies); $index++) { 
                         if ($index % 3 == 0) { ?>
-                     <li data-target="#carouselMovie" data-slide-to="<?=$index?>" <?php if ($index == 0) echo "class='active'"; ?> ></li>
+                     <li data-target="#carouselMovie" data-slide-to="<?=$index?>" <?php if ($index == 0) echo "class='active'"; ?>></li>
                   <?php }
                      } ?>
                   </ol>
@@ -153,7 +189,7 @@
                            <div class="col-md-auto">
                               <!-- make this button -->
                               <div class="card">
-                                 <img class="card-img-top" src="<?=$movies[$index]->image?>"
+                                 <img class="card-img-top movie-image" src="<?=$movies[$index]->image?>"
                                     alt="<?=$movies[$index]->title?> Movie Cover">
                                  <div class="card-body">
                                     <h4 class="card-title text-center"><?=$movies[$index]->title?></h4>
