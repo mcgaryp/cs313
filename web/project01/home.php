@@ -145,7 +145,7 @@
                            for ($index = 0; $index < count($movies); $index++) { 
                               echo "HELLLLLLLLLOOOOOO!";
                               if ($index % 3 == 0) { ?>
-                                 <div class="carousel-item <?php if ($index = 0) { echo "active"; } ?>">
+                                 <div class="carousel-item <?php if ($index == 0) { echo "active"; } ?>">
                                  <div class="row justify-content-center">
                         <?php } ?>
                            <div class="col-md-auto">
@@ -164,7 +164,7 @@
                                  </div>
                                  </div>
                         <?php }
-                              echo $index;
+                              // echo $index;
                            } ?> 
 
                            <!-- <div class="col-md-4 clearfix d-none d-md-block">
