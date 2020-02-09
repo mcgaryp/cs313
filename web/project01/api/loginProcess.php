@@ -56,8 +56,12 @@
    // set the session variables
    $_SESSION["account"] = $account;
    $_SESSION["profiles"] = $profiles;
+
+   echo "trying print out some things <br>";
+   echo $account;
+   print_r($profiles);
    
-   header("location: ../home.php", true);
+   // header("location: ../home.php", true);
 
    // Used as a reference
    // https://www.youtube.com/watch?v=PXugYdXCBck

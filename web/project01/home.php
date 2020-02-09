@@ -65,8 +65,6 @@
 
    // Get recently added top 10
 
-   echo $_SESSION["account"];
-
    ?> 
       <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
