@@ -123,7 +123,7 @@
       <div class="container">
          <div class="row justify-content-center pb-5">
             <div class="col-12">
-               <div id="carouselRecent" class="carousel slide" data-ride="carousel">
+               <div id="carouselRecent" class="carousel carousel-recent slide" data-ride="carousel">
                   <ol class="carousel-indicators">
                      <li data-target="#carouselRecent" data-slide-to="0" class="active"></li>
                      <li data-target="#carouselRecent" data-slide-to="1"></li>

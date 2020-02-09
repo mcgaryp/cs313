@@ -1,4 +1,4 @@
-$('.carousel').carousel({
+$('.carousel-recent').carousel({
    interval: 2000
  });
 
