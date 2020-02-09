@@ -1,4 +1,4 @@
-let butons = document.getElementsByClassName("modal-button");
+let buttons = document.getElementsByClassName("modal-button");
 for (let i = 0; i < buttons.length; i++) {
    let button = buttons[i];
    console.log(button);
