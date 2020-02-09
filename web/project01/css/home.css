@@ -19,6 +19,10 @@
    background-color: black;
 }
 
+.carousel-control-prev, .carousel-control-next {
+   width: 7%;
+}
+
 .movie-image {
    height: 450px;
 }
