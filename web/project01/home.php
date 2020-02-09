@@ -79,64 +79,44 @@
          <!-- Collapsible content -->
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-         <!-- Links -->
-         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="#">Pricing</a>
-            </li>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+               </li>
 
-            <!-- Dropdown -->
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">Dropdown</a>
-               <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-               <a class="dropdown-item" href="#">Action</a>
-               <a class="dropdown-item" href="#">Another action</a>
-               <a class="dropdown-item" href="#">Something else here</a>
+               <!-- Dropdown -->
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                  <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+               </li>
+
+            </ul>
+            <!-- Links -->
+
+            <!-- Search form -->
+            <form class="form-inline mr-auto">
+               <div class="md-form my-0">
+                  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                  <i class="fas fa-search text-white ml-3" aria-hidden="true"></i>
                </div>
-            </li>
-
-         </ul>
-         <!-- Links -->
-
-         <!-- Search form -->
-         <form class="form-inline">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-         </form>
+            </form>
          </div>
          <!-- Collapsible content -->
 
       </nav>
       <!--/.Navbar-->
-
-         <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark pink lighten-3 mb-4">
-
-         <!-- Collapsible content -->
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-         <!-- Search form -->
-         <form class="form-inline mr-auto">
-            <div class="md-form my-0">
-               <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-               <i class="fas fa-search text-white ml-3" aria-hidden="true"></i>
-            </div>
-         </form>
-
-         </div>
-         <!-- Collapsible content -->
-
-         <!-- Navbar brand -->
-         <a class="navbar-brand" href="#">Navbar</a>
-
-      </nav>
-      <!--/.Navbar-->   
 
       <div class="container">
          <div class="row justify-content-center pb-5">
