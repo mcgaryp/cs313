@@ -70,7 +70,7 @@
       <nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
 
          <!-- Navbar brand -->
-         <a class="navbar-brand" href="#">Navbar</a>
+         <a class="navbar-brand" href="#">McMovies</a>
 
          <!-- Collapse button -->
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -107,7 +107,7 @@
             <!-- Links -->
 
             <!-- Search form -->
-            <form class="form-inline mr-auto">
+            <form class="form-inline">
                <div class="md-form my-0">
                   <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                   <i class="fas fa-search text-black ml-3" aria-hidden="true"></i>
@@ -199,8 +199,34 @@
                                  <div class="card-body">
                                     <h4 class="card-title text-center"><?=$movies[$index]->title?></h4>
                                  </div>
+                                 <!-- Button trigger modal -->
+                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                    Launch demo modal
+                                 </button>
                               </div>
                               <!-- .button -->
+
+
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                 <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                       <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                             <span aria-hidden="true">&times;</span>
+                                          </button>
+                                       </div>
+                                       <div class="modal-body">
+                                       ...
+                                       </div>
+                                       <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <button type="button" class="btn btn-primary">Save changes</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
                            </div>
                         <?php 
                               if ($index % 3 == 2) { ?>
