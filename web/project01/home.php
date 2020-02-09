@@ -215,8 +215,8 @@
                                        </div>
                                        <div class="modal-body">
                                           <div class="row">
-                                             <div>Rating: <?=$movies[$index]->rating?></div><br>
-                                             <div>Year: <?=$movies[$index]->year?></div>
+                                             <div class="col">Rating: <?=$movies[$index]->rating?></div>
+                                             <div class="col">Year: <?=$movies[$index]->year?></div>
                                           </div>
                                           <h5>Description</h5>
                                           <p><?=$movies[$index]->description?></p>
