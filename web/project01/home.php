@@ -65,7 +65,7 @@
 
    // Get recently added top 10
 
-   print_r($_SESSION["account"]);
+   echo ($_SESSION["account"]);
    print_r($_SESSION["profiles"]);
 
    ?> 
