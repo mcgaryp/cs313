@@ -1,5 +1,5 @@
-$('.carousel').carousel({
+$('#carouselRecent').carousel({
    interval: 20000
  });
 
- $('carousel-multi-item').carousel('pause');
+ $('#carouselMovie').carousel('pause');
