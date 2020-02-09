@@ -20,6 +20,7 @@
    }
 
    if (isset($_POST['login'])) {
+      echo "entered first if<br>";
       // Get database
       $db = getDB();
 
