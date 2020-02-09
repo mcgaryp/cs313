@@ -194,7 +194,7 @@
                         <?php } ?>
                            <div class="col-md-auto">
                               <!-- button -->
-                              <button type="button" data-toggle="modal" data-target="#<?=$movies[$index]->id?>Modal" class="card modal-button">
+                              <button type="button" data-toggle="modal" data-target="<?=$movies[$index]->id?>Modal" class="card modal-button">
                                  <img class="card-img-top movie-image" src="<?=$movies[$index]->image?>"
                                     alt="<?=$movies[$index]->title?> Movie Cover">
                                  <div class="card-body">
