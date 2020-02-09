@@ -194,7 +194,7 @@
                         <?php } ?>
                            <div class="col-md-auto">
                               <!-- button -->
-                              <button type="button" data-toggle="modal" data-target="#<?=$movies[$index]->id?>Modal" class="card">
+                              <button type="button" data-toggle="modal" data-target="#<?=$movies[$index]->id?>Modal" class="card modal-button">
                                  <img class="card-img-top movie-image" src="<?=$movies[$index]->image?>"
                                     alt="<?=$movies[$index]->title?> Movie Cover">
                                  <div class="card-body">
@@ -202,7 +202,6 @@
                                  </div>
                               </button>
                               <!-- .button -->
-
 
                               <!-- Modal -->
                               <div class="modal fade" id="<?=$movies[$index]->id?>Modal" tabindex="-1" role="dialog" aria-labelledby="<?=$movies[$index]->id?>ModalCenterTitle" aria-hidden="true">
@@ -249,5 +248,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <script src="js/carousel.js" async defer></script>
+      <script src="js/modal.js" async defer></script>
    </body>
 </html>
