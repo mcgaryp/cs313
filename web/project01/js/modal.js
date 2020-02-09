@@ -7,9 +7,7 @@ for (let i = 0; i < buttons.length; i++) {
    console.log(modal);
    button.addEventListener('click', function() {
       // do something to my modal!
-      modal.classList.add("is-active");
-      modal.setAttribute("aria-hidden", "false");
-      modal.classList.remove("fade");
+      $(modal).modal('show');
       console.log("made it to the listener");
    });
 }
