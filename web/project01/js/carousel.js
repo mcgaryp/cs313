@@ -1,5 +1,5 @@
 $('.carousel-recent').carousel({
-   interval: 2000
+   interval: 10000
  });
 
  $('.carousel-multi-item').carousel({
