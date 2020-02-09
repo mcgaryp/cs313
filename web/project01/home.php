@@ -214,7 +214,12 @@
                                           </button>
                                        </div>
                                        <div class="modal-body">
-                                       <?=$movies[$index]->description?>
+                                          <div class="row">
+                                             <div>Rating: <?=$movies[$index]->rating?></div>
+                                             <div>Year: <?=$movies[$index]->year?></div>
+                                          </div>
+                                          <h5>Description</h5>
+                                          <p><?=$movies[$index]->description?></p>
                                        </div>
                                        <!-- <div class="modal-footer">
                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
