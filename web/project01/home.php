@@ -28,7 +28,8 @@
       public $rating;
       public $year;
 
-      function Movie($image, $title, $description, $rating, $year) {
+      function Movie($id, $image, $title, $description, $rating, $year) {
+         $this->id = $id;
          $this->image = $image;
          $this->title = $title;
          $this->description = $description;
@@ -58,7 +59,7 @@
 
    // Pass it into the object
    while($row = $movieDB->fetch(PDO::FETCH_ASSOC)) {
-      $movie = new Movie($row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
+      $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
       array_push($movies, $movie);
    }
 
@@ -192,27 +193,23 @@
                                  <div class="row justify-content-center">
                         <?php } ?>
                            <div class="col-md-auto">
-                              <!-- make this button -->
-                              <div class="card">
+                              <!-- button -->
+                              <div type="button" data-toggle="modal" data-target="#<?=$movies[$index]->id?>Modal" class="card">
                                  <img class="card-img-top movie-image" src="<?=$movies[$index]->image?>"
                                     alt="<?=$movies[$index]->title?> Movie Cover">
                                  <div class="card-body">
                                     <h4 class="card-title text-center"><?=$movies[$index]->title?></h4>
                                  </div>
-                                 <!-- Button trigger modal -->
-                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                    Launch demo modal
-                                 </button>
                               </div>
                               <!-- .button -->
 
 
                               <!-- Modal -->
-                              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                              <div class="modal fade" id="<?=$movies[$index]->id?>Modal" tabindex="-1" role="dialog" aria-labelledby="<?=$movies[$index]->id?>ModalCenterTitle" aria-hidden="true">
                                  <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                        <div class="modal-header">
-                                          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                          <h5 class="modal-title" id="<?=$movies[$index]->id?>ModalLongTitle">Modal title</h5>
                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                              <span aria-hidden="true">&times;</span>
                                           </button>
