@@ -53,6 +53,8 @@
          // failed to find any profiles to the account!
          echo "Failed to do that thing";
       }
+   } else {
+      echo "could not find login";
    }
 
    // set the session variables
