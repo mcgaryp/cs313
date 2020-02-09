@@ -1,7 +1,6 @@
 let buttons = document.getElementsByClassName("modal-button");
 for (let i = 0; i < buttons.length; i++) {
    let button = buttons[i];
-   console.log(button);
    let modalID = button.getAttribute('data-target');
    console.log(modalID);
    let modal = document.getElementById(modalID);
@@ -9,6 +8,7 @@ for (let i = 0; i < buttons.length; i++) {
    button.addEventListener('click', function() {
       // do something to my modal!
       modal.classList.add("is-active");
+      modal.setAttribute("aria-hidden", "false");
       console.log("made it to the listener");
    });
 }
