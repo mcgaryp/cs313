@@ -214,7 +214,7 @@
                                           </button>
                                        </div>
                                        <div class="modal-body">
-                                          <div class="row">
+                                          <div class="row mb-2">
                                              <div class="col">Rating: <?=$movies[$index]->rating?></div>
                                              <div class="col">Year: <?=$movies[$index]->year?></div>
                                           </div>
