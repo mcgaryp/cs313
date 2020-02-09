@@ -208,13 +208,13 @@
                                  <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                        <div class="modal-header">
-                                          <h5 class="modal-title" id="<?=$movies[$index]->id?>ModalLongTitle">Modal title</h5>
+                                          <h5 class="modal-title" id="<?=$movies[$index]->id?>ModalLongTitle"><?=$movies[$index]->title?></h5>
                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                              <span aria-hidden="false">&times;</span>
                                           </button>
                                        </div>
                                        <div class="modal-body">
-                                       ...
+                                       <?=$movies[$index]->description?>
                                        </div>
                                        <div class="modal-footer">
                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

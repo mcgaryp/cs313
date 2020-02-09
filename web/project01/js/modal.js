@@ -6,6 +6,5 @@ for (let i = 0; i < buttons.length; i++) {
    button.addEventListener('click', function() {
       // do something to my modal!
       $(modal).modal('show');
-      console.log("Calling ID: " + modal);
    });
 }
