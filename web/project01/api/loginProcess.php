@@ -34,7 +34,7 @@
       if ($accountTable->fetch((PDO::FETCH_ASSOC))) {
          while($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
             $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
-            echo $account . "<br>";
+            echo "Account: $account<br>";
          }
       } else {
          echo "Please input correct username and password<br>";
@@ -46,10 +46,10 @@
       $profileTable->execute();
 
       // pull data from database
-      if (mysqli_fetch_assoc($profileTable)) {
+      if ($profileTable->fetch(PDO::FETCH_ASSOC)) {
          // Logged in successful
          while($row = $profileTable->fetch(PDO::FETCH_ASSOC)) {
-            echo "Did enter loop";
+            echo "Did enter profile loop";
             $profile = $row["nick_name"];
             array_push($profiles, $profile);
          }
