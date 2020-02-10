@@ -25,9 +25,10 @@
       $db = getDB();
 
       $query = "SELECT * FROM account WHERE username = 'porter' AND password = 'password'";
+      echo "query: $query";
       $accountTable = $db->prepare($query);
       $accountTable->execute();
-
+      echo "executed query";
       // Check to see if we have the right account
       if (mysqli_fetch_assoc($accountTable)) {
          while($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
