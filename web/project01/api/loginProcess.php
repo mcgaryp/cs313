@@ -22,7 +22,8 @@
    if (isset($_POST['login'])) {
       echo "entered first if<br>";
       // Get database
-      $db = getDB();
+      
+      $db = getBD();
 
       $query = "SELECT * FROM account WHERE username = 'porter' AND password = 'password'";
       echo "query: $query";
