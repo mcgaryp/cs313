@@ -34,7 +34,7 @@
       if ($row = $accountTable->fetch((PDO::FETCH_ASSOC))) {
          echo "entered account table if<br>";
          $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
-         echo "Account: $account<br>";
+         echo "Account: $account->id<br>";
       } else {
          echo "Please input correct username and password<br>";
          header("../index.php", true);
@@ -52,7 +52,7 @@
          echo "Did enter profile loop<br>";
          $profile = $row["nick_name"];
          array_push($profiles, $profile);
-         echo "profile: $profile<br>";
+         echo "profile: $profile[0]<br>";
       }
    } else {
       echo "could not find login<br>";
