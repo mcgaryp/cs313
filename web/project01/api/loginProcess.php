@@ -49,9 +49,10 @@
       if ($profileTable->fetch(PDO::FETCH_ASSOC)) {
          // Logged in successful
          while($row = $profileTable->fetch(PDO::FETCH_ASSOC)) {
-            echo "Did enter profile loop";
+            echo "Did enter profile loop<br>";
             $profile = $row["nick_name"];
             array_push($profiles, $profile);
+            echo "profile: $profile<br>";
          }
       } else {
          // failed to find any profiles to the account!
