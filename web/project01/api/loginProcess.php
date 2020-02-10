@@ -26,17 +26,18 @@
       $db = getBD();
 
       $query = "SELECT * FROM account WHERE username = 'porter' AND password = 'password'";
-      echo "query: $query";
+      echo "query: $query<br>";
       $accountTable = $db->prepare($query);
       $accountTable->execute();
-      echo "executed query";
+      echo "executed query<br>";
       // Check to see if we have the right account
-      if (mysqli_fetch_assoc($accountTable)) {
+      if ($accountTable->fetch((PDO::FETCH_ASSOC))) {
          while($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
             $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
+            echo $account . "<br>";
          }
       } else {
-         echo "Please input correct username and password";
+         echo "Please input correct username and password<br>";
          exit;
       }
 
@@ -54,10 +55,10 @@
          }
       } else {
          // failed to find any profiles to the account!
-         echo "Failed to do that thing";
+         echo "Failed to do that thing<br>";
       }
    } else {
-      echo "could not find login";
+      echo "could not find login<br>";
    }
 
    // set the session variables
