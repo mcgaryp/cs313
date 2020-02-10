@@ -31,35 +31,33 @@
       $accountTable->execute();
       echo "executed query<br>";
       // Check to see if we have the right account
-      if ($accountTable->fetch((PDO::FETCH_ASSOC))) {
-         while($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
-            $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
-            echo "Account: $account<br>";
-         }
+      if ($row = $accountTable->fetch((PDO::FETCH_ASSOC))) {
+         echo "entered account table if<br>";
+         $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
+         echo "Account: $account<br>";
       } else {
          echo "Please input correct username and password<br>";
+         header("../index.php", true);
          exit;
       }
 
       $query = 'SELECT nick_name FROM account a INNER JOIN user_profile up ON up.account_id = a.account_id AND a.account_id = 2;';
+      echo "query: $query<br>";
       $profileTable = $db->prepare($query);
       $profileTable->execute();
+      echo "query executed<br>";
 
       // pull data from database
-      if ($profileTable->fetch(PDO::FETCH_ASSOC)) {
-         // Logged in successful
-         while($row = $profileTable->fetch(PDO::FETCH_ASSOC)) {
-            echo "Did enter profile loop<br>";
-            $profile = $row["nick_name"];
-            array_push($profiles, $profile);
-            echo "profile: $profile<br>";
-         }
-      } else {
-         // failed to find any profiles to the account!
-         echo "Failed to do that thing<br>";
+      while($row = $profileTable->fetch(PDO::FETCH_ASSOC)) {
+         echo "Did enter profile loop<br>";
+         $profile = $row["nick_name"];
+         array_push($profiles, $profile);
+         echo "profile: $profile<br>";
       }
    } else {
       echo "could not find login<br>";
+      header("../index.php", true);
+      exit;
    }
 
    // set the session variables
