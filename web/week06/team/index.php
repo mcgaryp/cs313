@@ -18,14 +18,14 @@
             </div>
             <div class="col">
                <textarea class="form-control" placeholder="Content" name content></textarea>
-                  <select id="inputFood" class="form-control" name="food">
+                  <select id="inputTopic" class="form-control" name="topic">
                      <?php
                         $statement = $db->prepare("SELECT * FROM topic");
                         $statement->execute();
                         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                            $id   = $row['topic_id'];
-                           $food = $row['topic_name'];
-                           echo "<option value='$id'>$food</option>";
+                           $topic = $row['topic_name'];
+                           echo "<option value='$id'>$topic</option>";
                         }
                      ?>
                   </select>
