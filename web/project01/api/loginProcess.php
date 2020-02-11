@@ -70,7 +70,7 @@
 
       echo "trying print out some things <br>";
       print_r($_SESSION["Account"]);
-      echo $account;
+      // echo $account;
       print_r($profiles);
       
       // header("location: ../home.php", true);
