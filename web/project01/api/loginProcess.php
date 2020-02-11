@@ -36,7 +36,11 @@
       if ($row = $accountTable->fetch((PDO::FETCH_ASSOC))) {
          echo "entered account table if<br>";
          $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
-         echo "Account: $account->id<br>";
+         if (isset($account)) {
+            echo "Account: $account->id<br>";
+         } else {
+            echo "Failer to set account";
+         }
       } else {
          echo "Please input correct username and password<br>";
          header("../index.php", true);
