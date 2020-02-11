@@ -1,12 +1,14 @@
 <?php
 
-session_start();
+   include "classes/account/php";
 
-$_SESSION["current"] = "home.php";
+   session_start();
 
-if (isset($_SESSION["account"])) {
-   $account = $_SESSION["account"];
-}
+   $_SESSION["current"] = "home.php";
+
+   if (isset($_SESSION["account"])) {
+      $account = $_SESSION["account"];
+   }
 
 ?>
 
