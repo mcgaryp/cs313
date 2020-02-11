@@ -65,6 +65,8 @@
 
    // Get recently added top 10
 
+   print_r($_SESSION);
+
    ?> 
       <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
@@ -86,14 +88,11 @@
                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link" href="account.php">Account</a>
                </li>
 
                <!-- Dropdown -->
-               <li class="nav-item dropdown">
+               <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">Dropdown</a>
                   <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
@@ -101,7 +100,7 @@
                   <a class="dropdown-item" href="#">Another action</a>
                   <a class="dropdown-item" href="#">Something else here</a>
                   </div>
-               </li>
+               </li> -->
 
             </ul>
             <!-- Links -->
@@ -119,6 +118,7 @@
       </nav>
       <!--/.Navbar-->
 
+      <!-- This is a place holder to be implemented later with new tables i will introduce after the semester -->
       <div class="container">
          <div class="row justify-content-center pb-5">
             <div class="col-12">
