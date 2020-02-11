@@ -21,7 +21,7 @@ $db = get_db();
                <textarea class="form-control" placeholder="Content" name content></textarea>
             </div>
             <div class="col">
-               <select id="inputTopic" class="form-control" name="topic">
+               <select id="inputTopic" class="form-control" name="content">
                   <?php
                   $statement = $db->prepare("SELECT * FROM topic");
                   $statement->execute();
