@@ -69,7 +69,7 @@
       $_SESSION["profiles"] = $profiles;
 
       echo "trying print out some things <br>";
-      print_r($_SESSION);
+      print_r($_SESSION["Account"]);
       echo $account;
       print_r($profiles);
       
