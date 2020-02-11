@@ -14,28 +14,28 @@
                <input type="text" class="form-control" placeholder="Last name" name="last">
             </div>
             <div class="col">
-                  <select id="inputFood" class="form-control" name="food">
-                     <?php
+               <select id="inputFood" class="form-control" name="food">
+                  <?php
 
-                        // query db
-                        $statement = $db->prepare("SELECT * FROM w5_food");
-                        $statement->execute();
+                     // query db
+                     $statement = $db->prepare("SELECT * FROM w5_food");
+                     $statement->execute();
 
-                        // loop through results
-                        while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                           $id = $row['id'];
-                           $food = $row['food'];
-                           
-                           // output html option for each row
-                           echo "<option value='$id'>$food</option>";
-                        }
-                        
-                     ?>
-                  </select>
-               </div>
-               <div class="col">
-                  <button class="btn btn-primary" type="submit">Save me some food</button>
-               </div>
+                     // loop through results
+                     while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['id'];
+                        $food = $row['food'];
+
+                        // output html option for each row
+                        echo "<option value='$id'>$food</option>";
+                     }
+                     
+                  ?>
+               </select>
+            </div>
+            <div class="col">
+               <button class="btn btn-primary" type="submit">Save me some food</button>
+            </div>
          </div>
       </form>
    </div>
