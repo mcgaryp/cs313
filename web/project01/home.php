@@ -1,5 +1,7 @@
 <?php
 
+   include "classes/account.php";
+
    session_start();
 
    $_SESSION["current"] = "home.php";
@@ -88,7 +90,7 @@
                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="account.php">Account</a>
+                  <a class="nav-link" href="accountSettings.php">Account</a>
                </li>
 
                <!-- Dropdown -->
