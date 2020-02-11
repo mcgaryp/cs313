@@ -1,3 +1,5 @@
+<?php
+
 // Account class object
    class Account {
       public $account_id;
@@ -12,3 +14,5 @@
          $this->email = $email;
       }
    }
+
+?>
