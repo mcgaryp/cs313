@@ -33,7 +33,7 @@
       $accountTable->execute();
       echo "executed query<br>";
       // Check to see if we have the right account
-      while ($row = $accountTable->fetch((PDO::FETCH_ASSOC))) {
+      while ($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
          echo "entered account table if<br>";
          $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
          if (isset($account)) {
