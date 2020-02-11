@@ -1,9 +1,5 @@
 <?php
 
-   session_start();
-
-   require "dbConnect.php";
-
    // Account class object
    class Account {
       public $account_id;
@@ -18,6 +14,10 @@
          $this->email = $email;
       }
    }
+
+   session_start();
+
+   require "dbConnect.php";
 
    if (isset($_POST['login'])) {
       // Get database
