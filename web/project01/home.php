@@ -67,7 +67,7 @@
 
    // Get recently added top 10
 
-   print_r($_SESSION);
+   // print_r($_SESSION);
 
    ?> 
       <!--Navbar-->
