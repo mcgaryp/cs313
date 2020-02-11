@@ -18,18 +18,17 @@
             </div>
             <div class="col">
                <textarea class="form-control" placeholder="Content" name content></textarea>
-                  <!-- <select id="inputFood" class="form-control" name="food">
+                  <select id="inputFood" class="form-control" name="food">
                      <?php
-                        // $statement = $db->prepare("SELECT * FROM w6_food");
-                        // $statement->execute();
-                        // while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-                        // {
-                        //    $id   = $row['id'];
-                        //    $food = $row['food'];
-                        //    echo "<option value='$id'>$food</option>";
-                        // }
+                        $statement = $db->prepare("SELECT * FROM topic");
+                        $statement->execute();
+                        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                           $id   = $row['topic_id'];
+                           $food = $row['topic_name'];
+                           echo "<option value='$id'>$food</option>";
+                        }
                      ?>
-                  </select> -->
+                  </select>
             </div>
             <div class="col">
                <button class="btn btn-primary" type="submit">Save me some SCRIPTURE</button>
