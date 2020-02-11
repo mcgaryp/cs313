@@ -17,7 +17,7 @@
                <input type="number" class="form-control" placeholder="Verse" name="verse">
             </div>
             <div class="col">
-               <textarea class="form-control" placeholder="Content" name content>
+               <textarea class="form-control" placeholder="Content" name content></textarea>
                   <!-- <select id="inputFood" class="form-control" name="food">
                      <?php
                         // $statement = $db->prepare("SELECT * FROM w6_food");
