@@ -25,7 +25,7 @@
       
       $db = getBD();
 
-      $account = new Account();
+      // $account = new Account();
 
       $query = "SELECT * FROM account a WHERE a.username = 'porter' AND a.password = 'password';";
       echo "query: $query<br>";

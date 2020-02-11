@@ -6,6 +6,6 @@ select * from user_profile;
 
 select title, rating, year from movie m inner join movie_group mg on m.movie_id = mg.movie_id and mg.account_id = 2;
 
-select nick_name from account a inner join user_profile up on up.account_id = a.account_id and a.account_id = 2;
+select up.nick_name from account a inner join user_profile up on up.account_id = a.account_id and a.account_id = 2;
 
 SELECT * FROM account a WHERE a.username = 'porter' AND a.password = 'password';
