@@ -23,17 +23,18 @@
       // Get database
       $db = getBD();
 
-
       $query = "SELECT * FROM account a WHERE a.username = 'porter' AND a.password = 'password';";
       $accountTable = $db->prepare($query);
       $accountTable->execute();
       
       // Check to see if we have the right account
       if ($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
-         echo "entered account table if<br>";
          $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
+      } else {
+         header("../index.php", true);
       }
 
+      // Get the account set up
       $query = 'SELECT nick_name FROM account a INNER JOIN user_profile up ON up.account_id = a.account_id AND a.account_id = 2;';
       $profileTable = $db->prepare($query);
       $profileTable->execute();
@@ -50,15 +51,13 @@
       $_SESSION["account"] = $account;
       $_SESSION["profiles"] = $profiles;
       
-      print_r($_SESSION);
-      // header("location: ../home.php", true);
+      // direct to the next page
+      header("location: ../home.php", true);
 
    } else {
+      // Failed to login with stuff on button click
       header("../index.php", true);
       exit;
    }
 
-   // Used as a reference
-   // https://www.youtube.com/watch?v=PXugYdXCBck
-
-   ?>
+?>
