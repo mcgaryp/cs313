@@ -13,7 +13,7 @@ CREATE TABLE scripture (
    book           TEXT     NOT NULL,
    chapter        INTEGER  NOT NULL,
    verse          INTEGER  NOT NULL,
-   content        TEXT     NOT NULL,
+   content        TEXT     NOT NULL
 );
 
 CREATE TABLE linker (
