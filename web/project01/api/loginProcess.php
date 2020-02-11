@@ -25,6 +25,8 @@
       
       $db = getBD();
 
+      $account;
+
       $query = "SELECT * FROM account a WHERE a.username = 'porter' AND a.password = 'password'";
       echo "query: $query<br>";
       $accountTable = $db->prepare($query);
@@ -47,28 +49,31 @@
       $profileTable->execute();
       echo "query executed<br>";
 
+      $profiles = [];
+
       // pull data from database
       while($row = $profileTable->fetch(PDO::FETCH_ASSOC)) {
          echo "Did enter profile loop<br>";
          $profile = $row["nick_name"];
          array_push($profiles, $profile);
-         echo "profile: $profiles[0]<br>";
+         echo "profile: $profile<br>";
       }
+
+      // set the session variables
+      $_SESSION["account"] = $account;
+      $_SESSION["profiles"] = $profiles;
+
+      echo "trying print out some things <br>";
+      echo $account;
+      print_r($profiles);
+      
+      // header("location: ../home.php", true);
+
    } else {
       echo "could not find login<br>";
       header("../index.php", true);
       exit;
    }
-
-   // set the session variables
-   $_SESSION["account"] = $account;
-   $_SESSION["profiles"] = $profiles;
-
-   echo "trying print out some things <br>";
-   echo $account;
-   print_r($profiles);
-   
-   // header("location: ../home.php", true);
 
    // Used as a reference
    // https://www.youtube.com/watch?v=PXugYdXCBck
