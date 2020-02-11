@@ -33,7 +33,7 @@
       $accountTable->execute();
       echo "executed query<br>";
       // Check to see if we have the right account
-      if ($row = $accountTable->fetch((PDO::FETCH_ASSOC))) {
+      while ($row = $accountTable->fetch((PDO::FETCH_ASSOC))) {
          echo "entered account table if<br>";
          $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
          if (isset($account)) {
@@ -41,11 +41,12 @@
          } else {
             echo "Failer to set account";
          }
-      } else {
-         echo "Please input correct username and password<br>";
-         header("../index.php", true);
-         exit;
       }
+      // } else {
+      //    echo "Please input correct username and password<br>";
+      //    header("../index.php", true);
+      //    exit;
+      // }
 
       $query = 'SELECT nick_name FROM account a INNER JOIN user_profile up ON up.account_id = a.account_id AND a.account_id = 2;';
       echo "query: $query<br>";
