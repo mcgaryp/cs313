@@ -28,9 +28,10 @@
             header("../index.php", true);
          } 
 
+         // Check the account if correct or not
          if ($account->id == null) {
             echo "Id was NULL";
-            header("location: ../index.php?error=Incorrect Username or Password", true);
+            header("location: ../index.php/?error=Incorrect Username or Password", true);
             echo "failed to exit";
             die();
          }
@@ -47,6 +48,7 @@
             $profile = $row["nick_name"];
             array_push($profiles, $profile);
          }
+
       } catch (Exception $e) {
          echo "Error with DB. Details: $e";
          die();
