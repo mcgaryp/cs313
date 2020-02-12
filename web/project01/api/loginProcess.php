@@ -20,7 +20,7 @@
       
       $query = 'SELECT * FROM account a WHERE a.username = :user AND a.password = :pass;';
       $accountTable = $db->prepare($query);
-      $accountTable->bindValue(':user', $_POST["username"]);
+      $accountTable->bindValue(':user', $user);
       $accountTable->bindValue(':pass', $pass);
       $accountTable->execute();
 
