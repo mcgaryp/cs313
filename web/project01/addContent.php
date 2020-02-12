@@ -68,7 +68,7 @@ print_r($_SESSION);
          </div>
 
          <!-- Movie Description -->
-         <div class="col mb-3">
+         <div class="col mb-3 form-group">
             <label for="movieDescription">Movie Description</label>
             <textarea class="form-control is-valid" id="movieDescription" placeholder="Required example textarea" name="desc" required></textarea>
             <div class="invalid-feedback">
@@ -83,15 +83,15 @@ print_r($_SESSION);
                <label class="custom-control-label" for="customSwitch1">Toggle for URL Image or File (.png, .jpg, etc...)</label>
             </div> -->
 
-            <!-- Image URL -->
-            <div class="col mb-3 form-group">
-               <input type="text" class="form-control is-valid" id="movieImageURL" placeholder="Movie Image URL" name="image" required>
-               <div class="invalid-feedback">
-                  We need to have a pretty picture!
-               </div>
+         <!-- Image URL -->
+         <div class="col mb-3 form-group">
+            <input type="text" class="form-control is-valid" id="movieImageURL" placeholder="Movie Image URL" name="image" required>
+            <div class="invalid-feedback">
+               We need to have a pretty picture!
             </div>
+         </div>
 
-            <!-- Image File
+         <!-- Image File
             <div class=" col mb-3 custom-file hidden">
                Comming Soon!
                <input type="file" class="custom-file-input" id="movieImage" placeholder="Choose file..." name="file" disabled>
@@ -109,7 +109,7 @@ print_r($_SESSION);
 
          <!-- Submit Button -->
          <div class="col mx-auto">
-            <button class="btn btn-primary mt-5" type="submit" name="add">Submit form</button>
+            <button class="btn btn-primary" type="submit" name="add">Submit form</button>
          </div>
       </form>
    </div>

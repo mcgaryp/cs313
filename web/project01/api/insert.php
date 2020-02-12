@@ -92,5 +92,3 @@
       $desc = $_POST["desc"];
       $image = $_POST["image"];
    }
-
-?>
