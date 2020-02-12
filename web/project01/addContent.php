@@ -8,11 +8,11 @@ $_SESSION["current"] = "addContent";
 
 print_r($_SESSION);
 
-if (isset($_SESSION["account"])) {
-   $account = $_SESSION["account"];
-} else {
-   header("location: index.php");
-}
+// if (isset($_SESSION["account"])) {
+//    $account = $_SESSION["account"];
+// } else {
+//    header("location: index.php");
+// }
 
 ?>
 <!DOCTYPE html>
