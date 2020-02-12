@@ -34,12 +34,34 @@ print_r($_SESSION);
    <div class="container">
       <form class="was-validated" method="POST" action="api/insert.php">
 
-         <!-- Movie Title -->
-         <div class="col-md-4 mb-3">
-            <label for="validationServer01">Movie Title</label>
-            <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
-            <div class="valid-feedback">
-               Looks good!
+         <div class="form-row">
+            <!-- Movie Title -->
+            <div class="col-md-4 mb-3">
+               <label for="validationServer01">Movie Title</label>
+               <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Mark" required>
+               <div class="valid-feedback">
+                  Looks good!
+               </div>
+            </div>
+
+            <!-- Movie Rating -->
+            <div class="col form-group">
+               <select class="custom-select" required>
+                  <option value="">Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+               </select>
+               <div class="invalid-feedback">Example invalid custom select feedback</div>
+            </div>
+
+            <!-- Movie creation Year -->
+            <div class="col-md-3 mb-3">
+               <label for="validationServer05">Year Made</label>
+               <input type="number" class="form-control is-invalid" id="validationServer05" maxlength="4" required>
+               <div class="invalid-feedback">
+                  Please provide a valid zip.
+               </div>
             </div>
          </div>
 
@@ -49,26 +71,6 @@ print_r($_SESSION);
             <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
             <div class="invalid-feedback">
                Please enter a message in the textarea.
-            </div>
-         </div>
-
-         <!-- Movie Rating -->
-         <div class="form-group">
-            <select class="custom-select" required>
-               <option value="">Open this select menu</option>
-               <option value="1">One</option>
-               <option value="2">Two</option>
-               <option value="3">Three</option>
-            </select>
-            <div class="invalid-feedback">Example invalid custom select feedback</div>
-         </div>
-
-         <!-- Movie creation Year -->
-         <div class="col-md-3 mb-3">
-            <label for="validationServer05">Year Made</label>
-            <input type="number" class="form-control is-invalid" id="validationServer05" maxlength="4" required>
-            <div class="invalid-feedback">
-               Please provide a valid zip.
             </div>
          </div>
 
