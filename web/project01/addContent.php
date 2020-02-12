@@ -80,22 +80,22 @@ print_r($_SESSION);
             <!-- Switch for Url or file -->
             <div class="col mb-3 custom-control custom-switch">
                <input type="checkbox" class="custom-control-input" id="customSwitch1">
-               <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+               <label class="custom-control-label" for="customSwitch1">Toggle for URL Image or File (.png, .jpg, etc...)</label>
             </div>
 
             <!-- Image URL -->
             <div class="col mb-3 form-group">
-               <label for="movieTitle">Movie Image URL</label>
-               <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Image" name="image" required>
+               <label for="movieImage">Movie Image URL</label>
+               <input type="text" class="form-control is-valid" id="movieImage" placeholder="Movie Image" name="image" required>
                <div class="invalid-feedback">
                   We need to have a pretty picture!
                </div>
             </div>
 
-            <div class="custom-file">
+            <div class="custom-file hidden">
                Comming Soon!
                <input type="file" class="custom-file-input" id="movieImage" placeholder="Choose file..." name="file" disabled>
-               <label class="custom-file-label" for="movieImage">Select a Movie mp4</label>
+               <label class="custom-file-label" for="movieImage">Select a Movie Image</label>
                <div class="invalid-feedback">We need to have a pretty picture!</div>
             </div>
          </div>
@@ -103,8 +103,8 @@ print_r($_SESSION);
          <!-- Movie Image -->
          <div class="custom-file">
             Comming Soon!
-            <input type="file" class="custom-file-input" id="movieImage" placeholder="Choose file..." name="file" disabled>
-            <label class="custom-file-label" for="movieImage">Select a Movie mp4</label>
+            <input type="file" class="custom-file-input" id="movieFile" placeholder="Choose file..." name="file" disabled>
+            <label class="custom-file-label" for="movieFile">Select a Movie mp4</label>
             <div class="invalid-feedback">We need to have a pretty picture!</div>
          </div>
 
