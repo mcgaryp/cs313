@@ -29,7 +29,8 @@
          } 
 
          if ($account->id == null) {
-            header("location: ../index.php?error=Incorrect Username or Password");
+            header("location: ../index.php?error=Incorrect Username or Password", true);
+            die();
          }
 
          // Get the account set up
