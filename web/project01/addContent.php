@@ -39,9 +39,6 @@ print_r($_SESSION);
             <div class="col-md-4 mb-3 form-group">
                <label for="movieTitle">Movie Title</label>
                <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" required>
-               <div class="valid-feedback">
-                  Can't wait to watch it!
-               </div>
                <div class="invalid-feedback">
                   What movie are we gonna watch?
                </div>
