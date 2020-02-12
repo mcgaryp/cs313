@@ -25,7 +25,8 @@
          if ($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
             $account = new Account($row['account_id'], $row['username'], $row['password'], $row['email']);
          } else {
-            header("../index.php", true);
+            echo "i am in here";
+            // header("../index.php", true);
          } 
          $_SESSION["account"] = $account;
          print_r($_SESSION);
