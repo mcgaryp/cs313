@@ -26,9 +26,11 @@
       }
 
       // Get the account set up
-      $query = 'SELECT nick_name FROM account a INNER JOIN user_profile up ON up.account_id = a.account_id AND a.account_id = 2;';
+      $query = "SELECT nick_name FROM account a INNER JOIN user_profile up ON up.account_id = a.account_id AND a.account_id = $account->id;";
       $profileTable = $db->prepare($query);
       $profileTable->execute();
+
+      echo $query;
 
       $profiles = [];
 
