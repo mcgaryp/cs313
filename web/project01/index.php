@@ -48,7 +48,7 @@
 								<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 							</div>
 
-							<small id="error" class="form-text text-danger"><?=$error?></small>
+							<small id="error" class="form-text text-danger text-center"><?=$error?></small>
 
 							<div class="container-login100-form-btn m-t-32">
 								<button class="login100-form-btn" name="login">

@@ -29,11 +29,15 @@
 					Create Account
             </span>
             <div class="login100-form p-b-33 p-t-5">
-               <form class="validate-form" method="POST" action="home.php">
-                  <div class="wrap-input100 validate-input" data-validate = "Enter username">
+               <form class="validate-form" method="POST" action="api/insert.php">
+						<div class="wrap-input100 validate-input" data-validate="Enter E-mail">
+							<input class="input100" type="email" name="email" placeholder="e-mail">
+							<span class="focus-input100" data-placeholder="&#57344;"></span>
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Enter Username">
                      <input class="input100" type="text" name="username" placeholder="Username">
                      <span class="focus-input100" data-placeholder="&#xe82a;"></span>
-                  </div>
+						</div>
 
                   <div class="wrap-input100 validate-input" data-validate="Enter password">
                      <input class="input100" type="password" name="pass" placeholder="Password">
@@ -46,7 +50,7 @@
                   </div>
                   
                   <div class="container-login100-form-btn m-t-32">
-                     <button class="login100-form-btn" type="submit">
+                     <button class="login100-form-btn" type="submit" name="create">
                         Create Account
                      </button>
                   </div>
