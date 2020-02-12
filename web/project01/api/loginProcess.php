@@ -12,13 +12,16 @@
          $pass = $_POST["password"];
       }
 
+      $user = 'porter';
+      $password = 'password';
+
       echo $user."<br>";
       echo $pass."<br>";
 
       // Get database
       $db = getBD();
       
-      $query = 'SELECT * FROM account a WHERE a.username = \':user\' AND a.password = \':pass\';';
+      $query = "SELECT * FROM account a WHERE a.username = :user AND a.password = :pass;";
       $accountTable = $db->prepare($query);
       $accountTable->bindValue(':user', $user);
       $accountTable->bindValue(':pass', $pass);
