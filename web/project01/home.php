@@ -1,11 +1,15 @@
 <?php
 
-include "classes/account.php";
+   include "classes/account.php";
 
-session_start();
+   session_start();
 
-$_SESSION["current"] = "home.php";
-$_SESSION["account"] = $account;
+   $_SESSION["current"] = "home.php";
+   if (isset($_SESSION["account"])) {
+      $account = $_SESSION["account"];
+   } else {
+      header("location: index.php", true);
+   }
 
 ?>
 
@@ -47,14 +51,6 @@ $_SESSION["account"] = $account;
 
    // Get data from db
    require_once "api/dbConnect.php";
-
-   // necessary to catch errors thrown from other files
-   function exception_error_handler($errno, $errstr, $errfile, $errline)
-   {
-      throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
-   }
-
-   set_error_handler("exception_error_handler");
 
    $db = getBD();
 
