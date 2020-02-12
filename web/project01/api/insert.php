@@ -75,7 +75,7 @@
 
    // Are we adding movies?
    if (isset($_POST["add"])) {
-
+      echo "Made it!";
    }
 
 ?>

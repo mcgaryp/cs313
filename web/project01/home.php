@@ -72,8 +72,6 @@
    }
    // Get recently added top 10
 
-   print_r($_SESSION);
-
    ?>
    <!--Navbar-->
    <nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
