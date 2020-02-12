@@ -76,12 +76,12 @@ print_r($_SESSION);
             </div>
          </div>
 
-         <div class="row">
-            <!-- Switch for Url or file -->
+         <!-- <div class="row">
+            Switch for Url or file
             <div class="col mb-3 custom-control custom-switch">
                <input type="checkbox" class="custom-control-input" id="customSwitch1">
                <label class="custom-control-label" for="customSwitch1">Toggle for URL Image or File (.png, .jpg, etc...)</label>
-            </div>
+            </div> -->
 
             <!-- Image URL -->
             <div class="col mb-3 form-group">
