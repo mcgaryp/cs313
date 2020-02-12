@@ -27,18 +27,8 @@ include "../classes/account.php";
          if ($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
             $account = new Account($row['account_id'], $row['username'], $row['password'], $row['email']);
          } else {
-            echo "i am in here";
-            // header("../index.php", true);
-         } 
-         echo gettype($account);
-         $_SESSION["account"] = $account;
-         print_r($_SESSION);
-
-         // Check the account if correct or not
-         if ($account->id == null) {
-            echo "Id was NULL";
+            // if failed to find account
             header("location: ../index.php?error=Incorrect Username or Password", true);
-            echo "failed to exit";
          }
 
          // Get the account set up
