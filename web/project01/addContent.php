@@ -76,8 +76,15 @@ print_r($_SESSION);
             </div>
          </div>
 
-         <!-- Image URL -->
-         <div class="col mb-3 form-group">
+         <div class="row">
+            <!-- Switch for Url or file -->
+            <div class="col mb-3 custom-control custom-switch">
+               <input type="checkbox" class="custom-control-input" id="customSwitch1">
+               <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+            </div>
+
+            <!-- Image URL -->
+            <div class="col mb-3 form-group">
                <label for="movieTitle">Movie Image URL</label>
                <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Image" name="image" required>
                <div class="invalid-feedback">
@@ -85,11 +92,19 @@ print_r($_SESSION);
                </div>
             </div>
 
+            <div class="custom-file">
+               Comming Soon!
+               <input type="file" class="custom-file-input" id="movieImage" placeholder="Choose file..." name="file" disabled>
+               <label class="custom-file-label" for="movieImage">Select a Movie mp4</label>
+               <div class="invalid-feedback">We need to have a pretty picture!</div>
+            </div>
+         </div>
+
          <!-- Movie Image -->
          <div class="custom-file">
             Comming Soon!
             <input type="file" class="custom-file-input" id="movieImage" placeholder="Choose file..." name="file" disabled>
-            <label class="custom-file-label" for="movieImage">Select a Movie Image</label>
+            <label class="custom-file-label" for="movieImage">Select a Movie mp4</label>
             <div class="invalid-feedback">We need to have a pretty picture!</div>
          </div>
 

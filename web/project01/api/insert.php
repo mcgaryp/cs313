@@ -78,8 +78,19 @@
       echo "Made it!";
       // Verify year made
       if (isset($_POST["year"])) {
-         echo date("Y");
+         $date = date("Y");
+         if ($_POST["year"] > $date || $_POST["year"] < 1888) {
+            header("location: ../addContent?error=Enter Vailid Year", true);
+            die;
+         }
       }
+
+      // Set variables
+      $title = $_POST["title"];
+      $rating = $_POST["rating"];
+      $year = $_POST["year"];
+      $desc = $_POST["desc"];
+      $ = $_POST[""];
    }
 
 ?>
