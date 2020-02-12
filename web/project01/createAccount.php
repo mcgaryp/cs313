@@ -1,5 +1,12 @@
 <?php
+
+if (isset($_GET["error"])) {
+	$error = $_GET["error"];
+}
+
 session_start();
+
+$_SESSION["current"] = "createAccount";
 
 ?>
 <!DOCTYPE html>
@@ -58,6 +65,8 @@ session_start();
 								</div>
 							</div>
 						</div>
+
+						<small id="error" class="form-text text-danger text-center"><?=$error?></small>
 
 						<div class="container-login100-form-btn m-t-32">
 							<button class="login100-form-btn" type="submit" name="create">
