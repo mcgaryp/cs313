@@ -5,6 +5,9 @@ include "classes/account.php";
 session_start();
 
 $_SESSION["current"] = "addContent";
+
+print_r($_SESSION);
+
 if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
 } else {
@@ -45,7 +48,7 @@ if (isset($_SESSION["account"])) {
          <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
          <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
       </div>
-      
+
       <div class="custom-control custom-radio mb-3">
          <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
          <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
