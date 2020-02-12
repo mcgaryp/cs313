@@ -47,7 +47,7 @@ print_r($_SESSION);
             <!-- Movie Rating -->
             <div class="col-md-4 mb-3 form-group">
                <label for="ratingSelect">Movie Rating</label>
-               <select class="custom-select" id="ratingSelect" required>
+               <select class="custom-select is-valid" id="ratingSelect" required>
                   <option value="">Open this select menu</option>
                   <!-- add php here for selector items -->
                   <option value="1"></option>
@@ -80,11 +80,14 @@ print_r($_SESSION);
          <div class="custom-file">
             <input type="file" class="custom-file-input" id="validatedCustomFile" required>
             <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-            <div class="invalid-feedback">Example invalid custom file feedback</div>
+            <div class="invalid-feedback">Example invalid custom file feedback</div> /
+
          </div>
 
          <!-- Submit Button -->
-         <button class="btn btn-primary mt-5" type="submit" name="add">Submit form</button>
+         <div class="col justify-content">
+            <button class="btn btn-primary mt-5" type="submit" name="add">Submit form</button>
+         </div>
       </form>
    </div>
 
