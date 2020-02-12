@@ -1,8 +1,12 @@
 <?php 
 
-session_start();
+	if (isset($_GET["error"])) {
+		$error = $_GET["error"];
+	}
 
-$_SESSION["current"] = "project01"; 
+	session_start();
+
+	$_SESSION["current"] = "project01"; 
 
 ?>
 <!DOCTYPE html>
@@ -44,7 +48,7 @@ $_SESSION["current"] = "project01";
 								<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 							</div>
 
-							<small id="error" class="form-text text-danger"></small>
+							<small id="error" class="form-text text-danger"><?=$error?></small>
 
 							<div class="container-login100-form-btn m-t-32">
 								<button class="login100-form-btn" name="login">
