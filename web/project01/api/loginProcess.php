@@ -1,6 +1,8 @@
 <?php
 
-   include "../classes/account.php";
+use function PHPSTORM_META\type;
+
+include "../classes/account.php";
 
    session_start();
 
@@ -28,13 +30,14 @@
             echo "i am in here";
             // header("../index.php", true);
          } 
+         echo gettype($account);
          $_SESSION["account"] = $account;
          print_r($_SESSION);
 
          // Check the account if correct or not
          if ($account->id == null) {
             echo "Id was NULL";
-            header("location: ../index.php/?error=Incorrect Username or Password", true);
+            // header("location: ../index.php/?error=Incorrect Username or Password", true);
             echo "failed to exit";
          }
 
