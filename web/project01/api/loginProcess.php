@@ -20,19 +20,19 @@
 
       // Get database
       $db = getBD();
-      
-      $query = "SELECT * FROM account a WHERE a.username = :user AND a.password = :pass;";
+      try {
+         $query = "SELECT * FROM account a WHERE a.username = :user AND a.password = :pass;";
       $accountTable = $db->prepare($query);
       $accountTable->bindValue(':user', $user);
       $accountTable->bindValue(':pass', $pass);
       $accountTable->execute();
 
-      echo $query;
+      echo $query."<br>";
       
       // Check to see if we have the right account
       if ($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
          echo "Made it to this<br>";
-         $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
+         $account = new Account($row['account_id'], $row['username'], $row['password'], $row['email']);
       } else {
          header("../index.php", true);
       }
