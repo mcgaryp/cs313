@@ -92,9 +92,10 @@ print_r($_SESSION);
                </div>
             </div>
 
-            <div class="custom-file hidden">
+            <!-- Image File -->
+            <div class=" col mb-3 custom-file hidden">
                Comming Soon!
-               <input type="file" class="custom-file-input" id="movieImage" placeholder="Choose file..." name="file" disabled>
+               <input type="file" class="custom-file-input" id="movieImage" placeholder="Choose file..." name="file">
                <label class="custom-file-label" for="movieImage">Select a Movie Image</label>
                <div class="invalid-feedback">We need to have a pretty picture!</div>
             </div>
