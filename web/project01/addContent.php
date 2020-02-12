@@ -33,31 +33,26 @@ print_r($_SESSION);
 
    <div class="container">
       <form class="was-validated" method="POST" action="api/insert.php">
+
+         <!-- Movie Title -->
+         <div class="col-md-4 mb-3">
+            <label for="validationServer01">Movie Title</label>
+            <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+            <div class="valid-feedback">
+               Looks good!
+            </div>
+         </div>
+
+         <!-- Movie Description -->
          <div class="mb-3">
-            <label for="validationTextarea">Textarea</label>
+            <label for="validationTextarea">Movie Description</label>
             <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
             <div class="invalid-feedback">
                Please enter a message in the textarea.
             </div>
          </div>
 
-         <div class="custom-control custom-checkbox mb-3">
-            <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
-            <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
-            <div class="invalid-feedback">Example invalid feedback text</div>
-         </div>
-
-         <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-            <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
-         </div>
-
-         <div class="custom-control custom-radio mb-3">
-            <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
-            <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
-            <div class="invalid-feedback">More example invalid feedback text</div>
-         </div>
-
+         <!-- Movie Rating -->
          <div class="form-group">
             <select class="custom-select" required>
                <option value="">Open this select menu</option>
@@ -68,13 +63,24 @@ print_r($_SESSION);
             <div class="invalid-feedback">Example invalid custom select feedback</div>
          </div>
 
+         <!-- Movie creation Year -->
+         <div class="col-md-3 mb-3">
+            <label for="validationServer05">Year Made</label>
+            <input type="number" class="form-control is-invalid" id="validationServer05" maxlength="4" required>
+            <div class="invalid-feedback">
+               Please provide a valid zip.
+            </div>
+         </div>
+
+         <!-- Movie Image -->
          <div class="custom-file">
             <input type="file" class="custom-file-input" id="validatedCustomFile" required>
             <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
             <div class="invalid-feedback">Example invalid custom file feedback</div>
          </div>
 
-         <button class="btn btn-primary" type="submit" name="add">Submit form</button>
+         <!-- Submit Button -->
+         <button class="btn btn-primary mt-5" type="submit" name="add">Submit form</button>
       </form>
    </div>
 
