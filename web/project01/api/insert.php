@@ -99,7 +99,7 @@
       // Try to add to DB
       try {
          // query
-         $query = 'INSERT INTO movies (image,title,description,rating,year) VALUES (:img, :title, :desc, :rat, :year);';
+         $query = 'INSERT INTO movie (image,title,description,rating,year) VALUES (:img, :title, :desc, :rat, :year);';
          $movieTable = $db ->prepare($query);
          // bind values
          $movieTable->bindValue(':img', $image);
