@@ -12,12 +12,6 @@
          $pass = $_POST["password"];
       }
 
-      $user = 'porter';
-      $password = 'password';
-
-      echo $user."<br>";
-      echo $pass."<br>";
-
       // Get database
       $db = getBD();
       try {
@@ -26,26 +20,22 @@
          $accountTable->bindValue(':user', $user);
          $accountTable->bindValue(':pass', $pass);
          $accountTable->execute();
-
-         echo $query."<br>";
          
          // Check to see if we have the right account
          if ($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
-            echo "Made it to this<br>";
             $account = new Account($row['account_id'], $row['username'], $row['password'], $row['email']);
          } else {
             header("../index.php", true);
          } 
 
-         echo " Setting up Querey<br>";
-         echo gettype($account->id)."<br>";
+         if ($account->id == null) {
+            header("location: ../index.php?error=Incorrect Username or Password");
+         }
 
          // Get the account set up
          $query = "SELECT nick_name FROM account a INNER JOIN user_profile up ON up.account_id = a.account_id AND a.account_id = $account->id;";
          $profileTable = $db->prepare($query);
          $profileTable->execute();
-
-         echo $query;
 
          $profiles = [];
 
