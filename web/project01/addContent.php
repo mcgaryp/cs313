@@ -60,7 +60,7 @@ print_r($_SESSION);
             <!-- Movie creation Year -->
             <div class="col-md-3 mb-3 form-group">
                <label for="yearMade">Year Made</label>
-               <input type="number" class="form-control is-invalid" id="yearMade" maxlength="4" required>
+               <input type="number" class="form-control is-invalid" id="yearMade" maxlength="4" minlength="4" required>
                <div class="invalid-feedback">
                   Please provide a valid year.
                </div>
