@@ -130,7 +130,6 @@
       }
 
       // TODO set up toast info
-
-      // send back to add content
+      // Send back to add content
       header("location: ../addContent?success=$title added to your collection");
    }
