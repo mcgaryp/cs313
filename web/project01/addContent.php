@@ -85,8 +85,7 @@ print_r($_SESSION);
 
             <!-- Image URL -->
             <div class="col mb-3 form-group">
-               <label for="movieImage">Movie Image URL</label>
-               <input type="text" class="form-control is-valid" id="movieImage" placeholder="Movie Image" name="image" required>
+               <input type="text" class="form-control is-valid" id="movieImage" placeholder="Movie Image URL" name="image" required>
                <div class="invalid-feedback">
                   We need to have a pretty picture!
                </div>
@@ -106,7 +105,7 @@ print_r($_SESSION);
             Comming Soon!
             <input type="file" class="custom-file-input" id="movieFile" placeholder="Choose file..." name="file" disabled>
             <label class="custom-file-label" for="movieFile">Select a Movie mp4</label>
-            <div class="invalid-feedback">We need to have a pretty picture!</div>
+            <div class="invalid-feedback">We need to have a movie to watch!</div>
          </div>
 
          <!-- Submit Button -->
