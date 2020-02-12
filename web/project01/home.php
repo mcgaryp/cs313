@@ -59,21 +59,24 @@ $_SESSION["account"] = $account;
    $db = getBD();
 
    // Just get some of the movies preparation
-   $movieDB = $db->prepare("SELECT * FROM movie m INNER JOIN movie_group mg on m.movie_id = mg.movie_id AND mg.account_id = $account->id");
-   $movieDB->execute();
+   try {
+      $movieDB = $db->prepare("SELECT * FROM movie m INNER JOIN movie_group mg on m.movie_id = mg.movie_id AND mg.account_id = $account->id");
+      $movieDB->execute();
 
-   // Create array to hold all the users movies
-   $movies = array();
+      // Create array to hold all the users movies
+      $movies = array();
 
-   // Pass it into the object
-   while ($row = $movieDB->fetch(PDO::FETCH_ASSOC)) {
-      $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
-      array_push($movies, $movie);
+      // Pass it into the object
+      while ($row = $movieDB->fetch(PDO::FETCH_ASSOC)) {
+         $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
+         array_push($movies, $movie);
+      }
+   } catch (Exception $e) {
+      echo "Error with DB. Details: $e";
    }
-
    // Get recently added top 10
 
-   // print_r($_SESSION);
+   print_r($_SESSION);
 
    ?>
    <!--Navbar-->
