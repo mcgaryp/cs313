@@ -77,7 +77,9 @@
    if (isset($_POST["add"])) {
       echo "Made it!";
       // Verify year made
-      if ($_POST["year"])
+      if (isset($_POST["year"])) {
+         echo date("Y");
+      }
    }
 
 ?>
