@@ -45,6 +45,7 @@ if (isset($_SESSION["account"])) {
          <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
          <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
       </div>
+      
       <div class="custom-control custom-radio mb-3">
          <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
          <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
@@ -66,6 +67,7 @@ if (isset($_SESSION["account"])) {
          <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
          <div class="invalid-feedback">Example invalid custom file feedback</div>
       </div>
+
       <button class="btn btn-primary" type="submit" name="add">Submit form</button>
    </form>
 
