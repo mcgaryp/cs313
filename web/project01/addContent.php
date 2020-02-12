@@ -38,7 +38,7 @@ print_r($_SESSION);
             <!-- Movie Title -->
             <div class="col-md-4 mb-3 form-group">
                <label for="movieTitle">Movie Title</label>
-               <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" required>
+               <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" required>
                <div class="invalid-feedback">
                   What movie are we gonna watch?
                </div>
@@ -47,10 +47,10 @@ print_r($_SESSION);
             <!-- Movie Rating -->
             <div class="col-md-4 mb-3 form-group">
                <label for="ratingSelect">Movie Rating</label>
-               <select class="custom-select is-valid" id="ratingSelect" required>
+               <select class="custom-select is-valid" id="ratingSelect" name="rating" required>
                   <option value="">Open this select menu</option>
                   <!-- add php here for selector items -->
-                  <option value="1"></option>
+                  <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                </select>
@@ -60,7 +60,7 @@ print_r($_SESSION);
             <!-- Movie creation Year -->
             <div class="col-md-4 mb-3 form-group">
                <label for="yearMade">Year Made</label>
-               <input type="number" class="form-control is-valid" id="yearMade" maxlength="4" minlength="4" required>
+               <input type="number" class="form-control is-valid" id="yearMade" maxlength="4" minlength="4" name="year" required>
                <div class="invalid-feedback">
                   Please provide a valid year.
                </div>
@@ -69,19 +69,28 @@ print_r($_SESSION);
 
          <!-- Movie Description -->
          <div class="mb-3">
-            <label for="validationTextarea">Movie Description</label>
-            <textarea class="form-control is-valid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+            <label for="movieDescription">Movie Description</label>
+            <textarea class="form-control is-valid" id="movieDescription" placeholder="Required example textarea" name="desc" required></textarea>
             <div class="invalid-feedback">
-               Please enter a message in the textarea.
+               Please enter a movie description in the textarea.
             </div>
          </div>
 
+         <!-- Image URL -->
+         <div class="col-md-4 mb-3 form-group">
+               <label for="movieTitle">Movie Image URL</label>
+               <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Image" name="image" required>
+               <div class="invalid-feedback">
+                  We need to have a pretty picture!
+               </div>
+            </div>
+
          <!-- Movie Image -->
          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="movieImage" placeholder="Choose file..." required>
+            Comming Soon!
+            <input type="file" class="custom-file-input" id="movieImage" placeholder="Choose file..." name="file" disabled>
             <label class="custom-file-label" for="movieImage">Select a Movie Image</label>
             <div class="invalid-feedback">We need to have a pretty picture!</div>
-
          </div>
 
          <!-- Submit Button -->

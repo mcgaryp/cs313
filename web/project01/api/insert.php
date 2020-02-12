@@ -76,6 +76,8 @@
    // Are we adding movies?
    if (isset($_POST["add"])) {
       echo "Made it!";
+      // Verify year made
+      if ($_POST["year"])
    }
 
 ?>
