@@ -68,7 +68,7 @@ print_r($_SESSION);
          </div>
 
          <!-- Movie Description -->
-         <div class="mb-3">
+         <div class="col mb-3">
             <label for="movieDescription">Movie Description</label>
             <textarea class="form-control is-valid" id="movieDescription" placeholder="Required example textarea" name="desc" required></textarea>
             <div class="invalid-feedback">
@@ -77,7 +77,7 @@ print_r($_SESSION);
          </div>
 
          <!-- Image URL -->
-         <div class="col-md-4 mb-3 form-group">
+         <div class="col mb-3 form-group">
                <label for="movieTitle">Movie Image URL</label>
                <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Image" name="image" required>
                <div class="invalid-feedback">
@@ -94,7 +94,7 @@ print_r($_SESSION);
          </div>
 
          <!-- Submit Button -->
-         <div class="col justify-content">
+         <div class="col mx-auto">
             <button class="btn btn-primary mt-5" type="submit" name="add">Submit form</button>
          </div>
       </form>
