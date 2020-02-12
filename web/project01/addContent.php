@@ -58,7 +58,7 @@ print_r($_SESSION);
             </div>
 
             <!-- Movie creation Year -->
-            <div class="col-md-3 mb-3 form-group">
+            <div class="col-md-4 mb-3 form-group">
                <label for="yearMade">Year Made</label>
                <input type="number" class="form-control is-valid" id="yearMade" maxlength="4" minlength="4" required>
                <div class="invalid-feedback">
