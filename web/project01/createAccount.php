@@ -26,7 +26,7 @@ session_start();
 
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-			<div class="wrap-login100 p-t-30 p-b-50">
+			<div class="wrap-login101 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
 					Create Account
 				</span>
@@ -37,7 +37,7 @@ session_start();
 							<div class="col">
 								<div class="wrap-input100 validate-input" data-validate="Enter E-mail">
 									<input class="input100" type="email" name="email" placeholder="e-mail">
-									<span class="focus-input100" data-placeholder="&#x1F4EA;"></span>
+									<span class="focus-input100" data-placeholder="&#x2709;"></span>
 								</div>
 
 								<div class="wrap-input100 validate-input" data-validate="Enter password">

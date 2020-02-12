@@ -179,14 +179,20 @@ iframe {
   background-color: rgba(0,0,0,0.65);
 }
 
-.wrap-login100, .wrap-login101 {
-  width: 390px;
+.wrap-login100 {
   border-radius: 10px;
   overflow: hidden;
 
   background: transparent;
 }
 
+.wrap-login101 {
+  width: 390px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  background: transparent;
+}
 
 /*------------------------------------------------------------------
 [ Form ]*/
