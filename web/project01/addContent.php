@@ -39,7 +39,7 @@ if (isset($_SESSION["account"])) {
 <body>
    <?php include "nav.php";
    if (isset($_SESSION["toast"])) {
-      
+
       if ($_SESSION["toast"] == true) { ?>
 
          <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">

@@ -132,5 +132,5 @@
       // TODO set up toast info
       $_SESSION["toast"] = true;
       // Send back to add content
-      header("location: ../addContent?success=$title added to your collection");
+      header("location: ../addContent.php?success=$title added to your collection");
    }
