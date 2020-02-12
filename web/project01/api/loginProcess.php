@@ -59,7 +59,7 @@
       print_r($_SESSION);
       
       // direct to the next page
-      // header("location: ../home.php", true);
+      header("location: ../home.php", true);
 
    } else {
       // Failed to login with stuff on button click
