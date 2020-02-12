@@ -78,9 +78,8 @@ print_r($_SESSION);
 
          <!-- Movie Image -->
          <div class="custom-file">
-            <label for="movieImage">Select a Movie Image</label>
             <input type="file" class="custom-file-input" id="movieImage" placeholder="Choose file..." required>
-            <label class="custom-file-label" for="movieImage"></label>
+            <label class="custom-file-label" for="movieImage">Select a Movie Image</label>
             <div class="invalid-feedback">We need to have a pretty picture!</div>
 
          </div>
