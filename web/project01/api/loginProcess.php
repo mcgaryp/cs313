@@ -7,13 +7,21 @@
    require "dbConnect.php";
 
    if (isset($_POST['login'])) {
+      if (isset($_POST["username"]) && isset($_POST["password"])) {
+         $user = $_POST["username"];
+         $pass = $_POST["password"];
+      }
+
+      echo $user."<br>";
+      echo $pass."<br>";
+
       // Get database
       $db = getBD();
       
       $query = 'SELECT * FROM account a WHERE a.username = :user AND a.password = :pass;';
       $accountTable = $db->prepare($query);
       $accountTable->bindValue(':user', $_POST["username"]);
-      $accountTable->bindValue(':pass', $_POST["password"]);
+      $accountTable->bindValue(':pass', $pass);
       $accountTable->execute();
 
       echo $query;
