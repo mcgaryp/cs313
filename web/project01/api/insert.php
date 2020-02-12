@@ -80,7 +80,7 @@
       if (isset($_POST["year"])) {
          $date = date("Y");
          if ($_POST["year"] > $date || $_POST["year"] < 1888) {
-            header("location: ../addContent?error=Enter Vailid Year", true);
+            header("location: ../addContent.php?error=Enter Vailid Year", true);
             die;
          }
       }
