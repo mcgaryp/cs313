@@ -15,10 +15,10 @@
       <li class="nav-item <?php if ($_SESSION["current"] == "home") { echo "active"; }?>">
          <a class="nav-link" href="home.php">Home <span class="sr-only"><?php if ($_SESSION["current"] == "home") { echo "(current)"; }?></span></a>
       </li>
-      <li class="nav-item <?php if ($_SESSION["current"] == "home") { echo "active"; }?>">
+      <li class="nav-item <?php if ($_SESSION["current"] == "account") { echo "active"; }?>">
          <a class="nav-link" href="accountSettings.php">Account<span class="sr-only"><?php if ($_SESSION["current"] == "account") { echo "(current)"; }?></span></a>
       </li>
-      <li class="nav-item <?php if ($_SESSION["current"] == "home") { echo "active"; }?>">
+      <li class="nav-item <?php if ($_SESSION["current"] == "addContent") { echo "active"; }?>">
          <a class="nav-link" href="addContent.php">Add Movies<span class="sr-only"><?php if ($_SESSION["current"] == "addContent") { echo "(current)"; }?></span></a>
       </li> 
       
