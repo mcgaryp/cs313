@@ -32,7 +32,7 @@
                <form class="validate-form" method="POST" action="api/insert.php">
 						<div class="wrap-input100 validate-input" data-validate="Enter E-mail">
 							<input class="input100" type="email" name="email" placeholder="e-mail">
-							<span class="focus-input100" data-placeholder="&#57344;"></span>
+							<span class="focus-input100" data-placeholder="&#x1F4EA;"></span>
 						</div>
 						<div class="wrap-input100 validate-input" data-validate="Enter Username">
                      <input class="input100" type="text" name="username" placeholder="Username">
