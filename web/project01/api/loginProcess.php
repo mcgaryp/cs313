@@ -27,6 +27,8 @@
          } else {
             header("../index.php", true);
          } 
+         $_SESSION["account"] = $account;
+         print_r($_SESSION);
 
          // Check the account if correct or not
          if ($account->id == null) {
