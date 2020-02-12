@@ -41,7 +41,7 @@
          echo gettype($account->id)."<br>";
 
          // Get the account set up
-         $query = "SELECT nick_name FROM account a INNER JOIN user_profile up ON up.account_id = a.account_id AND a.account_id = $account->id;";
+         $query = "SELECT nick_name FROM account a INNER JOIN user_profile up ON up.account_id = a.account_id AND a.account_id = 2;";
          $profileTable = $db->prepare($query);
          $profileTable->execute();
 
@@ -62,6 +62,8 @@
       // set the session variables
       $_SESSION["account"] = $account;
       $_SESSION["profiles"] = $profiles;
+
+      print_r($_SESSION);
       
       // direct to the next page
       // header("location: ../home.php", true);
