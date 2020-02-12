@@ -91,4 +91,40 @@
       $year = $_POST["year"];
       $desc = $_POST["desc"];
       $image = $_POST["image"];
+
+      // create movie in database
+      require "dbConnect.php";
+      $db = getBD();
+
+      // Try to add to DB
+      try {
+         // query
+         $query = 'INSERT INTO movies (image,title,description,rating,year) VALUES (:img, :title, :desc, :rat, :year);';
+         $movieTable = $db ->prepare($query);
+         // bind values
+         $movieTable->bindValue(':img', $image);
+         $movieTable->bindValue(':title', $title);
+         $movieTable->bindValue(':desc', $desc);
+         $movieTable->bindValue(':rat', $rating);
+         $movieTable->bindValue(':year', $year);
+         $movieTable->execute();
+      
+         // Catch erros
+      } catch (Exception $e) {
+         echo "Error with DB. Details: $e";
+         die;
+      }
+
+      // make sure the account is updated and the linker table
+      $movieId = $db->lastInsertId("movie_movie_id_seq");
+      $account = $_SESSION["account"];
+
+      $query = "INSERT INTO movie_group (movie_id, account_id) VALUES ($movieId,$account->id);";
+      $movieGroupTable = $db->prepare($query);
+      $movieGroupTable->execute();
+
+      // TODO set up toast info
+
+      // send back to add content
+      header("location: ../addContent?success=$title added to your collection");
    }

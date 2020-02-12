@@ -6,6 +6,14 @@ session_start();
 
 $_SESSION["current"] = "addContent";
 
+if (isset($_GET['success'])) {
+   $success = $_GET['success'];
+}
+
+if (isset($_GET['error'])) {
+   $error = $_GET['error'];
+}
+
 print_r($_SESSION);
 
 // if (isset($_SESSION["account"])) {
@@ -30,6 +38,45 @@ print_r($_SESSION);
 
 <body>
    <?php include "nav.php"; ?>
+
+   <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+      <!-- Position it -->
+      <div style="position: absolute; top: 0; right: 0;">
+         <?php if (isset($error)) { ?>
+            <!-- Error Toast -->
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+               <div class="toast-header">
+                  <img src="..." class="rounded mr-2" alt="...">
+                  <strong class="mr-auto text-danger">Error</strong>
+                  <small class="text-muted">just now</small>
+                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="toast-body">
+                  <?= $error ?>
+               </div>
+            </div>
+         <?php } ?>
+
+         <?php if (isset($success)) { ?>
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+               <div class="toast-header">
+                  <img src="..." class="rounded mr-2" alt="...">
+                  <strong class="mr-auto">Success</strong>
+                  <small class="text-muted">just now</small>
+                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="toast-body">
+                  <?= $success ?>
+               </div>
+            </div>
+         <?php } ?>
+
+      </div>
+   </div>
 
    <div class="container">
       <form class="was-validated" method="POST" action="api/insert.php">
