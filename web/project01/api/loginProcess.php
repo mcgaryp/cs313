@@ -29,6 +29,7 @@
          } 
 
          if ($account->id == null) {
+            echo "Id was NULL";
             header("location: ../index.php?error=Incorrect Username or Password", true);
             echo "failed to exit";
             die();
