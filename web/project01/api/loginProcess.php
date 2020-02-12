@@ -28,10 +28,13 @@
       
       // Check to see if we have the right account
       if ($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
+         echo "Made it to this<br>";
          $account = new Account($row["account_id"], $row["username"], $row["password"], $row["email"]);
       } else {
          header("../index.php", true);
       }
+
+      echo " Setting up Querey<br>";
 
       // Get the account set up
       $query = "SELECT nick_name FROM account a INNER JOIN user_profile up ON up.account_id = a.account_id AND a.account_id = $account->id;";
