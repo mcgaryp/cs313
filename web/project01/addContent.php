@@ -36,31 +36,36 @@ print_r($_SESSION);
 
          <div class="form-row">
             <!-- Movie Title -->
-            <div class="col-md-4 mb-3">
-               <label for="validationServer01">Movie Title</label>
-               <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Mark" required>
+            <div class="col-md-4 mb-3 form-group">
+               <label for="movieTitle">Movie Title</label>
+               <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" required>
                <div class="valid-feedback">
-                  Looks good!
+                  Can't wait to watch it!
+               </div>
+               <div class="invalid-feedback">
+                  What movie are we gonna watch?
                </div>
             </div>
 
             <!-- Movie Rating -->
-            <div class="col form-group">
-               <select class="custom-select" required>
+            <div class="col-md-4 mb-3 form-group">
+               <label for="ratingSelect">Movie Rating</label>
+               <select class="custom-select" id="ratingSelect" required>
                   <option value="">Open this select menu</option>
-                  <option value="1">One</option>
+                  <!-- add php here for selector items -->
+                  <option value="1"></option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                </select>
-               <div class="invalid-feedback">Example invalid custom select feedback</div>
+               <div class="invalid-feedback">Choose a rating!</div>
             </div>
 
             <!-- Movie creation Year -->
-            <div class="col-md-3 mb-3">
-               <label for="validationServer05">Year Made</label>
-               <input type="number" class="form-control is-invalid" id="validationServer05" maxlength="4" required>
+            <div class="col-md-3 mb-3 form-group">
+               <label for="yearMade">Year Made</label>
+               <input type="number" class="form-control is-invalid" id="yearMade" maxlength="4" required>
                <div class="invalid-feedback">
-                  Please provide a valid zip.
+                  Please provide a valid year.
                </div>
             </div>
          </div>
