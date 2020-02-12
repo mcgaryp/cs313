@@ -29,6 +29,7 @@ if (isset($_SESSION["account"])) {
 </head>
 
 <body>
+   <?php include "nav.php";?>
    <form class="was-validated" method="POST" action="api/insert.php">
       <div class="mb-3">
          <label for="validationTextarea">Textarea</label>

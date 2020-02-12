@@ -4,7 +4,7 @@
 
    session_start();
 
-   $_SESSION["current"] = "home.php";
+   $_SESSION["current"] = "account";
 
    if (isset($_SESSION["account"])) {
       $account = $_SESSION["account"];
@@ -24,7 +24,9 @@
       <script src="https://kit.fontawesome.com/79ad9f74b9.js" crossorigin="anonymous"></script>
    </head>
    <body>
-      <?php print_r($_SESSION);?>
+      <?php 
+         include "nav.php";
+      print_r($_SESSION);?>
       <div>User account by the uername of: <?=$account->username?></div>
       <!-- Scripts -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
