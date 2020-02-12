@@ -90,7 +90,7 @@
       $rating = $_POST["rating"];
       $year = $_POST["year"];
       $desc = $_POST["desc"];
-      $ = $_POST[""];
+      $image = $_POST["image"];
    }
 
 ?>
