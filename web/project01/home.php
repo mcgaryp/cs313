@@ -5,6 +5,7 @@ include "classes/account.php";
 session_start();
 
 $_SESSION["current"] = "home.php";
+$_SESSION["account"] = $account;
 
 ?>
 
@@ -58,7 +59,7 @@ $_SESSION["current"] = "home.php";
    $db = getBD();
 
    // Just get some of the movies preparation
-   $movieDB = $db->prepare("SELECT * FROM movie m INNER JOIN movie_group mg on m.movie_id = mg.movie_id AND mg.account_id = 2");
+   $movieDB = $db->prepare("SELECT * FROM movie m INNER JOIN movie_group mg on m.movie_id = mg.movie_id AND mg.account_id = $account->id");
    $movieDB->execute();
 
    // Create array to hold all the users movies
