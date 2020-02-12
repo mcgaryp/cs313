@@ -55,7 +55,7 @@ include "../classes/account.php";
 
       print_r($_SESSION);
       
-      // direct to the next page
+      // direct to the next page TODO make a profiles page to show the different profiles on the account
       header("location: ../home.php", true);
 
    } else {
