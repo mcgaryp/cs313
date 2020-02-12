@@ -50,7 +50,7 @@
       $accountId = $db->lastInsertId("account_account_id_seq");
 
       try {
-         $query = "SELECT * FROM account WHERE account_id = $accountID";
+         $query = "SELECT * FROM account WHERE account_id = $accountId";
          $state = $db->prepare($query);
          $state->execute();
          
