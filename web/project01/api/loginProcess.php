@@ -9,10 +9,14 @@
    if (isset($_POST['login'])) {
       // Get database
       $db = getBD();
-
-      $query = "SELECT * FROM account a WHERE a.username = 'porter' AND a.password = 'password';";
+      
+      $query = 'SELECT * FROM account a WHERE a.username = :user AND a.password = :pass;';
       $accountTable = $db->prepare($query);
+      $accountTable->bindValue(':user', $_POST["username"]);
+      $accountTable->bindValue(':pass', $_POST["password"]);
       $accountTable->execute();
+
+      echo $query;
       
       // Check to see if we have the right account
       if ($row = $accountTable->fetch(PDO::FETCH_ASSOC)) {
@@ -39,7 +43,7 @@
       $_SESSION["profiles"] = $profiles;
       
       // direct to the next page
-      header("location: ../home.php", true);
+      // header("location: ../home.php", true);
 
    } else {
       // Failed to login with stuff on button click
