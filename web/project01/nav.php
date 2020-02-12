@@ -12,7 +12,7 @@
 
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
-         
+
          <!-- Home -->
          <li class="nav-item 
             <?php if ($_SESSION["current"] == "home") {
@@ -25,11 +25,11 @@
          </li>
 
          <!-- Dropdown Account options-->
-         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle 
-               <?php if ($_SESSION["current"] == "account/$extension") {
-                  echo "active";
-               } ?>" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+         <li class="nav-item dropdown 
+            <?php if ($_SESSION["current"] == "account") {
+               echo "active";
+            } ?>">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
 
                <!-- settings tab -->
