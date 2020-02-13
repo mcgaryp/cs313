@@ -39,6 +39,13 @@ if (isset($_SESSION["account"])) {
    <?php include "nav.php"; ?>
 
    <!-- What movie are we going to delete? -->
+   <form action="delete.php" method="POST">
+      
+   </form>
+
+   <!-- Title -->
+
+   <!-- Show List of Movies that have that title with option to delete-->
 
    <!-- Confirm that you want to delete it! -->
 
