@@ -151,11 +151,13 @@ if (isset($_SESSION["account"])) {
          </div>
 
          <!-- Movie Description -->
-         <div class="col mb-3 form-group">
-            <label for="movieDescription">Movie Description</label>
-            <textarea class="form-control is-valid" id="movieDescription" placeholder="Required example textarea" name="desc" required></textarea>
-            <div class="invalid-feedback">
-               Please enter a movie description in the textarea.
+         <div class="row">
+            <div class="col mb-3 form-group">
+               <label for="movieDescription">Movie Description</label>
+               <textarea class="form-control is-valid" id="movieDescription" placeholder="Required example textarea" name="desc" required></textarea>
+               <div class="invalid-feedback">
+                  Please enter a movie description in the textarea.
+               </div>
             </div>
          </div>
 
@@ -167,10 +169,12 @@ if (isset($_SESSION["account"])) {
             </div> -->
 
          <!-- Image URL -->
-         <div class="col mb-3 form-group">
-            <input type="text" class="form-control is-valid" id="movieImageURL" placeholder="Movie Image URL" name="image" required>
-            <div class="invalid-feedback">
-               We need to have a pretty picture!
+         <div class="row">
+            <div class="col mb-3 form-group">
+               <input type="text" class="form-control is-valid" id="movieImageURL" placeholder="Movie Image URL" name="image" required>
+               <div class="invalid-feedback">
+                  We need to have a pretty picture!
+               </div>
             </div>
          </div>
 
