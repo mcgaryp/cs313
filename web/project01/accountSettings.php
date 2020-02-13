@@ -82,19 +82,19 @@ if (isset($_SESSION["account"])) {
             <h2>Settings</h2>
          </div>
          <div class="col">
-            <div class="row">
+            <div class="row px-3">
                Parental Controls (Coming Eventually)
             </div>
-            <div class="row">
+            <div class="row px-3">
                Manage Download Devices (Coming Eventually)
             </div>
-            <div class="row">
+            <div class="row px-3">
                <a href="addContent.php">Add Movies</a>
             </div>
-            <div class="row">
+            <div class="row px-3">
                <a href="delete.php">Remove Movies</a>
             </div>
-            <div class="row">
+            <div class="row px-3">
                <a href="api/logout.php">Sign out</a>
             </div>
          </div>
@@ -113,13 +113,13 @@ if (isset($_SESSION["account"])) {
                   Manage Profiles (Coming Soon)
                </div>
             </div>
-            <div class="row">
+            <div class="row px-3">
                Subtitles (Coming Eventually)
             </div>
-            <div class="row">
+            <div class="row px-3">
                Playback Settings (Coming Eventually)
             </div>
-            <div class="row">
+            <div class="row px-3">
                Subtitle Appearance (Coming Eventually)
             </div>
          </div>
