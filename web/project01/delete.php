@@ -39,35 +39,38 @@ if (isset($_SESSION["account"])) {
 <body>
    <?php include "nav.php"; ?>
 
-   <!-- What movie are we going to delete? -->
-   <form action="delete.php" method="POST" class="was-validated">
-      <div class="row">
-         <div class="form-group">
+   <div class="container">
+      <!-- What movie are we going to delete? -->
+      <form action="delete.php" method="POST" class="was-validated">
+         <div class="row">
+            <div class="form-group">
 
-            <!-- Title -->
-            <div class="col-md-4 mb-3">
-               <label for="movieTitle">Movie Title</label>
-               <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" required>
-               <div class="invalid-feedback">
-                  What movie are we gonna remove?
+               <!-- Title -->
+               <div class="col-md-4 mb-3">
+                  <label for="movieTitle">Movie Title</label>
+                  <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" required>
+                  <div class="invalid-feedback">
+                     What movie are we gonna remove?
+                  </div>
                </div>
+
+               <!-- Button to confirm -->
+               <div class="col-md-4 mb-3">
+                  <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+               </div>
+
             </div>
 
-            <!-- Button to confirm -->
-            <div class="col-md-4 mb-3">
-               <button class="btn btn-danger" type="submit" name="delete">Delete</button>
-            </div>
-            
          </div>
 
-      </div>
 
+      </form>
 
-   </form>
+      <!-- Show List of Movies that have that title with option to delete-->
 
-   <!-- Show List of Movies that have that title with option to delete-->
-
-   <!-- Confirm that you want to delete it! -->
+      <!-- Confirm that you want to delete it! -->
+      
+   </div>
 
    <!-- Scripts -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
