@@ -5,8 +5,6 @@
    session_start();
 
    $_SESSION["current"] = "home";
-
-   print_r($_SESSION);
    
    if (isset($_SESSION["account"])) {
       $account = $_SESSION["account"];

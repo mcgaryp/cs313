@@ -5,6 +5,7 @@ include "classes/account.php";
 session_start();
 
 $_SESSION["current"] = "addContent";
+unset($_SESSION["extension"]);
 
 if (isset($_GET['success'])) {
    $success = $_GET['success'];
@@ -13,8 +14,6 @@ if (isset($_GET['success'])) {
 if (isset($_GET['error'])) {
    $error = $_GET['error'];
 }
-
-print_r($_SESSION);
 
 if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
