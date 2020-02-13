@@ -66,6 +66,7 @@ if (isset($_SESSION["account"])) {
       </form>
       <?php 
          if (isset($delete)) {
+            echo "made it!";
             $title = $_POST["title"];
 
             require "api/dbConnect.php";
