@@ -8,8 +8,8 @@ session_start();
 $_SESSION["current"] = "deleteContent";
 unset($_SESSION["extension"]);
 
-if (isset($_POST['success'])) {
-   $success = $_POST['success'];
+if (isset($_GET['success'])) {
+   $success = $_GET['success'];
 }
 
 if (isset($_GET['error'])) {
@@ -73,9 +73,10 @@ if (isset($_SESSION["account"])) {
             $db = getBD();
             // search database for title
             try {
-               $query = 'SELECT * FROM movie m inner join movie_group mg on title = :title and mg.account_id = '.$account->id.' and m.movie_id = mg.movie_id;';
+               $query = 'SELECT * FROM movie m inner join movie_group mg on title = :title and mg.account_id = 2 and m.movie_id = mg.movie_id;';
                $state = $db->prepare($query);
                $state->bindValue(':title', $title);
+               // $state->bindValue(':id', $account->id);
                $state->execute();
 
                $movies= array();
