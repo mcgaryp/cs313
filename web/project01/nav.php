@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
 
    <!-- Navbar brand -->
-   <a class="navbar-brand" href="#">McMovies</a>
+   <a class="navbar-brand" href="home.php">McMovies</a>
 
    <!-- Collapse button -->
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>

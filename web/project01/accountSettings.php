@@ -40,32 +40,36 @@ if (isset($_SESSION["account"])) {
          <div class="col">
             <div class="row">
                <div class="col">
-                  Email
+                  <div><?=$account->email?></div>
                </div>
                <div class="col">
-                  Change email
-               </div>
-            </div>
-            <div class="row">
-               <div class="col">
-                  Password: ********
-               </div>
-               <div class="col">
-                  Change password
+                  <a href="">Change email</a>
                </div>
             </div>
             <div class="row">
                <div class="col">
-                  Phone: 479-696-1637
+                  <div>
+                     Password: ********
+                  </div>
                </div>
                <div class="col">
-                  Change phone number
+                  <a href="">Change password</a>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col">
+                  <div>
+                     Phone: 479-696-1637
+                  </div>
+               </div>
+               <div class="col">
+                  <a href="">Change phone number</a>
                </div>
             </div>
             <hr>
             <div class="row">
                <div class="col">
-                  Billing
+                  Billing (Coming Soon)
                </div>
             </div>
          </div>
@@ -77,19 +81,19 @@ if (isset($_SESSION["account"])) {
          </div>
          <div class="col">
             <div class="row">
-               Parental Controls
+               Parental Controls (Coming Eventually)
             </div>
             <div class="row">
-               Manage Download Devices
+               Manage Download Devices (Coming Eventually)
             </div>
             <div class="row">
-               Add Movies
+               <a href="addContent.php">Add Movies</a>
             </div>
             <div class="row">
-               Delet Movies
+               <a href="delete.php">Remove Movies</a>
             </div>
             <div class="row">
-               Sign out
+               <a href="api/logout.php">Sign out</a>
             </div>
          </div>
       </div>
@@ -101,20 +105,20 @@ if (isset($_SESSION["account"])) {
          <div class="col">
             <div class="row">
                <div class="col">
-                  Profile Name and Icon
+                  Profile Name and Icon (Coming Soon)
                </div>
                <div class="col">
-                  Manage Profiles
+                  Manage Profiles (Coming Soon)
                </div>
             </div>
             <div class="row">
-               Subtitles
+               Subtitles (Coming Eventually)
             </div>
             <div class="row">
-               Playback Settings
+               Playback Settings (Coming Eventually)
             </div>
             <div class="row">
-               Subtitle Appearance
+               Subtitle Appearance (Coming Eventually)
             </div>
          </div>
       </div>
