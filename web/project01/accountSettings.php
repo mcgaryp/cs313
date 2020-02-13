@@ -70,6 +70,7 @@ if (isset($_SESSION["account"])) {
          </div>
       </div>
    </div>
+   <hr>
    <div class="row">
       <div class="col">
          <h2>Settings</h2>
