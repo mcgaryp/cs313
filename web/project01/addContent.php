@@ -195,8 +195,8 @@ if (isset($_SESSION["account"])) {
          </div> -->
 
          <!-- Submit Button -->
-         <div class="row">
-            <div class="col justify-content-center">
+         <div class="row justify-content-center">
+            <div class="col">
                <button class="btn btn-primary" type="submit" name="add">Submit form</button>
             </div>
          </div>
