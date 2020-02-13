@@ -33,7 +33,7 @@ if (isset($_SESSION["account"])) {
    <div class="container">
       <h1>Account</h1>
       <hr>
-      <div class="row">
+      <div class="row ">
          <div class="col">
             <h2>Membership & Billing</h2>
          </div>
@@ -100,10 +100,12 @@ if (isset($_SESSION["account"])) {
          </div>
          <div class="col">
             <div class="row">
-               Profile Name and Icon
-            </div>
-            <div class="row">
-               Manage Profiles
+               <div class="col">
+                  Profile Name and Icon
+               </div>
+               <div class="col">
+                  Manage Profiles
+               </div>
             </div>
             <div class="row">
                Subtitles
