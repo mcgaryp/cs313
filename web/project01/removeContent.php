@@ -16,8 +16,8 @@ if (isset($_GET['error'])) {
    $error = $_GET['error'];
 }
 
-if (isset($_GET['delete'])) {
-   $delete = $_GET['delete'];
+if (isset($_POST['delete'])) {
+   $delete = $_POST['delete'];
 }
 
 if (isset($_SESSION["account"])) {
