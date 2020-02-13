@@ -82,8 +82,10 @@ if (isset($_SESSION["account"])) {
                $movies= array();
 
                while($row->fetch(PDO::FETCH_ASSOC)) {
+                  echo "trying to add movie!";
                   $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
                   array_push($movies, $movie);
+                  echo "Added movie!";
                }
             } catch (Exception $e) {
                echo "Error with DB. Details: $e";
