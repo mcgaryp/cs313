@@ -15,11 +15,11 @@ if (isset($_GET['error'])) {
    $error = $_GET['error'];
 }
 
-if (isset($_SESSION["account"])) {
-   $account = $_SESSION["account"];
-} else {
-   header("location: index.php", true);
-}
+// if (isset($_SESSION["account"])) {
+//    $account = $_SESSION["account"];
+// } else {
+//    header("location: index.php", true);
+// }
 
 ?>
 <!DOCTYPE html>
@@ -37,6 +37,8 @@ if (isset($_SESSION["account"])) {
 
 <body>
    <?php include "nav.php"; ?>
+
+   <!--  -->
 
    <!-- Scripts -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
