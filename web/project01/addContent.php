@@ -101,9 +101,30 @@ if (isset($_SESSION["account"])) {
                <select class="custom-select is-valid" id="ratingSelect" name="rating" required>
                   <option value="">Open this select menu</option>
                   <!-- add php here for selector items -->
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <?php 
+
+                     // Get Ratings from data base
+                     require "api/dbConnect.php";
+                     $db = getBD();
+
+                     // create query
+                     $query = "SELECT * FROM common_lookup WHERE context = 'RATING';";
+                     $state = $db->prepare($query);
+
+                     // run query
+                     $state->execute();
+
+                     // get values and and pring them out with php to generate options
+                     try {
+                        while($row = $state->fetch(PDO::FETCH_ASSOC)) {
+                           $rating = $row["meaning"];
+                           echo "<option value='$rating'>$rating</option>";
+                        }
+                     } catch (Exception $e) {
+                        echo "Error with DB. Details: $e";
+                     }
+
+                  ?>
                </select>
                <div class="invalid-feedback">Choose a rating!</div>
             </div>

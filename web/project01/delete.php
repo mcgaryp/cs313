@@ -7,8 +7,8 @@ session_start();
 $_SESSION["current"] = "deleteContent";
 unset($_SESSION["extension"]);
 
-if (isset($_GET['success'])) {
-   $success = $_GET['success'];
+if (isset($_POST['success'])) {
+   $success = $_POST['success'];
 }
 
 if (isset($_GET['error'])) {
@@ -39,8 +39,8 @@ if (isset($_SESSION["account"])) {
    <?php include "nav.php"; ?>
 
    <!-- What movie are we going to delete? -->
-   <form action="delete.php" method="POST">
-      
+   <form action="delete.php" method="POST" class="was-validated">
+
    </form>
 
    <!-- Title -->
