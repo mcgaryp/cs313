@@ -30,104 +30,105 @@ if (isset($_SESSION["account"])) {
    <?php
    include "nav.php";
    print_r($_SESSION); ?>
-   <div>User account by the uername of: <?= $account->username ?></div>
-   <h1>Account</h1>
-   <hr>
-   <div class="row">
-      <div class="col">
-         <h2>Membership & Billing</h2>
-      </div>
-      <div class="col">
-         <div class="row">
-            <div class="col">
-               Email
-            </div>
-            <div class="col">
-               Change email
-            </div>
+   <div class="container">
+      <h1>Account</h1>
+      <hr>
+      <div class="row">
+         <div class="col">
+            <h2>Membership & Billing</h2>
          </div>
-         <div class="row">
-            <div class="col">
-               Password: ********
+         <div class="col">
+            <div class="row">
+               <div class="col">
+                  Email
+               </div>
+               <div class="col">
+                  Change email
+               </div>
             </div>
-            <div class="col">
-               Change password
+            <div class="row">
+               <div class="col">
+                  Password: ********
+               </div>
+               <div class="col">
+                  Change password
+               </div>
             </div>
-         </div>
-         <div class="row">
-            <div class="col">
-               Phone: 479-696-1637
+            <div class="row">
+               <div class="col">
+                  Phone: 479-696-1637
+               </div>
+               <div class="col">
+                  Change phone number
+               </div>
             </div>
-            <div class="col">
-               Change phone number
-            </div>
-         </div>
-         <hr>
-         <div class="row">
-            <div class="col">
-               Billing
-            </div>
-         </div>
-      </div>
-   </div>
-   <hr>
-   <div class="row">
-      <div class="col">
-         <h2>Settings</h2>
-      </div>
-      <div class="col">
-         <div class="row">
-            <div class="col">
-               Parental Controls
-            </div>
-            <div class="col">
-               Manage Download Devices
-            </div>
-            <div class="col">
-               Add Movies
-            </div>
-            <div class="col">
-               Delet Movies
-            </div>
-            <div class="col">
-               Sign out
+            <hr>
+            <div class="row">
+               <div class="col">
+                  Billing
+               </div>
             </div>
          </div>
       </div>
-   </div>
-   <hr>
-   <div class="row">
-      <div class="col">
-         <h2>My Profile</h2>
-      </div>
-      <div class="col">
-         <div class="row">
-            <div class="col">
-               Profile Name and Icon
-            </div>
-            <div class="col">
-               Manage Profiles
+      <hr>
+      <div class="row">
+         <div class="col">
+            <h2>Settings</h2>
+         </div>
+         <div class="col">
+            <div class="row">
+               <div class="col">
+                  Parental Controls
+               </div>
+               <div class="col">
+                  Manage Download Devices
+               </div>
+               <div class="col">
+                  Add Movies
+               </div>
+               <div class="col">
+                  Delet Movies
+               </div>
+               <div class="col">
+                  Sign out
+               </div>
             </div>
          </div>
-         <div class="row">
-            <div class="col">
-               Subtitles
+      </div>
+      <hr>
+      <div class="row">
+         <div class="col">
+            <h2>My Profile</h2>
+         </div>
+         <div class="col">
+            <div class="row">
+               <div class="col">
+                  Profile Name and Icon
+               </div>
+               <div class="col">
+                  Manage Profiles
+               </div>
             </div>
-            <div class="col">
-               Playback Settings
-            </div>
-            <div class="col">
-               Subtitle Appearance
+            <div class="row">
+               <div class="col">
+                  Subtitles
+               </div>
+               <div class="col">
+                  Playback Settings
+               </div>
+               <div class="col">
+                  Subtitle Appearance
+               </div>
             </div>
          </div>
       </div>
    </div>
 
-      <!-- Scripts -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-      <script src="" async defer></script>
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="" async defer></script>
 </body>
 
 </html>
