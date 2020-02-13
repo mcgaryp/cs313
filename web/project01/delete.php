@@ -15,11 +15,11 @@ if (isset($_GET['error'])) {
    $error = $_GET['error'];
 }
 
-// if (isset($_SESSION["account"])) {
-//    $account = $_SESSION["account"];
-// } else {
-//    header("location: index.php", true);
-// }
+if (isset($_SESSION["account"])) {
+   $account = $_SESSION["account"];
+} else {
+   header("location: index.php", true);
+}
 
 ?>
 <!DOCTYPE html>
