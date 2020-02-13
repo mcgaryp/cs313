@@ -101,28 +101,28 @@ if (isset($_SESSION["account"])) {
                <select class="custom-select is-valid" id="ratingSelect" name="rating" required>
                   <option value="">Select Rating</option>
                   <!-- add php here for selector items -->
-                  <?php 
+                  <?php
 
-                     // Get Ratings from data base
-                     require "api/dbConnect.php";
-                     $db = getBD();
+                  // Get Ratings from data base
+                  require "api/dbConnect.php";
+                  $db = getBD();
 
-                     // create query
-                     $query = "SELECT * FROM common_lookup WHERE context = 'RATING';";
-                     $state = $db->prepare($query);
+                  // create query
+                  $query = "SELECT * FROM common_lookup WHERE context = 'RATING';";
+                  $state = $db->prepare($query);
 
-                     // run query
-                     $state->execute();
+                  // run query
+                  $state->execute();
 
-                     // get values and and pring them out with php to generate options
-                     try {
-                        while($row = $state->fetch(PDO::FETCH_ASSOC)) {
-                           $rating = $row["meaning"];
-                           echo "<option value='$rating'>$rating</option>";
-                        }
-                     } catch (Exception $e) {
-                        echo "Error with DB. Details: $e";
+                  // get values and and pring them out with php to generate options
+                  try {
+                     while ($row = $state->fetch(PDO::FETCH_ASSOC)) {
+                        $rating = $row["meaning"];
+                        echo "<option value='$rating'>$rating</option>";
                      }
+                  } catch (Exception $e) {
+                     echo "Error with DB. Details: $e";
+                  }
 
                   ?>
                </select>
@@ -134,13 +134,13 @@ if (isset($_SESSION["account"])) {
                <label for="yearMade">Year Made</label>
                <select class="form-control is-valid" id="yearMade" name="year" required>
                   <option value="">Select Year</option>
-                  <?php 
+                  <?php
 
-                     $i = date("Y");
-                     while ( $i > 1887) {
-                        echo "<option value='$i'>$i</option>";
-                        $i--;
-                     }
+                  $i = date("Y");
+                  while ($i > 1887) {
+                     echo "<option value='$i'>$i</option>";
+                     $i--;
+                  }
 
                   ?>
                </select>
@@ -191,8 +191,10 @@ if (isset($_SESSION["account"])) {
          </div> -->
 
          <!-- Submit Button -->
-         <div class="col mx-auto">
-            <button class="btn btn-primary" type="submit" name="add">Submit form</button>
+         <div class="row">
+            <div class="col mx-auto">
+               <button class="btn btn-primary" type="submit" name="add">Submit form</button>
+            </div>
          </div>
       </form>
    </div>
