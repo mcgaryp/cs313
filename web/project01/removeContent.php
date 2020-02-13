@@ -66,8 +66,8 @@ if (isset($_SESSION["account"])) {
       </form>
       <?php 
          if (isset($delete)) {
-            echo "made it!";
             $title = $_POST["title"];
+            echo $title;
 
             require "api/dbConnect.php";
             $db = getBD();
@@ -79,7 +79,7 @@ if (isset($_SESSION["account"])) {
                // $state->bindValue(':id', $account->id);
                $state->execute();
 
-               $movies= array();
+               $movies = array();
 
                while($row->fetch(PDO::FETCH_ASSOC)) {
                   echo "trying to add movie!";
