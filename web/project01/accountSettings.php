@@ -36,12 +36,12 @@ if (isset($_SESSION["account"])) {
       <h1>Account</h1>
       <hr>
       <div class="row ">
-         <div class="col">
+         <div class="col text-black-50">
             <h2>Membership & Billing</h2>
          </div>
          <div class="col">
             <div class="row">
-               <div class="col">
+               <div class="col text-black-50">
                   <div><?=$account->email?></div>
                </div>
                <div class="col">
@@ -49,7 +49,7 @@ if (isset($_SESSION["account"])) {
                </div>
             </div>
             <div class="row">
-               <div class="col">
+               <div class="col text-black-50">
                   <div>
                      Password: ********
                   </div>
@@ -59,7 +59,7 @@ if (isset($_SESSION["account"])) {
                </div>
             </div>
             <div class="row">
-               <div class="col">
+               <div class="col text-black-50">
                   <div>
                      Phone: 479-696-1637
                   </div>
@@ -78,7 +78,7 @@ if (isset($_SESSION["account"])) {
       </div>
       <hr>
       <div class="row">
-         <div class="col">
+         <div class="col text-black-50">
             <h2>Settings</h2>
          </div>
          <div class="col">
@@ -101,7 +101,7 @@ if (isset($_SESSION["account"])) {
       </div>
       <hr>
       <div class="row">
-         <div class="col">
+         <div class="col text-black-50">
             <h2>My Profile</h2>
          </div>
          <div class="col">
