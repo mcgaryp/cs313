@@ -27,9 +27,9 @@ if (isset($_SESSION["account"])) {
 </head>
 
 <body>
-   <?php
-   include "nav.php";
-   print_r($_SESSION); ?>
+   <?php include "nav.php"; ?>
+
+   <!-- My settings -->
    <div class="container">
       <h1>Account</h1>
       <hr>
@@ -77,23 +77,19 @@ if (isset($_SESSION["account"])) {
          </div>
          <div class="col">
             <div class="row">
-               <div class="col">
-                  Parental Controls
-               </div>
-               <div class="col">
-                  Manage Download Devices
-               </div>
+               Parental Controls
             </div>
             <div class="row">
-               <div class="col">
-                  Add Movies
-               </div>
-               <div class="col">
-                  Delet Movies
-               </div>
-               <div class="col">
-                  Sign out
-               </div>
+               Manage Download Devices
+            </div>
+            <div class="row">
+               Add Movies
+            </div>
+            <div class="row">
+               Delet Movies
+            </div>
+            <div class="row">
+               Sign out
             </div>
          </div>
       </div>
@@ -104,23 +100,19 @@ if (isset($_SESSION["account"])) {
          </div>
          <div class="col">
             <div class="row">
-               <div class="col">
-                  Profile Name and Icon
-               </div>
-               <div class="col">
-                  Manage Profiles
-               </div>
+               Profile Name and Icon
             </div>
             <div class="row">
-               <div class="col">
-                  Subtitles
-               </div>
-               <div class="col">
-                  Playback Settings
-               </div>
-               <div class="col">
-                  Subtitle Appearance
-               </div>
+               Manage Profiles
+            </div>
+            <div class="row">
+               Subtitles
+            </div>
+            <div class="row">
+               Playback Settings
+            </div>
+            <div class="row">
+               Subtitle Appearance
             </div>
          </div>
       </div>
