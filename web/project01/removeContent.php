@@ -66,7 +66,13 @@ if (isset($_SESSION["account"])) {
       </form>
       <?php 
          if (isset($delete)) {
-            $title = $_POST["title"];
+            if (isset($_POST["title"])) {
+               $title = $_POST["title"];
+            } else {
+               echo "Failed to set";
+               return;
+            }
+            
             echo $title;
 
             require "api/dbConnect.php";
