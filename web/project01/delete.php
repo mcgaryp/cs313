@@ -38,7 +38,9 @@ if (isset($_SESSION["account"])) {
 <body>
    <?php include "nav.php"; ?>
 
-   <!--  -->
+   <!-- What movie are we going to delete? -->
+
+   <!-- Confirm that you want to delete it! -->
 
    <!-- Scripts -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

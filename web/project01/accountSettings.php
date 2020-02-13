@@ -41,30 +41,30 @@ if (isset($_SESSION["account"])) {
          </div>
          <div class="col">
             <div class="row">
-               <div class="col text-black-50">
+               <div class="col text-black-50 text-left">
                   <div><?=$account->email?></div>
                </div>
-               <div class="col">
+               <div class="col text-right">
                   <a href="">Change email</a>
                </div>
             </div>
             <div class="row">
-               <div class="col text-black-50">
+               <div class="col text-black-50 text-left">
                   <div>
                      Password: ********
                   </div>
                </div>
-               <div class="col">
+               <div class="col text-right">
                   <a href="">Change password</a>
                </div>
             </div>
             <div class="row">
-               <div class="col text-black-50">
+               <div class="col text-black-50 text-left">
                   <div>
                      Phone: 479-696-1637
                   </div>
                </div>
-               <div class="col">
+               <div class="col text-right">
                   <a href="">Change phone number</a>
                </div>
             </div>
@@ -106,10 +106,10 @@ if (isset($_SESSION["account"])) {
          </div>
          <div class="col">
             <div class="row">
-               <div class="col">
+               <div class="col text-left">
                   Profile Name and Icon (Coming Soon)
                </div>
-               <div class="col">
+               <div class="col text-right">
                   Manage Profiles (Coming Soon)
                </div>
             </div>
