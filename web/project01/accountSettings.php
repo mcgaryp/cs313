@@ -9,6 +9,8 @@ $_SESSION["extension"] = "settings";
 
 if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
+} else {
+   header("location: index/php", true);
 }
 
 ?>
