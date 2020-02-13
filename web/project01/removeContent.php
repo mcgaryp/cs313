@@ -68,24 +68,23 @@ if (isset($_SESSION["account"])) {
          if (isset($delete)) {
             if (isset($_POST["title"])) {
                $title = $_POST["title"];
-            } else {
-               echo "Failed to set";
-               return;
             }
-            
-            echo $title;
 
             require "api/dbConnect.php";
             $db = getBD();
+
             // search database for title
             try {
                $query = 'SELECT * FROM movie m inner join movie_group mg on title = :title and mg.account_id = 2 and m.movie_id = mg.movie_id;';
+               echo $query;
                $state = $db->prepare($query);
                $state->bindValue(':title', $title);
                // $state->bindValue(':id', $account->id);
                $state->execute();
+               echo "executing";
 
                $movies = array();
+               echo "built array";
 
                while($row->fetch(PDO::FETCH_ASSOC)) {
                   echo "trying to add movie!";
