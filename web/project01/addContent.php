@@ -99,7 +99,7 @@ if (isset($_SESSION["account"])) {
             <div class="col-md-4 mb-3 form-group">
                <label for="ratingSelect">Movie Rating</label>
                <select class="custom-select is-valid" id="ratingSelect" name="rating" required>
-                  <option value="">Open this select menu</option>
+                  <option value="">Select Rating</option>
                   <!-- add php here for selector items -->
                   <?php 
 
@@ -132,7 +132,17 @@ if (isset($_SESSION["account"])) {
             <!-- Movie creation Year -->
             <div class="col-md-4 mb-3 form-group">
                <label for="yearMade">Year Made</label>
-               <input type="number" class="form-control is-valid" id="yearMade" maxlength="4" minlength="4" name="year" required>
+               <select class="form-control is-valid" id="yearMade" name="year" required>
+                  <option value="">Select Year</option>
+                  <?php 
+
+                     $i = 1888;
+                     while ($i < date("Y")) {
+                        echo "<option value='$i'>$i</option>";
+                     }
+
+                  ?>
+               </select>
                <div class="invalid-feedback">
                   Please provide a valid year.
                </div>

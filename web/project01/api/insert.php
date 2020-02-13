@@ -75,15 +75,6 @@
 
    // Are we adding movies?
    if (isset($_POST["add"])) {
-      echo "Made it!";
-      // Verify year made
-      if (isset($_POST["year"])) {
-         $date = date("Y");
-         if ($_POST["year"] > $date || $_POST["year"] < 1888) {
-            header("location: ../addContent.php?error=Enter Vailid Year", true);
-            die;
-         }
-      }
 
       // Set variables
       $title = $_POST["title"];
