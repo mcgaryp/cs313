@@ -43,7 +43,6 @@ if (isset($_SESSION["account"])) {
       <!-- What movie are we going to delete? -->
       <form action="delete.php" method="POST" class="was-validated">
          <div class="row">
-            <div class="form-group">
 
                <!-- Title -->
                <div class="col-md-4 mb-3">
@@ -61,15 +60,12 @@ if (isset($_SESSION["account"])) {
 
             </div>
 
-         </div>
-
-
       </form>
 
       <!-- Show List of Movies that have that title with option to delete-->
 
       <!-- Confirm that you want to delete it! -->
-      
+
    </div>
 
    <!-- Scripts -->
