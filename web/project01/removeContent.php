@@ -1,6 +1,7 @@
 <?php
 
 include "classes/account.php";
+include "classes/movie.php";
 
 session_start();
 
@@ -13,6 +14,10 @@ if (isset($_POST['success'])) {
 
 if (isset($_GET['error'])) {
    $error = $_GET['error'];
+}
+
+if (isset($_GET['delete'])) {
+   $delete = $_GET['delete'];
 }
 
 if (isset($_SESSION["account"])) {
@@ -46,25 +51,57 @@ if (isset($_SESSION["account"])) {
 
                <!-- Title -->
                <div class="col-md-4 mb-3">
-                  <label for="movieTitle">Movie Title</label>
                   <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" required>
                   <div class="invalid-feedback">
-                     What movie are we gonna remove?
+                     What movie are we gonna remove from your library?
                   </div>
                </div>
 
                <!-- Button to confirm -->
                <div class="col-md-4 mb-3">
-                  <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+                  <button class="btn btn-warning" type="submit" name="delete">Delete</button>
                </div>
 
             </div>
-
       </form>
+      <?php 
+         if (isset($delete)) {
+            $title = $_POST["title"];
 
+            require "api/dbConnect.php";
+            $db = getBD();
+            // search database for title
+            try {
+               $query = 'SELECT * FROM movie m inner join movie_group mg on title = :title and mg.account_id = '.$account->id.' and m.movie_id = mg.movie_id;';
+               $state = $db->prepare($query);
+               $state->bindValue(':title', $title);
+               $state->execute();
+
+               $movies= array();
+
+               while($row->fetch(PDO::FETCH_ASSOC)) {
+                  $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
+                  array_push($movies, $movie);
+               }
+            } catch (Exception $e) {
+               echo "Error with DB. Details: $e";
+               die;
+            }
+
+            // display list of things that match that description
+            foreach($movies as $movie) {
+               echo "i found this many movies!";
+            }
+      ?>
+            
+      <?php } ?>
       <!-- Show List of Movies that have that title with option to delete-->
-
+      
       <!-- Confirm that you want to delete it! -->
+
+      <!-- delete movie -->
+
+      <!-- delete relationship -->
 
    </div>
 

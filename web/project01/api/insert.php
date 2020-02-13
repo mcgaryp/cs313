@@ -83,6 +83,11 @@
       $desc = $_POST["desc"];
       $image = $_POST["image"];
 
+      // TODO search movies to see if we already have this content
+         // if we have it just ask for the personalized mp4
+      
+         //else continue to add to the other stuff
+
       // create movie in database
       require "dbConnect.php";
       $db = getBD();

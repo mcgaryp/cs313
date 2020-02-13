@@ -44,6 +44,7 @@ values (
    2003
 );
 
+-- for porter
 insert into movie (
    image,
    title,
@@ -171,6 +172,19 @@ insert into movie_group (
    (SELECT account_id
       FROM account
       WHERE username = 'porter')
+);
+
+-- admin add
+insert into movie_group (
+   movie_id,
+   account_id
+) values (
+   (SELECT movie_id
+      FROM movie
+      WHERE title = 'Hook'),
+   (SELECT account_id
+      FROM account
+      WHERE username = 'admin')
 );
 
 -- CREATE USER_PROFILE WITH PO & LALA
