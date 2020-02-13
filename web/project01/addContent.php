@@ -139,6 +139,7 @@ if (isset($_SESSION["account"])) {
                      $i = 1888;
                      while ($i < date("Y")) {
                         echo "<option value='$i'>$i</option>";
+                        $i++;
                      }
 
                   ?>
