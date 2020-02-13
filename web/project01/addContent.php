@@ -136,10 +136,10 @@ if (isset($_SESSION["account"])) {
                   <option value="">Select Year</option>
                   <?php 
 
-                     $i = 1888;
-                     while ($i < date("Y")) {
+                     $i = date("Y");
+                     while ( $i > 1887) {
                         echo "<option value='$i'>$i</option>";
-                        $i++;
+                        $i--;
                      }
 
                   ?>
