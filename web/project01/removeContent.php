@@ -86,7 +86,7 @@ if (isset($_SESSION["account"])) {
                $movies = array();
                echo "built array";
 
-               while($row->fetch(PDO::FETCH_ASSOC)) {
+               while($row = $state->fetch(PDO::FETCH_ASSOC)) {
                   echo "trying to add movie!";
                   $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
                   array_push($movies, $movie);
