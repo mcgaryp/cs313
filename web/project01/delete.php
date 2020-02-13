@@ -40,10 +40,26 @@ if (isset($_SESSION["account"])) {
 
    <!-- What movie are we going to delete? -->
    <form action="delete.php" method="POST" class="was-validated">
+      <div class="row">
+
+         <!-- Title -->
+         <div class="col-md-4 mb-3 form-group">
+            <label for="movieTitle">Movie Title</label>
+            <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" required>
+            <div class="invalid-feedback">
+               What movie are we gonna remove?
+            </div>
+         </div>
+
+         <!-- Button to confirm -->
+         <div class="col-auto">
+            <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+         </div>
+
+      </div>
+
 
    </form>
-
-   <!-- Title -->
 
    <!-- Show List of Movies that have that title with option to delete-->
 

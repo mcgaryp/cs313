@@ -85,7 +85,7 @@ if (isset($_SESSION["account"])) {
    <div class="container">
       <form class="was-validated" method="POST" action="api/insert.php">
 
-         <div class="form-row">
+         <div class="row">
             <!-- Movie Title -->
             <div class="col-md-4 mb-3 form-group">
                <label for="movieTitle">Movie Title</label>
@@ -173,7 +173,7 @@ if (isset($_SESSION["account"])) {
             <div class="col mb-3 form-group">
                <input type="text" class="form-control is-valid" id="movieImageURL" placeholder="Movie Image URL" name="image" required>
                <div class="invalid-feedback">
-                  We need to have a pretty picture!
+                  We need to have a pretty cover picture!
                </div>
             </div>
          </div>
@@ -196,8 +196,8 @@ if (isset($_SESSION["account"])) {
 
          <!-- Submit Button -->
          <div class="row justify-content-center">
-            <div class="-auto">
-               <button class="btn btn-primary" type="submit" name="add">Submit form</button>
+            <div class="col-auto">
+               <button class="btn btn-success" type="submit" name="add">Add Movie</button>
             </div>
          </div>
       </form>
