@@ -83,6 +83,8 @@ if (isset($_SESSION["account"])) {
                <div class="col">
                   Manage Download Devices
                </div>
+            </div>
+            <div class="row">
                <div class="col">
                   Add Movies
                </div>
