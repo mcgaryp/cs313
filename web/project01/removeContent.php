@@ -46,7 +46,7 @@ if (isset($_SESSION["account"])) {
 
    <div class="container">
       <!-- What movie are we going to delete? -->
-      <form action="delete.php" method="POST" class="was-validated">
+      <form action="removeContent.php" method="POST" class="was-validated">
          <div class="row">
 
                <!-- Title -->

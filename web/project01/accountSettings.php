@@ -92,7 +92,7 @@ if (isset($_SESSION["account"])) {
                <a href="addContent.php">Add Movies</a>
             </div>
             <div class="row px-3">
-               <a href="delete.php">Remove Movies</a>
+               <a href="removeContent.php">Remove Movies</a>
             </div>
             <div class="row px-3">
                <a href="api/logout.php">Sign out</a>
