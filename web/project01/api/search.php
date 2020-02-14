@@ -61,5 +61,5 @@
 
    } else {
       header("location: ../", true);
-      die
+      die;
    }
