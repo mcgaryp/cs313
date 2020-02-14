@@ -6,7 +6,7 @@
    session_start();
 
    if (isset($_SESSION["account"])) {
-      
+
       if (isset($_POST["search"])) {
 
          $account = $_SESSION["account"];
@@ -39,7 +39,8 @@
          header("location: ../searchResults.php");
 
       } else {
-         header("location: home.php", true);
+         // header("location: home.php", true);
+         echo " stopped here";
       }
 
    } else {
