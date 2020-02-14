@@ -15,8 +15,8 @@ if (isset($_SESSION["account"])) {
    header("location: index.php", true);
 }
 
-if (isset($_POST['results'])) {
-   $movies = $_POST['results'];
+if (isset($_SESSION["results"])) {
+   $movies = $_SESSION["results"];
 } else {
    header("location: home.php", true);
 }
