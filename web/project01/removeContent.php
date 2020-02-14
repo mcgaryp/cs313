@@ -20,6 +20,10 @@ if (isset($_POST['delete'])) {
    $delete = $_POST['delete'];
 }
 
+if (isset($_POST['title'])) {
+   $title = $_POST['title'];
+}
+
 if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
 }
@@ -53,7 +57,7 @@ if (isset($_SESSION["account"])) {
 
                   <!-- Title -->
                   <div class="col-auto mb-3">
-                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" required>
+                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" value="<?=$title?>" required>
                      <div class="invalid-feedback">
                         What movie are we gonna remove from your library?
                      </div>
@@ -70,9 +74,6 @@ if (isset($_SESSION["account"])) {
       </div>
       <?php
       if (isset($delete)) {
-         if (isset($_POST["title"])) {
-            $title = $_POST["title"];
-         }
 
          require "api/dbConnect.php";
          $db = getBD();
@@ -96,7 +97,7 @@ if (isset($_SESSION["account"])) {
             die;
          } ?>
 
-         <?php if ($movies != null) {
+         <?php if (!empty($movies)) {
             $i = 1; ?>
             <!-- Show List of Movies that have that title with option to delete-->
             <table class="table table-striped table-hover">
