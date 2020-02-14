@@ -36,11 +36,11 @@
          }
 
          $_SESSION["results"] = $movies;
-         header("location: ../searchResults.php");
+         print_r($_SESSION);
+         // header("location: ../searchResults.php");
 
       } else {
-         // header("location: home.php", true);
-         echo " stopped here";
+         header("location: home.php", true);
       }
 
    } else {
