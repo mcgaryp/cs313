@@ -115,13 +115,13 @@ if (isset($_SESSION["account"])) {
                   <?php
                   foreach ($movies as $movie) { ?>
                      <tr>
-                        <th scope="row"><?= $i ?></th>
-                        <td><img src="<?= $movie->image ?>" alt="<?= $movie->title ?>" class="img-thumbnail"></td>
-                        <td><?= $movie->title ?></td>
-                        <td><?= $movie->description ?></td>
-                        <td><?= $movie->year ?></td>
-                        <td><?= $movie->rating ?></td>
-                        <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+                        <th scope="row" class="align-middle"><?= $i ?></th>
+                        <td class="align-middle"><img src="<?= $movie->image ?>" alt="<?= $movie->title ?>" class="img-thumbnail"></td>
+                        <td class="align-middle"><?= $movie->title ?></td>
+                        <td class="align-middle"><?= $movie->description ?></td>
+                        <td class="align-middle"><?= $movie->year ?></td>
+                        <td class="align-middle"><?= $movie->rating ?></td>
+                        <td class="align-middle"><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
                      </tr>
                   <?php $i ++; } ?>
                </tbody>
