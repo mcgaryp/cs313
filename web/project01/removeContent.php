@@ -94,6 +94,7 @@ if (isset($_SESSION["account"])) {
 
          <table class="table table-striped table-hover">
             <thead class="thead-dark">
+               <th scope="col"></th>
                <th scope="col">Cover Image</th>
                <th scope="col">Title</th>
                <th scope="col">Description</th>
