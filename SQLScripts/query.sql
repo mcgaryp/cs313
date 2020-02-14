@@ -13,3 +13,14 @@ SELECT * FROM account a WHERE a.username = 'porter' AND a.password = 'password';
 SELECT * FROM common_lookup WHERE context = 'RATING';
 
 SELECT m.movie_id, title, rating FROM movie m inner join movie_group mg on title LIKE '%Lord%' and mg.account_id = 2 and m.movie_id = mg.movie_id;
+
+
+
+SELECT title, rating, year FROM movie WHERE movie_id = 5;
+SELECT * FROM movie_group WHERE movie_id = 5 AND account_id = 1;
+
+DELETE FROM movie_group WHERE movie_id = 5 AND account_id = 1;
+-- DELETE FROM movie WHERE movie_id = 5;
+
+SELECT title, rating, year FROM movie Where title like '%Lord%';
+SELECT * FROM movie_group;

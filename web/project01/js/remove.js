@@ -14,5 +14,3 @@ function callDelete(movieId) {
    xhttp.send();
    console.log("request complete");
 }
-
-// https://web-engineering-2.herokuapp.com/project01/removeContent.php?../home.php
