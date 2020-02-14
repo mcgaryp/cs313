@@ -71,7 +71,7 @@
          <div class="md-form my-0">
             <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchForWhat">
             <button class="btn btn-primary" type="submit" name="search">
-               <i class="fas fa-search text-black ml-3" aria-hidden="true"></i>
+               <i class="fas fa-search text-black" aria-hidden="true"></i>
             </button>
          </div>
       </form>
