@@ -7,7 +7,7 @@ session_start();
 if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
 } else {
-   echo false;
+   echo "account not set";
 }
 
 if (isset($_POST["movieId"])) {
@@ -23,14 +23,12 @@ if (isset($_POST["movieId"])) {
       $state = $db->prepare($query);
       $state->execute();
    } catch (Exception $e) {
-      echo false;
+      echo "Database trouble. Details: $e";
    }
       
    // check to see if the movie group has that movie id in it if it doesnt then delete the movie
 
    echo true;
 } else {
-   echo false;
+   echo "Movieid not set";
 }
-
-?>
