@@ -18,7 +18,7 @@
 
          // search for key words
          try {
-            $searchItem = '%'.$searchItem.'%';
+            $searchItem = $searchItem.'%';
             $titleQ = 'SELECT * FROM movie WHERE title iLIKE :search;';
             $imageQ = 'SELECT * FROM movie WHERE image iLIKE :search;'; 
             $descQ = 'SELECT * FROM movie WHERE description iLIKE :search;'; 
