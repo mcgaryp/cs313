@@ -7,7 +7,7 @@ session_start();
 
 $_SESSION["current"] = "searchResults";
 
-print_r($_SESSION);
+print_r($_SESSION["results"]);
 
 if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
