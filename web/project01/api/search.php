@@ -6,6 +6,7 @@
    session_start();
 
    if (isset($_SESSION["account"]) && isset($_POST["search"])) {
+      echo "hello";
       $account = $_SESSION["account"];
       $searchItem = $_POST["search"];
 

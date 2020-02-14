@@ -18,7 +18,7 @@ if (isset($_SESSION["account"])) {
 if (isset($_POST['results'])) {
    $movies = $_POST['results'];
 } else {
-   header("location: index.php", true);
+   header("location: home.php", true);
 }
 
 ?>
