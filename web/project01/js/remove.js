@@ -4,7 +4,7 @@ function callDelete(movieId) {
    data.append('movieId', movieId);
 
    var xhttp = new XMLHttpRequest();
-   xhttp.open('POST', 'api/delete.php', true);
+   xhttp.open('GET', 'api/delete.php', true);
    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
          if (xhttp.response == 1)
