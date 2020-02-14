@@ -26,11 +26,11 @@
             $yearQ = 'SELECT * FROM movie WHERE year iLIKE :search;';
 
             $querys = array();
-            array_push($titleQ);
-            array_push($imageQ);
-            array_push($descQ);
-            array_push($ratQ);
-            array_push($yearQ);
+            array_push($querys, $titleQ);
+            array_push($querys, $imageQ);
+            array_push($querys, $descQ);
+            array_push($querys, $ratQ);
+            array_push($querys, $yearQ);
 
             $movies = array();
 
