@@ -35,8 +35,9 @@
             $movies = array();
 
             foreach($querys as $query) {
+               echo "hello<br>";
                $state = $db->prepare($query);
-               $state->bindValue(':search',  $searchItem);
+               $state->bindValue(':search', $searchItem);
                $state->execute();
 
                while($row = $state->fetch(PDO::FETCH_ASSOC)) {
