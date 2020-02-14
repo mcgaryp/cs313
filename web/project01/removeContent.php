@@ -126,11 +126,9 @@ if (isset($_SESSION["account"])) {
                         <td class="align-middle"><?= $movie->year ?></td>
                         <td class="align-middle"><?= $movie->rating ?></td>
                         <td class="align-middle">
-                           <form method="POST" action="removeContent.php">
-                              <button type="submit" class="btn btn-danger" name="delete">
-                                 <i class="fas fa-trash" id="<?=$i?>"></i>
+                              <button type="submit" class="btn btn-danger" onclick="confirm()" id="<?=$i?>">
+                                 <i class="fas fa-trash"></i>
                               </button>
-                           </form>
                         </td>
                      </tr>
                   <?php $i++;
