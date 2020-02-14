@@ -127,16 +127,16 @@ if (isset($_SESSION["account"])) {
          <?php } else { ?>
             <div class="row justify-content-center">
                <div class="col-auto">
-                  <h6 class="text-muted">Coult not find your Movie</h6>
+                  <h6 class="text-muted">Could not find your Movie</h6>
                </div>
             </div>
-               <?php   }
-         } ?>
-               <!-- Confirm that you want to delete it! -->
+      <?php   }
+      } ?>
+      <!-- Confirm that you want to delete it! -->
 
-               <!-- delete movie -->
+      <!-- delete movie -->
 
-               <!-- delete relationship -->
+      <!-- delete relationship -->
 
    </div>
 
