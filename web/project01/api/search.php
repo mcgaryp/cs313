@@ -20,27 +20,15 @@
          try {
             $searchItem = $searchItem.'%';
             $titleQ = 'SELECT * FROM movie WHERE title iLIKE :search;';
-            $imageQ = 'SELECT * FROM movie WHERE image iLIKE :search;'; 
-            $descQ = 'SELECT * FROM movie WHERE description iLIKE :search;'; 
-            $ratQ = 'SELECT * FROM movie WHERE rating iLIKE :search;'; 
-
-            $querys = array();
-            array_push($querys, $titleQ);
-            array_push($querys, $imageQ);
-            array_push($querys, $descQ);
-            array_push($querys, $ratQ);
 
             $movies = array();
+            $state = $db->prepare($query);
+            $state->bindValue(':search', $searchItem);
+            $state->execute();
 
-            foreach($querys as $query) {
-               $state = $db->prepare($query);
-               $state->bindValue(':search', $searchItem);
-               $state->execute();
-
-               while($row = $state->fetch(PDO::FETCH_ASSOC)) {
-                  $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
-                  array_push($movies, $movie);
-               }
+            while($row = $state->fetch(PDO::FETCH_ASSOC)) {
+               $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
+               array_push($movies, $movie);
             }
             
          } catch (Exception $e) {

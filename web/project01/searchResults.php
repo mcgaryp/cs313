@@ -34,12 +34,15 @@ if (isset($_SESSION["results"])) {
 </head>
 
 <body>
-   <div class="container"><?php
+   <?php
 
-                           include "nav.php";
+   include "nav.php";
 
-                           if (!empty($movies)) {
-                              $i = 1; ?>
+   ?>
+   <div class="container">
+      <?php
+      if (!empty($movies)) {
+         $i = 1; ?>
          <!-- Show List of Movies that have that title with option to delete-->
          <table class="table table-striped table-hover">
             <thead class="thead-dark">
@@ -53,7 +56,7 @@ if (isset($_SESSION["results"])) {
             </thead>
             <tbody>
                <?php
-                              foreach ($movies as $movie) { ?>
+               foreach ($movies as $movie) { ?>
                   <tr>
                      <th scope="row" class="align-middle"><?= $i ?></th>
                      <td class="align-middle"><img src="<?= $movie->image ?>" alt="<?= $movie->title ?>" class="img-thumbnail"></td>
@@ -95,7 +98,7 @@ if (isset($_SESSION["results"])) {
                      </td>
                   </tr>
                <?php $i++;
-                              } ?>
+               } ?>
             </tbody>
          </table>
       <?php } else { ?>
