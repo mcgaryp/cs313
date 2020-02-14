@@ -21,7 +21,7 @@ if (isset($_POST['delete'])) {
 }
 
 if (isset($_POST['search'])) {
-   $delete = $_POST['search'];
+   $search = $_POST['search'];
 }
 
 if (isset($_POST['title'])) {
@@ -128,7 +128,7 @@ if (isset($_SESSION["account"])) {
                         <td class="align-middle">
                            <form method="POST" action="removeContent.php">
                               <button type="submit" class="btn btn-danger" name="delete">
-                                 <i class="fas fa-trash"></i>
+                                 <i class="fas fa-trash" id="<?=$i?>"></i>
                               </button>
                            </form>
                         </td>
@@ -146,6 +146,8 @@ if (isset($_SESSION["account"])) {
       <?php   }
       } ?>
       <!-- Confirm that you want to delete it! -->
+
+      
 
       <!-- delete movie -->
 
