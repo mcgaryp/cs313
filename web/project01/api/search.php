@@ -55,7 +55,7 @@
          header("location: ../searchResults.php");
 
       } else {
-         header("location: home.php", true);
+         header("location: ../home.php", true);
          die;
       }
 
