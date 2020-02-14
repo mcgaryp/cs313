@@ -3,6 +3,7 @@
 
    class Movie
    {
+      public $id;
       public $image;
       public $title;
       public $description;
