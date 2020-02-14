@@ -19,20 +19,35 @@
          // search for key words
          try {
             $searchItem = '%'.$searchItem.'%';
-            $query = 'SELECT * FROM movie WHERE title iLIKE :search OR image iLIKE :search OR description iLIKE :search OR rating iLIKE :search OR year iLIKE :search;';
+            $titleQ = 'SELECT * FROM movie WHERE title iLIKE :search;';
+            $imageQ = 'SELECT * FROM movie WHERE image iLIKE :search;'; 
+            $descQ = 'SELECT * FROM movie WHERE description iLIKE :search;'; 
+            $ratQ = 'SELECT * FROM movie WHERE rating iLIKE :search;'; 
+            $yearQ = 'SELECT * FROM movie WHERE year iLIKE :search;';
 
-            $state = $db->prepare($query);
-            $state->bindValue(':search',  $searchItem);
-            $state->execute();
+            $querys = array();
+            array_push($titleQ);
+            array_push($imageQ);
+            array_push($descQ);
+            array_push($ratQ);
+            array_push($yearQ);
 
             $movies = array();
 
-            while($row = $state->fetch(PDO::FETCH_ASSOC)) {
-               $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
-               array_push($movies, $movie);
+            foreach($querys as $query) {
+               $state = $db->prepare($query);
+               $state->bindValue(':search',  $searchItem);
+               $state->execute();
+
+               while($row = $state->fetch(PDO::FETCH_ASSOC)) {
+                  $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
+                  array_push($movies, $movie);
+               }
             }
+            
          } catch (Exception $e) {
             echo "Error with DB. Details: $e";
+            die;
          }
 
          $_SESSION["results"] = $movies;
@@ -46,5 +61,3 @@
    } else {
       header("location: ../", true);
    }
-
-?>
