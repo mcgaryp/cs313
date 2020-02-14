@@ -35,7 +35,6 @@
             $movies = array();
 
             foreach($querys as $query) {
-               echo "hello<br>";
                $state = $db->prepare($query);
                $state->bindValue(':search', $searchItem);
                $state->execute();
@@ -43,7 +42,6 @@
                while($row = $state->fetch(PDO::FETCH_ASSOC)) {
                   $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
                   array_push($movies, $movie);
-                  echo $movie;
                }
             }
             
@@ -53,8 +51,7 @@
          }
 
          $_SESSION["results"] = $movies;
-         print_r($_SESSION);
-         // header("location: ../searchResults.php");
+         header("location: ../searchResults.php", true);
 
       } else {
          header("location: ../home.php", true);
