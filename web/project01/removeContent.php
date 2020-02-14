@@ -123,15 +123,20 @@ if (isset($_SESSION["account"])) {
                   <?php } ?>
                </tbody>
             </table>
-      <?php }
-      } ?>
-      <!-- Show List of Movies that have that title with option to delete-->
+         <?php } else { ?>
+            <div class="row justify-content-center">
+               <div class="col-auto">
+                  <h6 class="text-danger">Coult not find your Movie</h6>
+               </div>
+            </div>
+               <?php   }
+         } ?> <!-- Show List of Movies that have that title with option to delete-->
 
-      <!-- Confirm that you want to delete it! -->
+               <!-- Confirm that you want to delete it! -->
 
-      <!-- delete movie -->
+               <!-- delete movie -->
 
-      <!-- delete relationship -->
+               <!-- delete relationship -->
 
    </div>
 
