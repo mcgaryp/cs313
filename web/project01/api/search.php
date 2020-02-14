@@ -23,14 +23,12 @@
             $imageQ = 'SELECT * FROM movie WHERE image iLIKE :search;'; 
             $descQ = 'SELECT * FROM movie WHERE description iLIKE :search;'; 
             $ratQ = 'SELECT * FROM movie WHERE rating iLIKE :search;'; 
-            $yearQ = 'SELECT * FROM movie WHERE year iLIKE :search;';
 
             $querys = array();
             array_push($querys, $titleQ);
             array_push($querys, $imageQ);
             array_push($querys, $descQ);
             array_push($querys, $ratQ);
-            array_push($querys, $yearQ);
 
             $movies = array();
 

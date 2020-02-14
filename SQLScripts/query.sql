@@ -25,5 +25,5 @@ DELETE FROM movie_group WHERE movie_id = 5 AND account_id = 1;
 SELECT title, rating, year FROM movie Where title ILIKE '%lord%';
 SELECT * FROM movie_group;
 
-SELECT * FROM movie WHERE title iLIKE '%lord%';
+SELECT * FROM movie WHERE year iLIKE '%lord%';
 -- OR image iLIKE '%lord%' OR description iLIKE '%lord%' OR rating iLIKE '%lord%' OR year iLIKE '%lord%';
