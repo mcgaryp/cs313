@@ -56,8 +56,10 @@
 
       } else {
          header("location: home.php", true);
+         die;
       }
 
    } else {
       header("location: ../", true);
+      die
    }

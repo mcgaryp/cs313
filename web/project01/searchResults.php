@@ -37,6 +37,9 @@ if (isset($_SESSION["results"])) {
 
 <body>
    <?php
+
+   include "nav.php";
+
    if (!empty($search)) {
       if (!empty($movies)) {
          $i = 1; ?>
