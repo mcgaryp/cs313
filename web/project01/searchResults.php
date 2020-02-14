@@ -40,7 +40,6 @@ if (isset($_SESSION["results"])) {
 
    include "nav.php";
 
-   if (!empty($search)) {
       if (!empty($movies)) {
          $i = 1; ?>
          <!-- Show List of Movies that have that title with option to delete-->
@@ -107,8 +106,7 @@ if (isset($_SESSION["results"])) {
                <h6 class="text-muted">Could not find your Movie</h6>
             </div>
          </div>
-   <?php   }
-   } ?>
+   <?php   } ?>
 
    <!-- Scripts -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
