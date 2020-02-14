@@ -5,39 +5,45 @@
 
    session_start();
 
-   if (isset($_SESSION["account"]) && isset($_POST["search"])) {
-      echo "hello";
-      $account = $_SESSION["account"];
-      $searchItem = $_POST["search"];
+   if (isset($_SESSION["account"])) {
+      
+      if (isset($_POST["search"])) {
 
-      // get database
-      require "dbConnect.php";
-      $db = getBD();
+         $account = $_SESSION["account"];
+         $searchItem = $_POST["search"];
 
-      // search for key words
-      try {
-         $searchItem = '%'.$searchItem.'%';
-         $query = 'SELECT * FROM movie WHERE title iLIKE :search OR image iLIKE :search OR description iLIKE :search OR rating iLIKE :search OR year iLIKE :search;';
+         // get database
+         require "dbConnect.php";
+         $db = getBD();
 
-         $state = $db->prepare($query);
-         $state->bindValue(':search',  $searchItem);
-         $state->execute();
+         // search for key words
+         try {
+            $searchItem = '%'.$searchItem.'%';
+            $query = 'SELECT * FROM movie WHERE title iLIKE :search OR image iLIKE :search OR description iLIKE :search OR rating iLIKE :search OR year iLIKE :search;';
 
-         $movies = array();
+            $state = $db->prepare($query);
+            $state->bindValue(':search',  $searchItem);
+            $state->execute();
 
-         while($row = $state->fetch(PDO::FETCH_ASSOC)) {
-            $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
-            array_push($movies, $movie);
+            $movies = array();
+
+            while($row = $state->fetch(PDO::FETCH_ASSOC)) {
+               $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
+               array_push($movies, $movie);
+            }
+         } catch (Exception $e) {
+            echo "Error with DB. Details: $e";
          }
-      } catch (Exception $e) {
-         echo "Error with DB. Details: $e";
+
+         $_SESSION["results"] = $movies;
+         header("location: ../searchResults.php");
+
+      } else {
+         header("location: home.php", true);
       }
 
-      $_SESSION["results"] = $movies;
-      header("location: ../searchResults.php");
-
    } else {
-      header("location: ../");
+      header("location: ../", true);
    }
 
 ?>
