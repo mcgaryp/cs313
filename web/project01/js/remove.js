@@ -8,6 +8,7 @@ function callDelete(movieId) {
          else {
             // Failed to delete
             console.log("Failed to delete");
+            console.log(xhttp.response);
          }
       }
    }
