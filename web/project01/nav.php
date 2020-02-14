@@ -67,10 +67,12 @@
       <!-- Links -->
 
       <!-- Search form -->
-      <form class="form-inline">
+      <form class="form-inline" method="POST" action="api/search.php">
          <div class="md-form my-0">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-            <i class="fas fa-search text-black ml-3" aria-hidden="true"></i>
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchForWhat">
+            <button class="btn btn-primary" type="submit" name="search">
+               <i class="fas fa-search text-black ml-3" aria-hidden="true"></i>
+            </button>
          </div>
       </form>
    </div>
