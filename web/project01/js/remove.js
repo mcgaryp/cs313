@@ -3,7 +3,11 @@ function callDelete(movieId) {
    var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-         window.location.assign("home/php");
+         if (xhttp.response == true)
+            window.location.assign("home.php");
+         else {
+            // Failed to delete
+         }
       }
    }
    xhttp.open("POST", "api/delete.php?movieId=" + movieId, true);
