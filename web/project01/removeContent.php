@@ -86,7 +86,7 @@ if (isset($_SESSION["account"])) {
             $state->bindValue(':id', $account->id);
             $state->execute();
 
-            // $movies = array();
+            $movies = array();
 
             while ($row = $state->fetch(PDO::FETCH_ASSOC)) {
                $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
