@@ -79,10 +79,10 @@ if (isset($_SESSION["account"])) {
 
          // search database for title
          try {
-            $query = 'SELECT * FROM movie m inner join movie_group mg on title = :title and mg.account_id = 2 and m.movie_id = mg.movie_id;';
+            $query = 'SELECT * FROM movie m inner join movie_group mg on title = :title and mg.account_id = :id and m.movie_id = mg.movie_id;';
             $state = $db->prepare($query);
             $state->bindValue(':title', $title);
-            // $state->bindValue(':id', $account->id);
+            $state->bindValue(':id', $account->id);
             $state->execute();
 
             // $movies = array();
@@ -98,6 +98,7 @@ if (isset($_SESSION["account"])) {
 
          <?php if ($movies != null) {
             $i = 1; ?>
+            <!-- Show List of Movies that have that title with option to delete-->
             <table class="table table-striped table-hover">
                <thead class="thead-dark">
                   <th scope="col"></th>
@@ -126,12 +127,11 @@ if (isset($_SESSION["account"])) {
          <?php } else { ?>
             <div class="row justify-content-center">
                <div class="col-auto">
-                  <h6 class="text-danger">Coult not find your Movie</h6>
+                  <h6 class="text-muted">Coult not find your Movie</h6>
                </div>
             </div>
                <?php   }
-         } ?> <!-- Show List of Movies that have that title with option to delete-->
-
+         } ?>
                <!-- Confirm that you want to delete it! -->
 
                <!-- delete movie -->
