@@ -7,6 +7,8 @@ session_start();
 
 $_SESSION["current"] = "searchResults";
 
+print_r($_SESSION);
+
 if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
 } else {
@@ -18,8 +20,6 @@ if (isset($_POST['results'])) {
 } else {
    header("location: index.php", true);
 }
-
-
 
 ?>
 <!DOCTYPE html>
