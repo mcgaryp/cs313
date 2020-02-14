@@ -7,8 +7,6 @@ session_start();
 
 $_SESSION["current"] = "searchResults";
 
-print_r($_SESSION["results"]);
-
 if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
 } else {
@@ -36,12 +34,12 @@ if (isset($_SESSION["results"])) {
 </head>
 
 <body>
-   <?php
+   <div class="container"><?php
 
-   include "nav.php";
+                           include "nav.php";
 
-      if (!empty($movies)) {
-         $i = 1; ?>
+                           if (!empty($movies)) {
+                              $i = 1; ?>
          <!-- Show List of Movies that have that title with option to delete-->
          <table class="table table-striped table-hover">
             <thead class="thead-dark">
@@ -55,7 +53,7 @@ if (isset($_SESSION["results"])) {
             </thead>
             <tbody>
                <?php
-               foreach ($movies as $movie) { ?>
+                              foreach ($movies as $movie) { ?>
                   <tr>
                      <th scope="row" class="align-middle"><?= $i ?></th>
                      <td class="align-middle"><img src="<?= $movie->image ?>" alt="<?= $movie->title ?>" class="img-thumbnail"></td>
@@ -97,7 +95,7 @@ if (isset($_SESSION["results"])) {
                      </td>
                   </tr>
                <?php $i++;
-               } ?>
+                              } ?>
             </tbody>
          </table>
       <?php } else { ?>
@@ -106,7 +104,8 @@ if (isset($_SESSION["results"])) {
                <h6 class="text-muted">Could not find your Movie</h6>
             </div>
          </div>
-   <?php   } ?>
+      <?php   } ?>
+   </div>
 
    <!-- Scripts -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
