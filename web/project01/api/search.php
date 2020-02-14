@@ -15,18 +15,22 @@
       $db = getBD();
 
       // search for key words
-      $searchItem = '%'.$searchItem.'%';
-      $query = 'SELECT * FROM movie WHERE title iLIKE :search OR image iLIKE :search OR description iLIKE :search OR rating iLIKE :search OR year iLIKE :search;';
+      try {
+         $searchItem = '%'.$searchItem.'%';
+         $query = 'SELECT * FROM movie WHERE title iLIKE :search OR image iLIKE :search OR description iLIKE :search OR rating iLIKE :search OR year iLIKE :search;';
 
-      $state = $db->prepare($query);
-      $state->bindValue(':search',  $searchItem);
-      $state->execute();
+         $state = $db->prepare($query);
+         $state->bindValue(':search',  $searchItem);
+         $state->execute();
 
-      $movies = array();
+         $movies = array();
 
-      while($row = $state->fetch(PDO::FETCH_ASSOC)) {
-         $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
-         array_push($movies, $movie);
+         while($row = $state->fetch(PDO::FETCH_ASSOC)) {
+            $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
+            array_push($movies, $movie);
+         }
+      } catch (Exception $e) {
+         echo "Error with DB. Details: $e";
       }
 
       $_SESSION["results"] = $movies;
