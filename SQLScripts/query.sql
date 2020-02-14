@@ -12,4 +12,4 @@ SELECT * FROM account a WHERE a.username = 'porter' AND a.password = 'password';
 
 SELECT * FROM common_lookup WHERE context = 'RATING';
 
-SELECT m.movie_id, title, rating FROM movie m inner join movie_group mg on title = 'Hook' and mg.account_id = 2 and m.movie_id = mg.movie_id;
+SELECT m.movie_id, title, rating FROM movie m inner join movie_group mg on title LIKE '%Lord%' and mg.account_id = 2 and m.movie_id = mg.movie_id;
