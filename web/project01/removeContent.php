@@ -85,7 +85,7 @@ if (isset($_SESSION["account"])) {
             // $state->bindValue(':id', $account->id);
             $state->execute();
 
-            $movies = array();
+            // $movies = array();
 
             while ($row = $state->fetch(PDO::FETCH_ASSOC)) {
                $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
@@ -96,33 +96,35 @@ if (isset($_SESSION["account"])) {
             die;
          } ?>
 
-         <?php $i = 1; ?>
-         <table class="table table-striped table-hover">
-            <thead class="thead-dark">
-               <th scope="col"></th>
-               <th scope="col">Cover Image</th>
-               <th scope="col">Title</th>
-               <th scope="col">Description</th>
-               <th scope="col">Year Made</th>
-               <th scope="col">Rating</th>
-               <th scope="col"></th>
-            </thead>
-            <tbody>
-               <?php
-               foreach ($movies as $movie) { ?>
-                  <tr>
-                     <th scope="row"><?= $i ?></th>
-                     <td><img src="<?= $movie->image ?>" alt="<?= $movie->title ?>" class="img-thumbnail"></td>
-                     <td><?= $movie->title ?></td>
-                     <td><?= $movie->description ?></td>
-                     <td><?= $movie->year ?></td>
-                     <td><?= $movie->rating ?></td>
-                     <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
-                  </tr>
-               <?php } ?>
-            </tbody>
-         </table>
-      <?php } ?>
+         <?php if ($movies != null) {
+            $i = 1; ?>
+            <table class="table table-striped table-hover">
+               <thead class="thead-dark">
+                  <th scope="col"></th>
+                  <th scope="col">Cover Image</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Year Made</th>
+                  <th scope="col">Rating</th>
+                  <th scope="col"></th>
+               </thead>
+               <tbody>
+                  <?php
+                  foreach ($movies as $movie) { ?>
+                     <tr>
+                        <th scope="row"><?= $i ?></th>
+                        <td><img src="<?= $movie->image ?>" alt="<?= $movie->title ?>" class="img-thumbnail"></td>
+                        <td><?= $movie->title ?></td>
+                        <td><?= $movie->description ?></td>
+                        <td><?= $movie->year ?></td>
+                        <td><?= $movie->rating ?></td>
+                        <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+                     </tr>
+                  <?php } ?>
+               </tbody>
+            </table>
+      <?php }
+      } ?>
       <!-- Show List of Movies that have that title with option to delete-->
 
       <!-- Confirm that you want to delete it! -->
