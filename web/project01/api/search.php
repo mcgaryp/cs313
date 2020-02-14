@@ -52,7 +52,7 @@
 
          $_SESSION["results"] = $movies;
          print_r($_SESSION);
-         // header("location: ../searchResults.php");
+         header("location: ../searchResults.php");
 
       } else {
          header("location: home.php", true);
