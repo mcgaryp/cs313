@@ -91,7 +91,8 @@ if (isset($_SESSION["account"])) {
             echo "Error with DB. Details: $e";
             die;
          } ?>
-
+         
+         <?php $i = 1; ?>
          <table class="table table-striped table-hover">
             <thead class="thead-dark">
                <th scope="col"></th>
