@@ -45,25 +45,29 @@ if (isset($_SESSION["account"])) {
    <?php include "nav.php"; ?>
 
    <div class="container">
-      <!-- What movie are we going to delete? -->
-      <form action="removeContent.php" method="POST" class="was-validated">
-         <div class="row">
+      <div class="row justify-content-center">
+         <div class="col-auto">
+            <!-- What movie are we going to delete? -->
+            <form action="removeContent.php" method="POST" class="was-validated">
+               <div class="row">
 
-            <!-- Title -->
-            <div class="col-md-4 mb-3">
-               <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" required>
-               <div class="invalid-feedback">
-                  What movie are we gonna remove from your library?
+                  <!-- Title -->
+                  <div class="col-md-4 mb-3">
+                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" required>
+                     <div class="invalid-feedback">
+                        What movie are we gonna remove from your library?
+                     </div>
+                  </div>
+
+                  <!-- Button to confirm -->
+                  <div class="col-md-4 mb-3">
+                     <button class="btn btn-warning" type="submit" name="delete">Delete</button>
+                  </div>
+
                </div>
-            </div>
-
-            <!-- Button to confirm -->
-            <div class="col-md-4 mb-3">
-               <button class="btn btn-warning" type="submit" name="delete">Delete</button>
-            </div>
-
+            </form>
          </div>
-      </form>
+      </div>
       <?php
       if (isset($delete)) {
          if (isset($_POST["title"])) {
@@ -91,7 +95,7 @@ if (isset($_SESSION["account"])) {
             echo "Error with DB. Details: $e";
             die;
          } ?>
-         
+
          <?php $i = 1; ?>
          <table class="table table-striped table-hover">
             <thead class="thead-dark">
@@ -107,12 +111,12 @@ if (isset($_SESSION["account"])) {
                <?php
                foreach ($movies as $movie) { ?>
                   <tr>
-                     <th scope="row"><?=$i?></th>
-                     <td><img src="<?=$movie->image?>" alt="<?=$movie->title?>" class="img-thumbnail"></td>
-                     <td><?=$movie->title?></td>
-                     <td><?=$movie->description?></td>
-                     <td><?=$movie->year?></td>
-                     <td><?=$movie->rating?></td>
+                     <th scope="row"><?= $i ?></th>
+                     <td><img src="<?= $movie->image ?>" alt="<?= $movie->title ?>" class="img-thumbnail"></td>
+                     <td><?= $movie->title ?></td>
+                     <td><?= $movie->description ?></td>
+                     <td><?= $movie->year ?></td>
+                     <td><?= $movie->rating ?></td>
                      <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
                   </tr>
                <?php } ?>
