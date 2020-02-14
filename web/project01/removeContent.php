@@ -141,14 +141,16 @@ if (isset($_SESSION["account"])) {
                                        </button>
                                     </div>
                                     <div class="modal-body">
-                                       <h5 class="modal-title" id="<?= $movie->id ?>ModalLabel">
-                                          Perminately DELETE <bold><?= $movie->title ?></bold> from your library
-                                       </h5>
+                                       <p class="modal-title" id="<?= $movie->id ?>ModalLabel">
+                                          Perminately DELETE <span class="text-weight-bolder text-danger"><?= $movie->title ?></span> from your library
+                                       </p>
                                     </div>
                                     <div class="modal-footer">
                                        <div class="row justify-content-center">
-                                          <div class="col-auto"><button type="button" class="btn btn-success" data-dismiss="modal">No</button>
-                                             <button type="button" class="btn btn-danger">Yes</button></div>
+                                          <div class="col-auto">
+                                             <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+                                             <button type="button" class="btn btn-danger">Yes</button>
+                                          </div>
                                        </div>
                                     </div>
                                  </div>
