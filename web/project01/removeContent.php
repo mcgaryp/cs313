@@ -30,10 +30,9 @@ if (isset($_POST['title'])) {
 
 if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
+} else {
+   header("location: index.php", true);
 }
-// } else {
-//    header("location: index.php", true);
-// }
 
 ?>
 <!DOCTYPE html>
