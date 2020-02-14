@@ -20,6 +20,10 @@ if (isset($_POST['delete'])) {
    $delete = $_POST['delete'];
 }
 
+if (isset($_POST['search'])) {
+   $delete = $_POST['search'];
+}
+
 if (isset($_POST['title'])) {
    $title = $_POST['title'];
 }
@@ -57,7 +61,7 @@ if (isset($_SESSION["account"])) {
 
                   <!-- Title -->
                   <div class="col-auto mb-3">
-                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" value="<?=$title?>" required>
+                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" value="<?= $title ?>" required>
                      <div class="invalid-feedback">
                         What movie are we gonna remove from your library?
                      </div>
@@ -65,7 +69,7 @@ if (isset($_SESSION["account"])) {
 
                   <!-- Button to confirm -->
                   <div class="cola-auto mb-3 pl-0">
-                     <button class="btn btn-warning" type="submit" name="delete">Delete</button>
+                     <button class="btn btn-warning" type="submit" name="search">Delete</button>
                   </div>
 
                </div>
@@ -73,14 +77,14 @@ if (isset($_SESSION["account"])) {
          </div>
       </div>
       <?php
-      if (isset($delete)) {
+      if (isset($search)) {
 
          require "api/dbConnect.php";
          $db = getBD();
 
          // search database for title
          try {
-            $title = '%'.$title.'%';
+            $title = '%' . $title . '%';
             $query = 'SELECT * FROM movie m inner join movie_group mg on title LIKE :title and mg.account_id = 2 and m.movie_id = mg.movie_id;';
             $state = $db->prepare($query);
             $state->bindValue(':title', $title);
@@ -121,9 +125,16 @@ if (isset($_SESSION["account"])) {
                         <td class="align-middle"><?= $movie->description ?></td>
                         <td class="align-middle"><?= $movie->year ?></td>
                         <td class="align-middle"><?= $movie->rating ?></td>
-                        <td class="align-middle"><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+                        <td class="align-middle">
+                           <form method="POST" action="removeContent.php">
+                              <button type="submit" class="btn btn-danger" name="delete">
+                                 <i class="fas fa-trash"></i>
+                              </button>
+                           </form>
+                        </td>
                      </tr>
-                  <?php $i ++; } ?>
+                  <?php $i++;
+                  } ?>
                </tbody>
             </table>
          <?php } else { ?>
