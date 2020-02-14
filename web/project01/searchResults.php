@@ -13,8 +13,8 @@ if (isset($_SESSION["account"])) {
    header("location: index.php", true);
 }
 
-if (isset($_POST['search'])) {
-   $search = $_POST['search'];
+if (isset($_POST['results'])) {
+   $movies = $_POST['results'];
 } else {
    header("location: index.php", true);
 }
