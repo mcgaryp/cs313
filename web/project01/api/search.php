@@ -42,6 +42,7 @@
                while($row = $state->fetch(PDO::FETCH_ASSOC)) {
                   $movie = new Movie($row["movie_id"], $row["image"], $row["title"], $row["description"], $row["rating"], $row["year"]);
                   array_push($movies, $movie);
+                  echo $movie;
                }
             }
             
@@ -52,7 +53,7 @@
 
          $_SESSION["results"] = $movies;
          print_r($_SESSION);
-         header("location: ../searchResults.php");
+         // header("location: ../searchResults.php");
 
       } else {
          header("location: ../home.php", true);
