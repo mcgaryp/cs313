@@ -52,7 +52,7 @@ if (isset($_SESSION["account"])) {
                <div class="row">
 
                   <!-- Title -->
-                  <div class="col-md-4 mb-3">
+                  <div class="col-auto mb-3">
                      <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" required>
                      <div class="invalid-feedback">
                         What movie are we gonna remove from your library?
@@ -60,7 +60,7 @@ if (isset($_SESSION["account"])) {
                   </div>
 
                   <!-- Button to confirm -->
-                  <div class="col-md-4 mb-3">
+                  <div class="cola-auto mb-3 pl-0">
                      <button class="btn btn-warning" type="submit" name="delete">Delete</button>
                   </div>
 
