@@ -11,11 +11,10 @@ function callDelete(movieId) {
             window.location.assign("home.php");
          else {
             // Failed to delete
-            console.log("Failed to delete");
             console.log(xhttp.response);
          }
       }
    }
-   xhttp.send('movieId=' + movieId);
+   xhttp.send(data);
    
 }
