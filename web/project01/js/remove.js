@@ -12,7 +12,7 @@ function callDelete(movieId) {
          }
       }
    }
-   xhttp.open("POST", "api/delete.php?movieId=" + movieId, true);
-   xhttp.send();
+   xhttp.open("POST", "api/delete.php", true);
+   xhttp.send("movieId=" + movieId);
    
 }
