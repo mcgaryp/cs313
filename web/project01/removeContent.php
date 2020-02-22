@@ -171,11 +171,11 @@ if (isset($_SESSION["account"])) {
                                     </div>
 
                                     <!-- Confirm that you want to delete it! -->
-                                    <div class="modal-body">
+                                    <!-- <div class="modal-body">
                                        <p class="modal-title" id="<?= $movie->id ?>ModalLabel">
                                           Perminately DELETE <span class="text-weight-bolder text-danger"><?= $movie->title ?></span> from your library
                                        </p>
-                                    </div>
+                                    </div> -->
                                     <div class="modal-footer justify-content-center">
                                        <div class="row">
                                           <div class="col-auto">
