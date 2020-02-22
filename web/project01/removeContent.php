@@ -6,7 +6,6 @@ include "classes/movie.php";
 session_start();
 
 $_SESSION["current"] = "deleteContent";
-unset($_SESSION["extension"]);
 
 if (isset($_GET['success'])) {
    $success = $_GET['success'];
@@ -16,16 +15,16 @@ if (isset($_GET['error'])) {
    $error = $_GET['error'];
 }
 
-if (isset($_POST['delete'])) {
-   $delete = $_POST['delete'];
-}
-
 if (isset($_POST['search'])) {
    $search = $_POST['search'];
 }
 
 if (isset($_POST['title'])) {
    $title = $_POST['title'];
+}
+
+if (isset($_GET['title'])) {
+   $title = $_GET['title'];
 }
 
 if (isset($_SESSION["account"])) {

@@ -33,16 +33,13 @@ if (isset($_POST["movieId"])) {
       $state = $db->prepare($query);
       $state->execute();
       
-      header("location: ../home.php?success=true&title=$movie->title");
+      header("location: ../removeContent.php?success=true&title=$movie->title");
 
    } catch (Exception $e) {
       echo "Database trouble. Details: $e";
-      die;
+      header("location: ../removeContent.php?sucess=false&error=$e");
    }
       
-   // check to see if the movie group has that movie id in it if it doesnt then delete the movie
-   // echo true;
 } else {
-   echo "Movieid not set";
-   die;
+   header("location: ../removeContent.php?success=false&title=$movie->title");
 }
