@@ -96,12 +96,7 @@ if (isset($_POST["add"])) {
       $query = 'SELECT * FROM movie WHERE title = :title';
       $movieTable = $db->prepare($query);
       // bind values
-      $movieTable->bindValue(':account', $account->id);
-      $movieTable->bindValue(':img', $image);
       $movieTable->bindValue(':title', $title);
-      $movieTable->bindValue(':desc', $desc);
-      $movieTable->bindValue(':rat', $rating);
-      $movieTable->bindValue(':year', $year);
       $movieTable->execute();
 
       echo "executed the query";
