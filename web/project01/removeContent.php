@@ -84,7 +84,7 @@ if (isset($_SESSION["account"])) {
          // search database for title
          try {
             $title = '%' . $title . '%';
-            $query = 'SELECT * FROM movie m inner join movie_group mg on title iLIKE :title and mg.account_id = :id and m.movie_id = mg.movie_id;';
+            $query = 'SELECT * FROM movie WHERE title iLIKE :title and account_id = :id';
             $state = $db->prepare($query);
             $state->bindValue(':title', $title);
             $state->bindValue(':id', $account->id);
