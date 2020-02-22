@@ -95,7 +95,7 @@
       // Try to add to DB
       try {
          // query
-         $query = 'INSERT INTO movie (account,image,title,description,rating,year) VALUES (:account, :img, :title, :desc, :rat, :year);';
+         $query = 'INSERT INTO movie (account_id,image,title,description,rating,year) VALUES (:account, :img, :title, :desc, :rat, :year);';
          $movieTable = $db ->prepare($query);
          // bind values
          $movieTable->bindValue(':account', $account->id);
