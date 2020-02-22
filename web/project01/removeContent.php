@@ -75,7 +75,7 @@ if (isset($_SESSION["account"])) {
          </div>
       </div>
       <?php
-      if (isset($search)) {
+      if (isset($search) || $success == true) {
 
          require "api/dbConnect.php";
          $db = getBD();
