@@ -80,7 +80,7 @@ if (isset($_SESSION["account"])) {
 
                   <!-- Title -->
                   <div class="col-auto mb-3">
-                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" value="" required>
+                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" value=" " required>
                      <div class="invalid-feedback">
                         What movie are we gonna remove from your library?
                      </div>
@@ -145,6 +145,7 @@ if (isset($_SESSION["account"])) {
                         <td class="align-middle"><?= $movie->year ?></td>
                         <td class="align-middle"><?= $movie->rating ?></td>
                         <td class="align-middle">
+                           
                            <!-- Button trigger modal -->
                            <button type="button" class="btn btn-danger modal-button" data-toggle="modal" data-target="<?= $movie->id ?>">
                               <i class="fas fa-trash"></i>
@@ -169,12 +170,15 @@ if (isset($_SESSION["account"])) {
                                     <div class="modal-footer">
                                        <div class="row justify-content-center">
                                           <div class="row-auto">
-                                             <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
-                                             <!-- delete movie -->
+                                             <div class="col-auto">
+                                                <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+                                             </div>
+
+                                             <div class="col-auto"><!-- delete movie -->
                                              <form method="POST" action="api/delete.php">
-                                                <input id="<?= $movie->id ?>" name="movieId" value="<?= $movie->id ?>" hidden>
-                                                <button type="submit" class="btn btn-danger">Yes</button>
-                                             </form>
+                                             <input id="<?= $movie->id ?>" name="movieId" value="<?= $movie->id ?>" hidden>
+                                             <button type="submit" class="btn btn-danger">Yes</button>
+                                             </form></div>
                                           </div>
                                        </div>
                                     </div>
