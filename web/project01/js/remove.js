@@ -1,7 +1,6 @@
 function callDelete(movieId) {
-
-   const data = "movieId=" + movieId;
-   console.log(data);
+   
+   console.log("movieId=" + movieId);
 
    const xhttp = new XMLHttpRequest();
 
@@ -17,6 +16,6 @@ function callDelete(movieId) {
    }
    xhttp.open('POST', 'api/delete.php');
    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-   xhttp.send(data);
+   xhttp.send("movieId=" + movieId);
    
 }
