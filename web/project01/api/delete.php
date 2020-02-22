@@ -19,7 +19,7 @@ if (isset($_POST["movieId"])) {
 
    // delete from movie group relation first
    try {
-      $query = "DELETE FROM movie_group WHERE movie_id = $movieId AND account_id = $account->id;";
+      $query = "DELETE FROM movie WHERE movie_id = $movieId AND account_id = $account->id;";
       $state = $db->prepare($query);
       $state->execute();
    } catch (Exception $e) {
