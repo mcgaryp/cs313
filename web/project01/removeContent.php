@@ -57,15 +57,21 @@ if (isset($_SESSION["account"])) {
          <div class="toast-header">
             <!-- <img src="" class="rounded mr-2" alt="..."> -->
             <strong class="mr-auto"><?php if ($success) {
-               echo "Successful"; } else { echo "Failure"; } ?></strong>
+                                       echo "Successful";
+                                    } else {
+                                       echo "Failure";
+                                    } ?></strong>
             <small>now</small>
             <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                <span aria-hidden="true">&times;</span>
             </button>
          </div>
          <div class="toast-body">
-         <?php if ($success) {
-               echo "Successfully removed $title from your collection"; } else { echo "Failure to remove $title from your collection"; } ?>
+            <?php if ($success) {
+               echo "Successfully removed $title from your collection";
+            } else {
+               echo "Failure to remove $title from your collection";
+            } ?>
          </div>
       </div>
 
@@ -80,7 +86,7 @@ if (isset($_SESSION["account"])) {
 
                   <!-- Title -->
                   <div class="col-auto mb-3">
-                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" value=" " required>
+                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" value="" required>
                      <div class="invalid-feedback">
                         What movie are we gonna remove from your library?
                      </div>
@@ -145,7 +151,7 @@ if (isset($_SESSION["account"])) {
                         <td class="align-middle"><?= $movie->year ?></td>
                         <td class="align-middle"><?= $movie->rating ?></td>
                         <td class="align-middle">
-                           
+
                            <!-- Button trigger modal -->
                            <button type="button" class="btn btn-danger modal-button" data-toggle="modal" data-target="<?= $movie->id ?>">
                               <i class="fas fa-trash"></i>
@@ -169,16 +175,16 @@ if (isset($_SESSION["account"])) {
                                     </div>
                                     <div class="modal-footer">
                                        <div class="row justify-content-center">
-                                          <div class="row-auto">
-                                             <div class="col-auto">
-                                                <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
-                                             </div>
+                                          <div class="col-auto">
+                                             <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+                                          </div>
 
-                                             <div class="col-auto"><!-- delete movie -->
+                                          <div class="col-auto">
+                                             <!-- delete movie -->
                                              <form method="POST" action="api/delete.php">
-                                             <input id="<?= $movie->id ?>" name="movieId" value="<?= $movie->id ?>" hidden>
-                                             <button type="submit" class="btn btn-danger">Yes</button>
-                                             </form></div>
+                                                <input id="<?= $movie->id ?>" name="movieId" value="<?= $movie->id ?>" hidden>
+                                                <button type="submit" class="btn btn-danger">Yes</button>
+                                             </form>
                                           </div>
                                        </div>
                                     </div>
