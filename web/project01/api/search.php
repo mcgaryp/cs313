@@ -38,7 +38,9 @@
          }
 
          $_SESSION["results"] = $movies;
-         header("location: ../searchResults.php", true);
+         print_r($movies);
+         die;
+         // header("location: ../searchResults.php", true);
 
       } else {
          header("location: ../home.php", true);
