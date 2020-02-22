@@ -15,7 +15,6 @@ if (isset($_SESSION["account"])) {
 
 if (isset($_SESSION["results"])) {
    $movies = $_SESSION["results"];
-   print_r($movies);
 } else {
    header("location: home.php", true);
 }

@@ -1,10 +1,10 @@
 function callDelete(movieId) {
-   console.log("made it to the ajax");
-   var data = new FormData();
-   data.append('movieId', movieId);
 
-   var xhttp = new XMLHttpRequest();
-   xhttp.open('GET', 'api/delete.php', true);
+   const data = "movieId=" + movieId;
+   console.log(data);
+
+   const xhttp = new XMLHttpRequest();
+
    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
          if (xhttp.response == 1)
@@ -15,6 +15,8 @@ function callDelete(movieId) {
          }
       }
    }
+   xhttp.open('POST', 'api/delete.php');
+   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    xhttp.send(data);
    
 }
