@@ -33,7 +33,7 @@ if (isset($_POST["movieId"])) {
       $state = $db->prepare($query);
       $state->execute();
       
-      header("location: ../?success=true&title=$movie->title");
+      header("location: ../home.php?success=true&title=$movie->title");
 
    } catch (Exception $e) {
       echo "Database trouble. Details: $e";
