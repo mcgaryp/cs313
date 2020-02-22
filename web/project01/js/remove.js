@@ -1,5 +1,5 @@
 function callDelete(movieId) {
-   
+
    console.log("movieId=" + movieId);
 
    const xhttp = new XMLHttpRequest();
@@ -11,6 +11,7 @@ function callDelete(movieId) {
          else {
             // Failed to delete
             console.log(xhttp.response);
+            window.location.assign("api/delete.php");
          }
       }
    }
