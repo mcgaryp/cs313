@@ -11,7 +11,7 @@ if (isset($_SESSION["account"])) {
 }
 
 if (isset($_POST["movieId"])) {
-   $movieId = $_GET["movieId"];
+   $movieId = $_POST["movieId"];
 
    // get database
    require "dbConnect.php";
@@ -22,7 +22,7 @@ if (isset($_POST["movieId"])) {
       $query = "DELETE FROM movie WHERE movie_id = $movieId AND account_id = $account->id;";
       $state = $db->prepare($query);
       $state->execute();
-      echo "we deleted somthing";
+      echo "we deleted something";
    } catch (Exception $e) {
       echo "Database trouble. Details: $e";
    }
