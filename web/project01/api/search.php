@@ -10,7 +10,7 @@
       if (isset($_POST["search"])) {
 
          $account = $_SESSION["account"];
-         $searchItem = $_POST["search"];
+         $searchItem = $_POST["searchForWhat"];
 
          // get database
          require "dbConnect.php";
