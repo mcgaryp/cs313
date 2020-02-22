@@ -27,8 +27,8 @@ if (isset($_POST["movieId"])) {
    }
       
    // check to see if the movie group has that movie id in it if it doesnt then delete the movie
-   echo true;
-   // echo "we deleted somthing";
+   // echo true;
+   echo "we deleted somthing";
 } else {
    echo "Movieid not set";
 }
