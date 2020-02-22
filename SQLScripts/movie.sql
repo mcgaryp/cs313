@@ -3,6 +3,7 @@ CREATE TABLE movie (
    movie_id SERIAL NOT NULL PRIMARY KEY,
    -- movie_mp4_id INT NOT NULL REFERENCES movie_mp4(movie_mp4_id),
    -- movie_trailer_id INT NOT NULL REFERENCES movie_trailer(movie_trailer_id),
+   account_id INT NOT NULL REFERENCES account(account_id),
    image TEXT NOT NULL,
    title VARCHAR(255) NOT NULL,
    description TEXT NOT NULL,
@@ -14,6 +15,7 @@ CREATE TABLE movie (
 INSERT INTO movie (
    -- movie_mp4_id,
    -- movie_trailer_id,
+   account_id,
    image,
    title,
    description,
@@ -22,6 +24,7 @@ INSERT INTO movie (
 ) VALUES (
    -- 1,
    -- 1,
+   1,
    'No Image',
    'No Title',
    'No Description',
