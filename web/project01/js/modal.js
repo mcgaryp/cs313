@@ -8,3 +8,7 @@ for (let i = 0; i < buttons.length; i++) {
       $(modal).modal('show');
    });
 }
+
+$(document).ready(function(){
+   $('.toast').toast('show');
+ });
