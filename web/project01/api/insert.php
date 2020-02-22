@@ -91,7 +91,7 @@ if (isset($_POST["add"])) {
    // Try to add to DB
    try {
 
-      // TODO search movies to see if we already have this content
+      // search movies to see if we already have this content
       // if we have it just ask for the personalized mp4
       $query = 'SELECT * FROM movie WHERE title = :title';
       $movieTable = $db->prepare($query);
@@ -104,8 +104,11 @@ if (isset($_POST["add"])) {
       $movieTable->bindValue(':year', $year);
       $movieTable->execute();
 
+      echo "executed the query";
+
       if ($row = $movieTable->fetch(PDO::FETCH_ASSOC)) {
-         header("location: ../addContent.php?success=false&error=This movie title has been taken");
+         header("location: ../addContent.php?success=false&error=This movie title has been taken", true);
+         die;
       }
 
       //else continue to add to the other stuff
@@ -123,10 +126,12 @@ if (isset($_POST["add"])) {
       $movieTable->execute();
 
       // Send back to add content
-      header("location: ../addContent.php?success=true$title added to your collection");
+      header("location: ../addContent.php?success=true$title added to your collection", true);
+      die;
 
       // Catch erros
    } catch (Exception $e) {
-      header("location: ../addContent.php?success=false&error=$e");
+      header("location: ../addContent.php?success=false&error=$e", true);
+      die;
    }
 }
