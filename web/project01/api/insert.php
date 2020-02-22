@@ -105,7 +105,7 @@ if (isset($_POST["add"])) {
       $movieTable->execute();
 
       if ($row = $movieTable->fetch(PDO::FETCH_ASSOC)) {
-         header("location: ..addContent.php?success=false&error=This movie title has been taken");
+         header("location: ../addContent.php?success=false&error=This movie title has been taken");
       }
 
       //else continue to add to the other stuff
