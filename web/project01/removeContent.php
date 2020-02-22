@@ -148,9 +148,9 @@ if (isset($_SESSION["account"])) {
                                        <div class="row justify-content-center">
                                           <div class="col-auto">
                                              <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
-                                             <form method="POST" >
-                                                <input id="<?= $movie->id ?>" name="<?= $movie->id ?>" value="<?= $movie->id ?>">
-                                                <button type="button" class="btn btn-danger" onclick="callDelete(<?= $movie->id ?>)">Yes</button>
+                                             <form method="POST" action="api/delete.php">
+                                                <input id="<?= $movie->id ?>" name="movieId" value="<?= $movie->id ?>">
+                                                <button type="submit" class="btn btn-danger" >Yes</button>
                                              </form>
                                           </div>
                                        </div>

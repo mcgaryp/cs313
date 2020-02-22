@@ -14,7 +14,7 @@ if (isset($_POST["movieId"])) {
    $movieId = $_GET["movieId"];
 
    // get database
-   require "api/dbConnect.php";
+   require "dbConnect.php";
    $db = getBD();
 
    // delete from movie group relation first
