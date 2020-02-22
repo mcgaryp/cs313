@@ -11,7 +11,7 @@ if (isset($_SESSION["account"])) {
 }
 
 if (isset($_POST["movieId"])) {
-   $movieId = $_POST["movieId"];
+   $movieId = $_GET["movieId"];
 
    // get database
    require "api/dbConnect.php";
