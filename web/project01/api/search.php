@@ -18,13 +18,13 @@
 
          // search for key words
          try {
-            $searchItem = $searchItem.'%';
-            $query = 'SELECT * FROM movie WHERE title iLIKE :search AND account_id = :account_id';
+            $searchItem = '%' . $searchItem .'%';
+            $query = 'SELECT * FROM movie WHERE title iLIKE :title and account_id = :id';
 
             $movies = array();
             $state = $db->prepare($query);
             $state->bindValue(':search', $searchItem);
-            $state->bindValue(':account_id', $account->id);
+            $state->bindValue(':id', $account->id);
             $state->execute();
 
             while($row = $state->fetch(PDO::FETCH_ASSOC)) {
