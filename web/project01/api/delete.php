@@ -22,13 +22,13 @@ if (isset($_POST["movieId"])) {
       $query = "DELETE FROM movie WHERE movie_id = $movieId AND account_id = $account->id;";
       $state = $db->prepare($query);
       $state->execute();
+      echo "we deleted somthing";
    } catch (Exception $e) {
       echo "Database trouble. Details: $e";
    }
       
    // check to see if the movie group has that movie id in it if it doesnt then delete the movie
    // echo true;
-   echo "we deleted somthing";
 } else {
    echo "Movieid not set";
 }
