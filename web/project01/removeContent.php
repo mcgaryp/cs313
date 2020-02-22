@@ -176,7 +176,7 @@ if (isset($_SESSION["account"])) {
                                           Perminately DELETE <span class="text-weight-bolder text-danger"><?= $movie->title ?></span> from your library
                                        </p>
                                     </div>
-                                    <div class="modal-footer">
+                                    <div class="modal-footer justify-content-center">
                                        <div class="row">
                                           <div class="col-auto">
                                              <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
