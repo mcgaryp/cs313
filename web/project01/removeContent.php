@@ -146,10 +146,10 @@ if (isset($_SESSION["account"])) {
                                     </div>
                                     <div class="modal-footer">
                                        <div class="row justify-content-center">
-                                          <div class="col-auto">
+                                          <div class="row-auto">
                                              <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
                                              <form method="POST" action="api/delete.php">
-                                                <input id="<?= $movie->id ?>" name="movieId" value="<?= $movie->id ?>">
+                                                <input id="<?= $movie->id ?>" name="movieId" value="<?= $movie->id ?>" hidden>
                                                 <button type="submit" class="btn btn-danger" >Yes</button>
                                              </form>
                                           </div>
