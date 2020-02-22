@@ -19,7 +19,7 @@
          // search for key words
          try {
             $searchItem = '%' . $searchItem .'%';
-            $query = 'SELECT * FROM movie WHERE title iLIKE :title and account_id = :id';
+            $query = 'SELECT * FROM movie WHERE title iLIKE :search and account_id = :id';
 
             $movies = array();
             $state = $db->prepare($query);
