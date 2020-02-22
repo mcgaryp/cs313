@@ -80,7 +80,7 @@ if (isset($_SESSION["account"])) {
 
                   <!-- Title -->
                   <div class="col-auto mb-3">
-                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" value="<?= $title ?>" required>
+                     <input type="text" class="form-control is-valid" id="movieTitle" placeholder="Movie Title" name="title" value="" required>
                      <div class="invalid-feedback">
                         What movie are we gonna remove from your library?
                      </div>
