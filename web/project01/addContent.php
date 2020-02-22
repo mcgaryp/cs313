@@ -5,7 +5,6 @@ include "classes/account.php";
 session_start();
 
 $_SESSION["current"] = "addContent";
-unset($_SESSION["extension"]);
 
 if (isset($_GET['success'])) {
    $success = $_GET['success'];
@@ -37,50 +36,33 @@ if (isset($_SESSION["account"])) {
 
 <body>
    <?php include "nav.php";
-   if (isset($_SESSION["toast"])) {
 
-      if ($_SESSION["toast"] == true) { ?>
+   if (isset($success)) { ?>
 
-         <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
-            <!-- Position it -->
-            <div style="position: absolute; top: 0; right: 0;">
-               <?php if (isset($error)) { ?>
-                  <!-- Error Toast -->
-                  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                     <div class="toast-header">
-                        <img src="..." class="rounded mr-2" alt="...">
-                        <strong class="mr-auto text-danger">Error</strong>
-                        <small class="text-muted">just now</small>
-                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                           <span aria-hidden="true">&times;</span>
-                        </button>
-                     </div>
-                     <div class="toast-body">
-                        <?= $error ?>
-                     </div>
-                  </div>
-               <?php } ?>
-
-               <?php if (isset($success)) { ?>
-                  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                     <div class="toast-header">
-                        <img src="..." class="rounded mr-2" alt="...">
-                        <strong class="mr-auto">Success</strong>
-                        <small class="text-muted">just now</small>
-                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                           <span aria-hidden="true">&times;</span>
-                        </button>
-                     </div>
-                     <div class="toast-body">
-                        <?= $success ?>
-                     </div>
-                  </div>
-               <?php } ?>
-
-            </div>
+      <!-- Toast -->
+      <div class="toast" style="position: absolute; top: 60px; right: 0;">
+         <div class="toast-header">
+            <!-- <img src="" class="rounded mr-2" alt="..."> -->
+            <strong class="mr-auto"><?php if ($success) {
+                                       echo "Successful";
+                                    } else {
+                                       echo "Failure";
+                                    } ?></strong>
+            <small>now</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
          </div>
-   <?php }
-   } ?>
+         <div class="toast-body">
+            <?php if ($success) {
+               echo "Successfully removed $title from your collection";
+            } else {
+               echo "Failure to remove $title from your collection";
+            } ?>
+         </div>
+      </div>
+
+   <?php } ?>
 
    <div class="container">
       <form class="was-validated" method="POST" action="api/insert.php">

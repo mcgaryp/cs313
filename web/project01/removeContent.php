@@ -160,6 +160,8 @@ if (isset($_SESSION["account"])) {
                            <!-- Modal -->
                            <div class="modal fade" id="<?= $movie->id ?>" tabindex="-1" role="dialog" aria-labelledby="<?= $movie->id ?>ModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
+
+                                 <!-- Confirm that you want to delete it! -->
                                  <div class="modal-content">
                                     <div class="modal-header">
                                        <p class="modal-title" id="<?= $movie->id ?>ModalLabel">
@@ -170,12 +172,6 @@ if (isset($_SESSION["account"])) {
                                        </button>
                                     </div>
 
-                                    <!-- Confirm that you want to delete it! -->
-                                    <!-- <div class="modal-body">
-                                       <p class="modal-title" id="<?= $movie->id ?>ModalLabel">
-                                          Perminately DELETE <span class="text-weight-bolder text-danger"><?= $movie->title ?></span> from your library
-                                       </p>
-                                    </div> -->
                                     <div class="modal-footer justify-content-center">
                                        <div class="row">
                                           <div class="col-auto">
