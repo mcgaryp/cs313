@@ -8,6 +8,7 @@ if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
 } else {
    echo "account not set";
+   header("location: ../");
 }
 
 if (isset($_POST["movieId"])) {
@@ -22,7 +23,7 @@ if (isset($_POST["movieId"])) {
       $query = "DELETE FROM movie WHERE movie_id = $movieId AND account_id = $account->id;";
       $state = $db->prepare($query);
       $state->execute();
-      echo "we deleted something";
+      header("location: ../");
    } catch (Exception $e) {
       echo "Database trouble. Details: $e";
    }

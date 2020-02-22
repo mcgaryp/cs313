@@ -139,6 +139,8 @@ if (isset($_SESSION["account"])) {
                                           <span aria-hidden="true">&times;</span>
                                        </button>
                                     </div>
+
+                                    <!-- Confirm that you want to delete it! -->
                                     <div class="modal-body">
                                        <p class="modal-title" id="<?= $movie->id ?>ModalLabel">
                                           Perminately DELETE <span class="text-weight-bolder text-danger"><?= $movie->title ?></span> from your library
@@ -148,6 +150,7 @@ if (isset($_SESSION["account"])) {
                                        <div class="row justify-content-center">
                                           <div class="row-auto">
                                              <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+                                             <!-- delete movie -->
                                              <form method="POST" action="api/delete.php">
                                                 <input id="<?= $movie->id ?>" name="movieId" value="<?= $movie->id ?>" hidden>
                                                 <button type="submit" class="btn btn-danger" >Yes</button>
@@ -172,12 +175,9 @@ if (isset($_SESSION["account"])) {
             </div>
       <?php   }
       } ?>
-      <!-- Confirm that you want to delete it! -->
+
    </div>
-   <!-- delete movie -->
-
-
-   <!-- delete relationship -->
+   
 
    </div>
 
