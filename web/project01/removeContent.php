@@ -175,16 +175,18 @@ if (isset($_SESSION["account"])) {
                                     </div>
                                     <div class="modal-footer">
                                        <div class="row justify-content-center">
-                                          <div class="col-auto">
-                                             <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
-                                          </div>
+                                          <div class="row">
+                                             <div class="col-auto">
+                                                <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+                                             </div>
 
-                                          <div class="col-auto">
-                                             <!-- delete movie -->
-                                             <form method="POST" action="api/delete.php">
-                                                <input id="<?= $movie->id ?>" name="movieId" value="<?= $movie->id ?>" hidden>
-                                                <button type="submit" class="btn btn-danger">Yes</button>
-                                             </form>
+                                             <div class="col-auto">
+                                                <!-- delete movie -->
+                                                <form method="POST" action="api/delete.php">
+                                                   <input id="<?= $movie->id ?>" name="movieId" value="<?= $movie->id ?>" hidden>
+                                                   <button type="submit" class="btn btn-danger">Yes</button>
+                                                </form>
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
