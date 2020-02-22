@@ -114,19 +114,19 @@
          die;
       }
 
-      // make sure the account is updated and the linker table
-      $movieId = $db->lastInsertId("movie_movie_id_seq");
-      $account = $_SESSION["account"];
+      // // make sure the account is updated and the linker table
+      // $movieId = $db->lastInsertId("movie_movie_id_seq");
+      // $account = $_SESSION["account"];
 
-      // try to update movie group
-      try {
-         $query = "INSERT INTO movie_group (movie_id, account_id) VALUES ($movieId,$account->id);";
-         $movieGroupTable = $db->prepare($query);
-         $movieGroupTable->execute();
-      } catch (Exception $e) {
-         echo "Error with DB. Details: $e";
-         die;
-      }
+      // // try to update movie group
+      // try {
+      //    $query = "INSERT INTO movie_group (movie_id, account_id) VALUES ($movieId,$account->id);";
+      //    $movieGroupTable = $db->prepare($query);
+      //    $movieGroupTable->execute();
+      // } catch (Exception $e) {
+      //    echo "Error with DB. Details: $e";
+      //    die;
+      // }
 
       // TODO set up toast info
       $_SESSION["toast"] = true;
