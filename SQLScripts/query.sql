@@ -4,29 +4,23 @@ select * from account;
 -- select * from movie_group;
 select * from user_profile;
 
--- Selects the movies to display on the 
-select title, rating, year from movie
--- inner join movie_group mg on m.movie_id = mg.movie_id and 
-Where account_id = 2;
+-- Selects the movies to display on the home page
+select title, rating, year from movie where account_id = 2;
 
+-- selects the profiles
 select up.nick_name from account a inner join user_profile up on up.account_id = a.account_id and a.account_id = 2;
 
+-- selects account with confirming password and username
 SELECT * FROM account a WHERE a.username = 'porter' AND a.password = 'password';
 
+-- looks up rating for inserting into html
 SELECT * FROM common_lookup WHERE context = 'RATING';
 
-SELECT m.movie_id, title, rating FROM movie m 
--- inner join movie_group mg on title LIKE '%Lord%' and 
-where m.account_id = 2; 
--- and m.movie_id = mg.movie_id;
-
-
-
+-- selects the movies based on movie id
 SELECT title, rating, year FROM movie WHERE movie_id = 5;
--- SELECT * FROM movie_group WHERE movie_id = 5 AND account_id = 1;
 
--- DELETE FROM movie_group WHERE movie_id = 5 AND account_id = 1;
--- DELETE FROM movie WHERE movie_id = 5;
+-- Deletes movie based on id and account
+DELETE FROM movie WHERE movie_id = 5 AND account_id = 1;
 
-SELECT title, rating, year FROM movie Where title ILIKE 'lo%';
--- SELECT * FROM movie_group;
+-- Searches for specific movies in an account
+SELECT movie_id, account_id, title, rating, year FROM movie WHERE title ILIKE 'lo%' AND account_id = 1;

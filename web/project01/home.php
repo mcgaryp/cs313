@@ -38,7 +38,7 @@
 
    // Just get some of the movies preparation
    try {
-      $movieDB = $db->prepare("SELECT * FROM movie m INNER JOIN movie_group mg on m.movie_id = mg.movie_id AND mg.account_id = $account->id");
+      $movieDB = $db->prepare("SELECT * FROM movie WHERE account_id = $account->id");
       $movieDB->execute();
 
       // Create array to hold all the users movies
