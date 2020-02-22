@@ -6,14 +6,15 @@ function callDelete(movieId) {
 
    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-         if (xhttp.response == true)
-            console.log(xhttp.response)
-            // window.location.assign("home.php");
-         else {
-            // Failed to delete
-            console.log(xhttp.response);x
-            // window.location.assign("api/delete.php");
-         }
+         console.log(xhttp.response);
+         //          if (xhttp.response)
+         //             console.log(xhttp.response)
+         //             // window.location.assign("home.php");
+         //          else {
+         //             // Failed to delete
+         //             console.log(xhttp.response);x
+         //             // window.location.assign("api/delete.php");
+         //          }
       }
    }
    xhttp.open('POST', 'api/delete.php');

@@ -148,7 +148,7 @@ if (isset($_SESSION["account"])) {
                                        <div class="row justify-content-center">
                                           <div class="col-auto">
                                              <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
-                                             <form method="POST" action="">
+                                             <form method="POST">
                                                 <button type="submit" class="btn btn-danger" onclick="callDelete(<?= $movie->id ?>)">Yes</button>
                                              </form>
                                           </div>
