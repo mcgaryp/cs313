@@ -83,6 +83,7 @@
       $desc = $_POST["desc"];
       $image = $_POST["image"];
       $account = $_SESSION["account"];
+      print_r($account);
 
       // TODO search movies to see if we already have this content
          // if we have it just ask for the personalized mp4
