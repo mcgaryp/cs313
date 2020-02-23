@@ -44,7 +44,7 @@ if (isset($_SESSION["account"])) {
    if (isset($success)) { ?>
 
       <!-- Toast -->
-      <div class="toast" style="position: absolute; top: 60px; right: 0;">
+      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 60px; right: 0; float:left" data-autohide="false">
          <div class="toast-header">
             <!-- <img src="" class="rounded mr-2" alt="..."> -->
             <strong class="mr-auto"><?php if ($success) {
