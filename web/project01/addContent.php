@@ -42,7 +42,9 @@ if (isset($_SESSION["account"])) {
    <?php include "nav.php";
 
    if (isset($success)) { 
-      echo $success;?>
+      echo $success.'<br>';
+      echo $title.'<br>';
+      echo $error.'<br>';?>
 
       <!-- Toast -->
       <div class="toast" style="position: absolute; top: 60px; right: 0;">
