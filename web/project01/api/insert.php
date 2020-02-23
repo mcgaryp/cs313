@@ -82,7 +82,6 @@ if (isset($_POST["add"])) {
    $desc = $_POST["desc"];
    $image = $_POST["image"];
    $account = $_SESSION["account"];
-   print_r($account);
 
    // create movie in database
    require "dbConnect.php";
@@ -99,14 +98,12 @@ if (isset($_POST["add"])) {
       $movieTable->bindValue(':title', $title);
       $movieTable->execute();
 
-      echo "executed the query";
-
       if ($row = $movieTable->fetch(PDO::FETCH_ASSOC)) {
          header("location: ../addContent.php?success=false&error=This movie title has been taken", true);
          die;
       }
 
-      //else continue to add to the other stuff
+      // else continue to add to the other stuff
 
       // query
       $query = 'INSERT INTO movie (account_id,image,title,description,rating,year) VALUES (:account, :img, :title, :desc, :rat, :year);';

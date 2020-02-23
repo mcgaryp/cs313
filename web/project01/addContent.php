@@ -55,9 +55,9 @@ if (isset($_SESSION["account"])) {
          </div>
          <div class="toast-body">
             <?php if ($success) {
-               echo "Successfully removed $title from your collection";
+               echo "Successfully added $title to your collection.";
             } else {
-               echo "Failure to remove $title from your collection";
+               echo "Failure to added $title to your collection. $error.";
             } ?>
          </div>
       </div>
