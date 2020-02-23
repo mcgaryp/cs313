@@ -99,7 +99,7 @@ if (isset($_POST["add"])) {
       $movieTable->execute();
 
       if ($row = $movieTable->fetch(PDO::FETCH_ASSOC)) {
-         header("location: ../addContent.php?success=false&error=This movie title has been taken", true);
+         header("location: ../addContent.php?success=false&error=This movie title has been taken&title=$title", true);
          die;
       }
 
@@ -123,7 +123,7 @@ if (isset($_POST["add"])) {
 
       // Catch erros
    } catch (Exception $e) {
-      header("location: ../addContent.php?success=false&error=$e", true);
+      header("location: ../addContent.php?success=false&error=$e&title=$title", true);
       die;
    }
 }

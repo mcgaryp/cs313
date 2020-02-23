@@ -61,7 +61,7 @@ if (isset($_SESSION["account"])) {
             </button>
          </div>
          <div class="toast-body">
-            <?php if ($success) {
+            <?php if ($success == true) {
                echo "Successfully added $title to your collection.";
             } else {
                echo "Failure to add $title to your collection with error: $error.";
