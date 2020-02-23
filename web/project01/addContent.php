@@ -37,7 +37,8 @@ if (isset($_SESSION["account"])) {
 <body>
    <?php include "nav.php";
 
-   if (isset($success)) { ?>
+   if (isset($success)) { 
+      echo $success;?>
 
       <!-- Toast -->
       <div class="toast" style="position: absolute; top: 60px; right: 0;">
