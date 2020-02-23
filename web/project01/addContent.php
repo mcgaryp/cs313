@@ -41,18 +41,15 @@ if (isset($_SESSION["account"])) {
 <body>
    <?php include "nav.php";
 
-   if (isset($success)) { 
-      echo $success.'<br>';
-      echo $title.'<br>';
-      echo $error.'<br>';?>
+   if (isset($success)) { ?>
 
       <!-- Toast -->
       <div class="toast" style="position: absolute; top: 60px; right: 0;">
          <div class="toast-header">
             <!-- <img src="" class="rounded mr-2" alt="..."> -->
-            <strong class="mr-auto"><?php if ($success == true) {
+            <strong class="mr-auto"><?php if ($success) {
                                        echo "Successful";
-                                    } else if ($success == false) {
+                                    } else {
                                        echo "Failure";
                                     } ?></strong>
             <small>now</small>
@@ -61,7 +58,7 @@ if (isset($_SESSION["account"])) {
             </button>
          </div>
          <div class="toast-body">
-            <?php if ($success == true) {
+            <?php if ($success) {
                echo "Successfully added $title to your collection.";
             } else {
                echo "Failure to add $title to your collection with error: $error.";

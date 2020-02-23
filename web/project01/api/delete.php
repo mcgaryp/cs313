@@ -33,13 +33,13 @@ if (isset($_POST["movieId"])) {
       $state = $db->prepare($query);
       $state->execute();
       
-      header("location: ../removeContent.php?success=true&title=$movie->title");
+      header("location: ../removeContent.php?success=1&title=$movie->title");
 
    } catch (Exception $e) {
       echo "Database trouble. Details: $e";
-      header("location: ../removeContent.php?sucess=false&error=$e");
+      header("location: ../removeContent.php?sucess=0&error=$e");
    }
       
 } else {
-   header("location: ../removeContent.php?success=false&title=$movie->title");
+   header("location: ../removeContent.php?success=0&title=$movie->title");
 }
