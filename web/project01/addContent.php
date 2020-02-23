@@ -43,7 +43,7 @@ if (isset($_SESSION["account"])) {
       <div class="toast" style="position: absolute; top: 60px; right: 0;">
          <div class="toast-header">
             <!-- <img src="" class="rounded mr-2" alt="..."> -->
-            <strong class="mr-auto"><?php if ($success) {
+            <strong class="mr-auto"><?php if ($success == true) {
                                        echo "Successful";
                                     } else {
                                        echo "Failure";
