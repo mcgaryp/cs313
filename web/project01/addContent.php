@@ -52,7 +52,7 @@ if (isset($_SESSION["account"])) {
             <!-- <img src="" class="rounded mr-2" alt="..."> -->
             <strong class="mr-auto"><?php if ($success == true) {
                                        echo "Successful";
-                                    } else {
+                                    } else if ($success == false) {
                                        echo "Failure";
                                     } ?></strong>
             <small>now</small>
