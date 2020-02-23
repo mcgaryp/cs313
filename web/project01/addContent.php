@@ -14,6 +14,10 @@ if (isset($_GET['error'])) {
    $error = $_GET['error'];
 }
 
+if (isset($_GET['title'])) {
+   $title = $_GET['title'];
+}
+
 if (isset($_SESSION["account"])) {
    $account = $_SESSION["account"];
 } else {
@@ -58,7 +62,7 @@ if (isset($_SESSION["account"])) {
             <?php if ($success) {
                echo "Successfully added $title to your collection.";
             } else {
-               echo "Failure to added $title to your collection. $error.";
+               echo "Failure to add $title to your collection with error: $error.";
             } ?>
          </div>
       </div>

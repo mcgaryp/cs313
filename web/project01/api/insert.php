@@ -118,7 +118,7 @@ if (isset($_POST["add"])) {
       $movieTable->execute();
 
       // Send back to add content
-      header("location: ../addContent.php?success=true$title added to your collection", true);
+      header("location: ../addContent.php?success=true&title=$title added to your collection", true);
       die;
 
       // Catch erros
