@@ -12,6 +12,23 @@ if (isset($_POST["create"])) {
 
       $email = $_POST["email"];
       $user = $_POST["username"];
+      // Create account in the Data base
+      require "dbConnect.php";
+      $db = getBD();
+      try {
+         // check to see is the username is used already
+         $query = 'SELECT username FROM account where username = :user;';
+         $state = $db->prepare($query);
+         $state->bindValue(':user', $user);
+         $state->execute();
+
+         if ($state->fetch(PDO::FETCH_ASSOC)) {
+            header("location: ../createAccount.php?error=Username is already taken", true);
+         }
+      } catch (Exception $e) {
+         echo "Error with DB. Details: $e";
+         die;
+      }
 
       // Do the passwords match
       if ($_POST["pass"] != $_POST["confirmPass"]) {
@@ -24,10 +41,6 @@ if (isset($_POST["create"])) {
    } else {
       header("location: ../createAccount.php?error=Enter all fields");
    }
-
-   // Create account in the Data base
-   require "dbConnect.php";
-   $db = getBD();
 
    // try to add to the DB
    try {
@@ -62,12 +75,10 @@ if (isset($_POST["create"])) {
 
          // TODO Send to profile pagez
          header("location: ../profiles.php", true);
-
       } else {
          // if failed to find account
          header("location: ../index.php?error=Incorrect Username or Password", true);
       }
-      
    } catch (Exception $e) {
       echo "Error with DB. Details: $e";
       die;
@@ -184,3 +195,5 @@ if (isset($_POST["addProfile"])) {
       die;
    }
 }
+
+?>
