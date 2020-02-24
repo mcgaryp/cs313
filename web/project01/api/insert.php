@@ -69,7 +69,7 @@ if (isset($_POST["create"])) {
    $_SESSION["account"] = $account;
 
    // TODO Send to profile pagez
-   header("location: ../home.php", true);
+   header("location: ../profiles.php", true);
 }
 
 // Are we adding movies?

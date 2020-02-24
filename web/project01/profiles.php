@@ -30,24 +30,26 @@ if (isset($_SESSION["account"])) {
 </head>
 
 <body class="bg-dark">
-   <?php
-   print_r($profiles);
-   // <!-- Create profiles -->
-   if (isset($profiles)) { ?>
-      <div class="container">
-         <div class="row text-center">
+   <div class="container">
+      <div class="row text-center">
+         <?php
+         // <!-- Create profiles -->
+         if (isset($profiles)) { ?>
+
             <?php foreach ($profiles as $profile) { ?>
                <div class="col-md-6 mb-4">
                   <img class="rounded-circle z-depth-2" alt="100x100" src="<?= $profile->icon ?>">
                   <h2 class="my-5 h2 text-light"><?= $profile->nickname ?></h2>
                </div>
-            <?php } ?>
+         <?php }
+         } else {
+            header("location: index.php");
+         } ?>
+         <div class="col-md-6 mb-4">
+            <div class="rounded-circle z-depth-2"><i class="fas fa-plus"></i></div>
          </div>
       </div>
-   <?php } else {
-      header("location: index.php");
-   } ?>
-
+   </div>
    <!-- Scripts -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
    </script>
