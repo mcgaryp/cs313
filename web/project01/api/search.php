@@ -18,7 +18,7 @@
 
          // search for key words
          try {
-            $searchItem = '%' . $searchItem .'%';
+            $searchItem = $searchItem .'%';
             $query = 'SELECT * FROM movie WHERE title iLIKE :search and account_id = :id';
 
             $movies = array();
