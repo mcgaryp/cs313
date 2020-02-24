@@ -65,7 +65,7 @@ if (isset($_SESSION["results"])) {
                      <td class="align-middle"><?= $movie->year ?></td>
                      <td class="align-middle"><?= $movie->rating ?></td>
                      <td class="align-middle">
-                        <button type="button" class="btn btn-danger">Play Trialer (Comming soon)</button>
+                        <button type="button" class="btn btn-danger mb-4">Play Trialer (Comming soon)</button>
                         <button type="button" class="btn btn-primary">Play Movie (comming soon)</button>
                      </td>
                   </tr>
