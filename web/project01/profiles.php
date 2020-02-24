@@ -35,16 +35,14 @@ if (isset($_SESSION["account"])) {
    // <!-- Create profiles -->
    if (isset($profiles)) { ?>
       <div class="container">
-         <?php foreach ($profiles as $profile) { ?>
-            <div class="row text-center">
+         <div class="row text-center">
+            <?php foreach ($profiles as $profile) { ?>
                <div class="col-md-6 mb-4">
                   <img class="rounded-circle z-depth-2" alt="100x100" src="<?= $profile->icon ?>">
-                  <h2 class="my-5 h2"><?= $profile->nickname ?></h2>
+                  <h2 class="my-5 h2 text-light"><?= $profile->nickname ?></h2>
                </div>
-            </div>
-
-
-         <?php } ?>
+            <?php } ?>
+         </div>
       </div>
    <?php } else {
       header("location: index.php");
