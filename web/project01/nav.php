@@ -42,7 +42,7 @@
                <a class="dropdown-item
                   <?php if ($extension == "settings") {
                      echo "active";
-                  } ?>" href="" aria-disabled="true">Switch Profiles(Comming Soon)</a>
+                  } ?>" href="profiles.php" aria-disabled="true">Switch Profiles</a>
 
                <!-- logout tab -->
                <a class="dropdown-item" href="api/logout.php">Logout</a>
