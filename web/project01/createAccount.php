@@ -42,32 +42,39 @@ $_SESSION["current"] = "createAccount";
 						<div class="row">
 
 							<div class="col">
-								<div class="wrap-input100 validate-input" data-validate="Enter E-mail">
-									<input class="input100" type="email" name="email" placeholder="e-mail">
-									<span class="focus-input100" data-placeholder="&#x2709;"></span>
-								</div>
-
-								<div class="wrap-input100 validate-input" data-validate="Enter password">
-									<input class="input100" type="password" name="pass" placeholder="Password">
-									<span class="focus-input100" data-placeholder="&#xe80f;"></span>
-								</div>
-							</div>
-
-							<div class="col">
+								<!-- username -->
 								<div class="wrap-input100 validate-input" data-validate="Enter Username">
 									<input class="input100" type="text" name="username" placeholder="Username">
 									<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 								</div>
 
+								<!-- email -->
+								<div class="wrap-input100 validate-input" data-validate="Enter E-mail">
+									<input class="input100" type="email" name="email" placeholder="e-mail">
+									<span class="focus-input100" data-placeholder="&#x2709;"></span>
+								</div>
+
+							</div>
+
+							<div class="col">
+								<!-- password -->
+								<div class="wrap-input100 validate-input" data-validate="Enter password">
+									<input class="input100" type="password" name="pass" placeholder="Password">
+									<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+								</div>
+
+								<!-- confirm password -->
 								<div class="wrap-input100 validate-input" data-validate="Confirm password">
 									<input class="input100" type="password" name="confirmPass" placeholder=" Confirm Password">
 									<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 								</div>
 							</div>
+
 						</div>
 
-						<small id="error" class="form-text text-danger text-center"><?=$error?></small>
+						<small id="error" class="form-text text-danger text-center"><?= $error ?></small>
 
+						<!-- create account -->
 						<div class="container-login100-form-btn m-t-32">
 							<button class="login100-form-btn" type="submit" name="create">
 								Create Account
@@ -76,6 +83,7 @@ $_SESSION["current"] = "createAccount";
 
 
 					</form>
+					<!-- back to login -->
 					<div class="container-login100-form-btn m-t-32">
 						<a href="index.php">
 							<button class="login100-form-btn">
