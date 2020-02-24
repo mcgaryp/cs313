@@ -127,47 +127,48 @@ if (isset($_POST["add"])) {
       die;
    }
 
-   // are we adding a profile?
-   if (isset($_POST["addProfile"])) {
-      echo "adding profile<br>";
-      // set variables
-      $account = $_SESSION["account"];
-      $nickname = $_POST["nickname"];
-      $icon = $_POST["icon"];
-      try {
-         // get db
-         require "dbConnect.php";
-         $db = getBD();
+}
 
-         // check to see if we have that profile nick name already
-         $query = 'SELECT nick_name FROM user_profile WHERE nick_name = :n AND account_id = :id;';
-         $state = $db->prepare($query);
-         $state->bindValue(':n', $nickname);
-         $state->bindValue(':id', $account->id);
+// are we adding a profile?
+if (isset($_POST["addProfile"])) {
+   echo "adding profile<br>";
+   // set variables
+   $account = $_SESSION["account"];
+   $nickname = $_POST["nickname"];
+   $icon = $_POST["icon"];
+   try {
+      // get db
+      require "dbConnect.php";
+      $db = getBD();
 
-         // execute
-         $state->execute();
+      // check to see if we have that profile nick name already
+      $query = 'SELECT nick_name FROM user_profile WHERE nick_name = :n AND account_id = :id;';
+      $state = $db->prepare($query);
+      $state->bindValue(':n', $nickname);
+      $state->bindValue(':id', $account->id);
 
-         // if we find a match tell everyone that we found one!
-         if ($row = $state->fetch(PDO::FETCH_ASSOC)) {
-            header("location: ../createProfile.php?success=0&error=This $nickname has already been taken");
-            die;
-         }
+      // execute
+      $state->execute();
 
-         // else continue to add profile
-         $query = 'INSERT INTO user_profile (account_id, icon, nickname) VALUES (:id,:icon,:nick;';
-         $state = $db->prepare($query);
-         $state->bindValue(':id', $account->id);
-         $state->bindValue(':icon', $icon);
-         $state->bindValue(':nick',$nickname);
-
-         // execute
-         $state->execute();
-
-         // send back to profiles to choose your new profile
-         header("location: ../profiles.php");
-      } catch (Exception $e) {
-         header("location: ../createProfile.php?success=0&error=$e");
+      // if we find a match tell everyone that we found one!
+      if ($row = $state->fetch(PDO::FETCH_ASSOC)) {
+         header("location: ../createProfile.php?success=0&error=This $nickname has already been taken");
+         die;
       }
+
+      // else continue to add profile
+      $query = 'INSERT INTO user_profile (account_id, icon, nickname) VALUES (:id,:icon,:nick;';
+      $state = $db->prepare($query);
+      $state->bindValue(':id', $account->id);
+      $state->bindValue(':icon', $icon);
+      $state->bindValue(':nick',$nickname);
+
+      // execute
+      $state->execute();
+
+      // send back to profiles to choose your new profile
+      header("location: ../profiles.php");
+   } catch (Exception $e) {
+      header("location: ../createProfile.php?success=0&error=$e");
    }
 }
