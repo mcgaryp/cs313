@@ -53,6 +53,7 @@ if (isset($_SESSION["account"])) {
             <a href="createProfile.php">
                <i style="font-size: 5em; color:black" class="bg-white p-5 fas fa-plus rounded-circle z-depth-2"></i>
             </a>
+            
          </div>
       </div>
    </div>

@@ -108,6 +108,7 @@ if (isset($_SESSION["account"])) {
                      }
                   } catch (Exception $e) {
                      echo "Error with DB. Details: $e";
+                     die;
                   }
 
                   ?>

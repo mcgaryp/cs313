@@ -147,3 +147,176 @@ INSERT INTO common_lookup (
    'STRING',
    'TV-MA'
 );
+
+-- 
+-- ICONS that will be avaliable 
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Iron-Man-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Black-Widow-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Captain-America-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Giant-Man-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Hulk-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Hawkeye-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Nick-Fury-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Thor-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Loki-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-War-Machine-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Agent-Coulson-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/shwz/disney/256/mickey-mouse-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/shwz/disney/256/pumbaa-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/shwz/disney/256/tarzan-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/shwz/disney/256/timon-icon.png'
+);
+
+INSERT INTO common_lookup (
+   context,
+   type,
+   meaning
+) VALUES (
+   'ICON',
+   'TEXT',
+   'http://icons.iconarchive.com/icons/shwz/disney/256/winnie-the-pooh-icon.png'
+);
+

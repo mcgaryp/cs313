@@ -126,4 +126,9 @@ if (isset($_POST["add"])) {
       header("location: ../addContent.php?success=0&error=$e&title=$title", true);
       die;
    }
+
+   // are we adding a profile?
+   if (isset($_POST["addProfile"])) {
+      
+   }
 }
