@@ -17,7 +17,7 @@
       $_SESSION["selectedProfile"] = $_POST["profile"];
       $profile = $_POST["profile"];
    }
-print $profile;
+   
 ?>
 
 <!DOCTYPE html>
