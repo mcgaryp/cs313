@@ -3,7 +3,7 @@ CREATE TABLE common_lookup (
    common_lookup_id  SERIAL      NOT NULL PRIMARY KEY,
    context           VARCHAR(25) NOT NULL,
    type              VARCHAR(25) NOT NULL,
-   meaning           VARCHAR(25) NOT NULL
+   meaning           VARCHAR(256) NOT NULL
 );
 
 -- TODO Insert admin into common look up table
@@ -188,16 +188,6 @@ INSERT INTO common_lookup (
    'ICON',
    'TEXT',
    'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Giant-Man-icon.png'
-);
-
-INSERT INTO common_lookup (
-   context,
-   type,
-   meaning
-) VALUES (
-   'ICON',
-   'TEXT',
-
 );
 
 INSERT INTO common_lookup (
