@@ -155,7 +155,7 @@ if (isset($_POST["addProfile"])) {
       // if we find a match tell everyone that we found one!
       if ($row = $state->fetch(PDO::FETCH_ASSOC)) {
          echo "found a similar name<br>";
-         header("location: ../createProfile.php?success=0&error=This $nickname has already been taken");
+         header("location: ../createProfile.php?success=0&error=This $nickname has already been taken", true);
          die;
       }
 
@@ -166,13 +166,18 @@ if (isset($_POST["addProfile"])) {
       $state->bindValue(':id', $account->id);
       $state->bindValue(':icon', $icon);
       $state->bindValue(':nick',$nickname);
+      echo "bound okay<br>";
 
       // execute
       $state->execute();
+      echo "executed okay<br>";
 
       // send back to profiles to choose your new profile
-      header("location: ../profiles.php");
+      header("location: ../profiles.php", true);
+      echo "should be on another page";
+      die;
+      
    } catch (Exception $e) {
-      header("location: ../createProfile.php?success=0&error=$e");
+      header("location: ../createProfile.php?success=0&error=$e", true);
    }
 }
