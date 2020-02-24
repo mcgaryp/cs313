@@ -166,8 +166,8 @@
                                           <p><?= $movies[$index]->description ?></p>
                                        </div>
                                        <div class="modal-footer">
-                                          <button type="button" class="btn btn-danger">Play Trialer</button>
-                                          <button type="button" class="btn btn-primary">Play Movie</button>
+                                          <button type="button" class="btn btn-danger">Play Trialer (Comming soon)</button>
+                                          <button type="button" class="btn btn-primary">Play Movie (comming soon)</button>
                                        </div>
                                     </div>
                                  </div>
