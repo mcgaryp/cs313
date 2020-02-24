@@ -150,7 +150,7 @@ if (isset($_POST["add"])) {
 
          // if we find a match tell everyone that we found one!
          if ($row = $state->fetch(PDO::FETCH_ASSOC)) {
-            header("location: ../createProfile.php?success=0&nicknam=$nickname&error=This nickname has already been taken");
+            header("location: ../createProfile.php?success=0&error=This $nickname has already been taken");
             die;
          }
 

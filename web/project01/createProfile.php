@@ -14,6 +14,15 @@ if (isset($_SESSION["account"])) {
    header("location: index.php", true);
 }
 
+if (isset($_GET["success"])) {
+   $success = $_GET["success"];
+}
+
+if (isset($_GET["error"])) {
+   $error = $_GET["error"];
+}
+
+
 ?>
 
 <!DOCTYPE html>
