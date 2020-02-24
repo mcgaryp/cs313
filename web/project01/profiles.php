@@ -51,9 +51,7 @@ if (isset($_SESSION["account"])) {
          } ?>
          <div class="col-md-6 mb-4">
             <a href="createProfile.php">
-               <div class="rounded-circle z-depth-2" alt>
-                  <i style="font-size: 5em; color:black" class="bg-white p-5 fas fa-plus"></i>
-               </div>
+               <i style="font-size: 5em; color:black" class="bg-white p-5 fas fa-plus rounded-circle z-depth-2"></i>
             </a>
          </div>
       </div>
