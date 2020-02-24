@@ -30,8 +30,8 @@ if (isset($_SESSION["account"])) {
 </head>
 
 <body class="bg-dark">
-   <div class="container">
-      <div class="row text-center">
+   <div class="container py-5">
+      <div class="row text-center justify-content-center">
          <?php
          // <!-- Create profiles -->
          if (isset($profiles)) { ?>
