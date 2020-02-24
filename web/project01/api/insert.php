@@ -172,8 +172,12 @@ if (isset($_POST["addProfile"])) {
       $state->execute();
       echo "executed okay<br>";
 
+      include "../classes/profile.php";
+
       // add profile to profiles array
       print_r($_SESSION["profiles"]);
+
+
 
       // send back to profiles to choose your new profile
       // header("location: ../profiles.php", true);
