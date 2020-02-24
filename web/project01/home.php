@@ -165,10 +165,10 @@
                                           <h5>Description</h5>
                                           <p><?= $movies[$index]->description ?></p>
                                        </div>
-                                       <!-- <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                          <button type="button" class="btn btn-primary">Save changes</button>
-                                       </div> -->
+                                       <div class="modal-footer">
+                                          <button type="button" class="btn btn-danger">Play Trialer</button>
+                                          <button type="button" class="btn btn-primary">Play Movie</button>
+                                       </div>
                                     </div>
                                  </div>
                               </div>
