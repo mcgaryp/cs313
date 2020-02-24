@@ -136,7 +136,9 @@ if (isset($_POST["addProfile"])) {
    $account = $_SESSION["account"];
    $nickname = $_POST["nickname"];
    $icon = $_POST["icon"];
+
    try {
+      echo "trying to do datastuff<br>";
       // get db
       require "dbConnect.php";
       $db = getBD();
@@ -152,10 +154,12 @@ if (isset($_POST["addProfile"])) {
 
       // if we find a match tell everyone that we found one!
       if ($row = $state->fetch(PDO::FETCH_ASSOC)) {
+         echo "found a similar name<br>";
          header("location: ../createProfile.php?success=0&error=This $nickname has already been taken");
          die;
       }
 
+      echo "did not find a similar name<br>";
       // else continue to add profile
       $query = 'INSERT INTO user_profile (account_id, icon, nickname) VALUES (:id,:icon,:nick;';
       $state = $db->prepare($query);
