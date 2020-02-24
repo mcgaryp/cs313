@@ -39,7 +39,7 @@ if (isset($_SESSION["account"])) {
             <?php foreach ($profiles as $profile) { ?>
                <div class="col-md-6 mb-4">
                   <form action="home.php" method="POST">
-                     <button class="bg-transparent" type="submit" name="profile" value="<?= $profile->nickname ?>">
+                     <button class=" btn btn-link bg-transparent" type="submit" name="profile" value="<?= $profile->nickname ?>">
                         <img class="rounded-circle z-depth-2" alt="100x100" src="<?= $profile->icon ?>">
                      </button>
                      <h2 class="my-5 h2 text-light"><?= $profile->nickname ?></h2>
@@ -52,7 +52,7 @@ if (isset($_SESSION["account"])) {
          <div class="col-md-6 mb-4">
             <a href="createProfile.php">
                <div class="rounded-circle z-depth-2" alt>
-                  <i class="fas fa-plus"></i>
+                  <i style="font-size: 3em; color:black" class="bg-white p-5 fas fa-plus"></i>
                </div>
             </a>
          </div>
