@@ -161,7 +161,7 @@ if (isset($_POST["addProfile"])) {
 
       echo "did not find a similar name<br>";
       // else continue to add profile
-      $query = 'INSERT INTO user_profile (account_id, icon, nickname) VALUES (:id,:icon,:nick;';
+      $query = 'INSERT INTO user_profile (account_id, icon, nickname) VALUES (:id,:icon,:nick);';
       $state = $db->prepare($query);
       $state->bindValue(':id', $account->id);
       $state->bindValue(':icon', $icon);
@@ -176,7 +176,7 @@ if (isset($_POST["addProfile"])) {
       header("location: ../profiles.php", true);
       echo "should be on another page";
       die;
-      
+
    } catch (Exception $e) {
       header("location: ../createProfile.php?success=0&error=$e", true);
    }
