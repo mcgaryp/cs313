@@ -29,26 +29,24 @@ if (isset($_SESSION["account"])) {
    <script src="https://kit.fontawesome.com/79ad9f74b9.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="bg-dark">
    <?php
 
    // <!-- Create profiles -->
-   if (isset($profiles)) {
-
-      foreach ($profiles as $profile) { ?>
-         <div class="bg-dark">
-            <div class="container">
-               <div class="row text-center">
-                  <div class="col-md-6 mb-4">
-                     <img class="rounded-circle z-depth-2" alt="100x100" src="<?= $profile->icon ?>">
-                     <h2 class="my-5 h2"><?= $profile->nickname ?></h2>
-                  </div>
+   if (isset($profiles)) { ?>
+      <div class="container">
+         <?php foreach ($profiles as $profile) { ?>
+            <div class="row text-center">
+               <div class="col-md-6 mb-4">
+                  <img class="rounded-circle z-depth-2" alt="100x100" src="<?= $profile->icon ?>">
+                  <h2 class="my-5 h2"><?= $profile->nickname ?></h2>
                </div>
             </div>
-         </div>
 
-   <?php }
-   } else {
+
+         <?php } ?>
+      </div>
+   <?php } else {
       header("location: index.php");
    } ?>
 
