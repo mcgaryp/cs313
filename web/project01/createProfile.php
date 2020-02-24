@@ -55,7 +55,7 @@ if (isset($_SESSION["account"])) {
             $db = getBD();
 
             // create my query
-            $query = "SELECT * FROM common_lookup WHERE context = 'ICON;";
+            $query = "SELECT * FROM common_lookup WHERE context = 'ICON';";
             $state = $db->prepare($query);
 
             // run query
