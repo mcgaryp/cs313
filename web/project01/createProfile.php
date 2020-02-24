@@ -28,6 +28,35 @@ if (isset($_SESSION["account"])) {
    <link rel="stylesheet" href="css/home.css">
    <script src="https://kit.fontawesome.com/79ad9f74b9.js" crossorigin="anonymous"></script>
 </head>
+<?php
+
+if (isset($success)) { ?>
+
+   <!-- Toast -->
+   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 60px; right: 0; z-index:10" data-autohide="false">
+      <div class="toast-header">
+         <!-- <img src="" class="rounded mr-2" alt="..."> -->
+         <strong class="mr-auto"><?php if ($success) {
+                                    echo "Successful";
+                                 } else {
+                                    echo "Failure";
+                                 } ?></strong>
+         <small>now</small>
+         <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="toast-body">
+         <?php if ($success) {
+            echo "Successfully added $title to your collection.";
+         } else {
+            echo "Failure to add $title to your collection with error: $error.";
+         } ?>
+      </div>
+   </div>
+
+<?php } ?>
+
 <div class="container">
    <form action="api/insert.php" method="POST" class="was-validated">
       <div class="row">
@@ -100,7 +129,7 @@ if (isset($_SESSION["account"])) {
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+<script src="js/modal.js" async defer></script>
 </body>
 
 </html>
