@@ -61,8 +61,6 @@ if (isset($_POST["create"])) {
 
    // get last creation and its details
    $accountId = $db->lastInsertId("account_account_id_seq");
-   echo $accountId;
-   die;
 
    try {
       $query = "SELECT * FROM account WHERE account_id = $accountId";
@@ -75,6 +73,8 @@ if (isset($_POST["create"])) {
 
          // Create account and add to session
          $_SESSION["account"] = $account;
+         print_r($account);
+         die;
 
          // TODO Send to profile pagez
          header("location: ../profiles.php", true);
