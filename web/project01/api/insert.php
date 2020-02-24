@@ -73,7 +73,7 @@ if (isset($_POST["create"])) {
 
          // Create account and add to session
          $_SESSION["account"] = $account;
-         $_SESSION["profiles"] = null;
+         $_SESSION["profiles"] = "";
 
          // TODO Send to profile pagez
          header("location: ../profiles.php", true);
