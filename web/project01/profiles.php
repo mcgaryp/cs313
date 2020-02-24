@@ -31,7 +31,7 @@ if (isset($_SESSION["account"])) {
 
 <body class="bg-dark">
    <?php
-
+   print_r($profiles);
    // <!-- Create profiles -->
    if (isset($profiles)) { ?>
       <div class="container">
