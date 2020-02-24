@@ -161,7 +161,7 @@ if (isset($_POST["addProfile"])) {
 
       echo "did not find a similar name<br>";
       // else continue to add profile
-      $query = 'INSERT INTO user_profile (account_id, icon, nickname) VALUES (:id,:icon,:nick);';
+      $query = 'INSERT INTO user_profile (account_id, icon, nickname) VALUES (:id, :icon, :nick);';
       $state = $db->prepare($query);
       $state->bindValue(':id', $account->id);
       $state->bindValue(':icon', $icon);
@@ -178,6 +178,7 @@ if (isset($_POST["addProfile"])) {
       die;
 
    } catch (Exception $e) {
+      echo "$e<br>";
       header("location: ../createProfile.php?success=0&error=$e", true);
    }
 }
