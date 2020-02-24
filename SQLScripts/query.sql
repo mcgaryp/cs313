@@ -8,7 +8,7 @@ select * from user_profile;
 select title, rating, year, account_id from movie where account_id = 2;
 
 -- selects the profiles
-select up.nick_name from account a inner join user_profile up on up.account_id = a.account_id and a.account_id = 2;
+select up.* from account a inner join user_profile up on up.account_id = a.account_id and a.account_id = 2;
 
 -- selects account with confirming password and username
 SELECT * FROM account a WHERE a.username = 'porter' AND a.password = 'password';

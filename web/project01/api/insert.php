@@ -131,14 +131,12 @@ if (isset($_POST["add"])) {
 
 // are we adding a profile?
 if (isset($_POST["addProfile"])) {
-   echo "adding profile<br>";
    // set variables
    $account = $_SESSION["account"];
    $nickname = $_POST["nickname"];
    $icon = $_POST["icon"];
 
    try {
-      echo "trying to do datastuff<br>";
       // get db
       require "dbConnect.php";
       $db = getBD();
@@ -154,38 +152,35 @@ if (isset($_POST["addProfile"])) {
 
       // if we find a match tell everyone that we found one!
       if ($row = $state->fetch(PDO::FETCH_ASSOC)) {
-         echo "found a similar name<br>";
-         header("location: ../createProfile.php?success=0&error=This $nickname has already been taken", true);
+         header("location: ../createProfile.php?success=0&error=$nickname has already been taken", true);
          die;
       }
 
-      echo "did not find a similar name<br>";
       // else continue to add profile
       $query = 'INSERT INTO user_profile (account_id, icon, nick_name) VALUES (:id, :icon, :nick);';
       $state = $db->prepare($query);
       $state->bindValue(':id', $account->id);
       $state->bindValue(':icon', $icon);
       $state->bindValue(':nick',$nickname);
-      echo "bound okay<br>";
 
       // execute
       $state->execute();
-      echo "executed okay<br>";
 
       include "../classes/profile.php";
 
       // add profile to profiles array
-      print_r($_SESSION["profiles"]);
-
+      $profile = new Profile($nickname, $icon);
+      $profiles = $_SESSION["profiles"];
+      array_push($profiles, $profile);
+      $_SESSION["profiles"] = $profiles;
 
 
       // send back to profiles to choose your new profile
-      // header("location: ../profiles.php", true);
-      echo "should be on another page";
+      header("location: ../profiles.php", true);
       die;
 
    } catch (Exception $e) {
-      echo "$e<br>";
       header("location: ../createProfile.php?success=0&error=$e", true);
+      die;
    }
 }

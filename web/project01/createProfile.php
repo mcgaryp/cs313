@@ -59,7 +59,7 @@ if (isset($success)) { ?>
          <?php if ($success) {
             echo "Successfully added $title to your collection.";
          } else {
-            echo "Failure to add $title to your collection with error: $error.";
+            echo "$error.";
          } ?>
       </div>
    </div>
