@@ -29,7 +29,7 @@ if (isset($_SESSION["account"])) {
    <script src="https://kit.fontawesome.com/79ad9f74b9.js" crossorigin="anonymous"></script>
 </head>
 <div class="container">
-   <form action="insert.php" method="POST" class="was-validated">
+   <form action="api/insert.php" method="POST" class="was-validated">
       <div class="row">
          <!-- nickname -->
          <div class="col-md-4 mb-3 form-group">
