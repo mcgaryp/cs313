@@ -17,13 +17,14 @@ if (isset($_POST["create"])) {
       $db = getBD();
       try {
          // check to see is the username is used already
-         $query = 'SELECT username FROM account where username = :user;';
+         $query = 'SELECT * FROM account where username = :user;';
          $state = $db->prepare($query);
          $state->bindValue(':user', $user);
          $state->execute();
 
-         if ($state->fetch(PDO::FETCH_ASSOC)) {
-            header("location: ../createAccount.php?error=Username is already taken", true);
+         if ($row = $state->fetch(PDO::FETCH_ASSOC)) {
+            header("location: ../createAccount.php?error=$user as an username is already taken", true);
+            die;
          }
       } catch (Exception $e) {
          echo "Error with DB. Details: $e";
