@@ -219,22 +219,26 @@ values (
 -- CREATE USER_PROFILE WITH PO & LALA
 insert into user_profile (
    account_id,
+   icon,
    nick_name
 ) values (
    (SELECT account_id
       FROM account
       WHERE username = 'porter' 
       AND email = 'portermcgary@gmail.com'),
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Captain-America-icon.png',
    'Po'
 );
 
 insert into user_profile (
    account_id,
+   icon,
    nick_name
 ) values (
    (SELECT account_id
       FROM account
       WHERE username = 'porter' 
       AND email = 'portermcgary@gmail.com'),
+   'http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Black-Widow-icon.png',
    'Lala'
 );

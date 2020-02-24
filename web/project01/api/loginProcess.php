@@ -1,7 +1,6 @@
 <?php
 
-use function PHPSTORM_META\type;
-
+include "../classes/profile.php";
 include "../classes/account.php";
 
    session_start();
@@ -40,7 +39,7 @@ include "../classes/account.php";
 
          // pull data from database
          while($row = $profileTable->fetch(PDO::FETCH_ASSOC)) {
-            $profile = $row["nick_name"];
+            $profile = new Profile($row["nick_name"], $row["icon"]);
             array_push($profiles, $profile);
          }
 
@@ -60,7 +59,7 @@ include "../classes/account.php";
 
    } else {
       // Failed to login with stuff on button click
-      header("../index.php", true);
+      header("../profiles.php", true);
       exit;
    }
 
