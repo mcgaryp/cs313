@@ -40,6 +40,8 @@ if (isset($_SESSION["account"])) {
          </div>
       </div>
 
+   </div>
+   <div class="row">
       <!-- have an option to provide icon of there own!? -->
       <!-- place option toggle here -->
 
@@ -66,7 +68,7 @@ if (isset($_SESSION["account"])) {
                while ($row = $state->fetch(PDO::FETCH_ASSOC)) {
                   $icon = $row["meaning"];
                   $name = $row["type"];
-                  echo "<option value='$icon'>$name</option>";
+                  echo "<option value='$icon'><img src='$icon'></option>";
                }
             } catch (Exception $e) {
                echo "Error with DB. Details: $e";
@@ -80,6 +82,8 @@ if (isset($_SESSION["account"])) {
 
       <!-- option to upload icon here if toggle pushed -->
 
+   </div>
+   <div class="row">
       <!-- Submit button -->
       <div class="row justtify-content-center">
          <div class="col-auto">
