@@ -65,7 +65,8 @@ if (isset($_SESSION["account"])) {
             try {
                while ($row = $state->fetch(PDO::FETCH_ASSOC)) {
                   $icon = $row["meaning"];
-                  echo "<option> value='$icon'><img src='$icon'></option>";
+                  $name = $row["type"];
+                  echo "<option> value='$icon'><img src='$name'></option>";
                }
             } catch (Exception $e) {
                echo "Error with DB. Details: $e";
