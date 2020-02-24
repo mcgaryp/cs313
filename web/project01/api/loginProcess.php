@@ -55,11 +55,11 @@ include "../classes/account.php";
       print_r($_SESSION);
       
       // direct to the next page TODO make a profiles page to show the different profiles on the account
-      header("location: ../home.php", true);
+      header("location: ../profile.php", true);
 
    } else {
       // Failed to login with stuff on button click
-      header("../profiles.php", true);
+      header("../index.php", true);
       exit;
    }
 

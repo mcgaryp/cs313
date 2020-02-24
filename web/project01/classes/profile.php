@@ -9,5 +9,4 @@ class Profile {
       $this->icon = $image;
    }
 }
-
 ?>
