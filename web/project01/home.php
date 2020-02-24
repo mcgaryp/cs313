@@ -13,6 +13,11 @@
       header("location: index.php", true);
    }
 
+   if (isset($_POST["profile"])) {
+      $_SESSION["selectedProfile"] = $_POST["profile"];
+      $profile = $_POST["profile"];
+   }
+
 ?>
 
 <!DOCTYPE html>

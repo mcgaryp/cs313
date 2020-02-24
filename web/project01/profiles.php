@@ -38,15 +38,23 @@ if (isset($_SESSION["account"])) {
 
             <?php foreach ($profiles as $profile) { ?>
                <div class="col-md-6 mb-4">
-                  <img class="rounded-circle z-depth-2" alt="100x100" src="<?= $profile->icon ?>">
-                  <h2 class="my-5 h2 text-light"><?= $profile->nickname ?></h2>
+                  <form action="home.php" method="POST">
+                     <button type="submit" name="profile" value="<?= $profile->nickname ?>">
+                        <img class="rounded-circle z-depth-2" alt="100x100" src="<?= $profile->icon ?>">
+                     </button>
+                     <h2 class="my-5 h2 text-light"><?= $profile->nickname ?></h2>
+                  </form>
                </div>
          <?php }
          } else {
             header("location: index.php");
          } ?>
          <div class="col-md-6 mb-4">
-            <div class="rounded-circle z-depth-2"><i class="fas fa-plus"></i></div>
+            <a href="createProfile.php">
+               <div class="rounded-circle z-depth-2" alt>
+                  <i class="fas fa-plus"></i>
+               </div>
+            </a>
          </div>
       </div>
    </div>
